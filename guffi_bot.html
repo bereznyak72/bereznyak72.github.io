@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/guffi.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Гуффи Бот - многофункциональный чат-бот для Telegram, VK и MAX с ИИ-функциями, играми, модерацией и уникальными командами.">
+    <meta name="keywords" content="Гуффи Бот, Telegram бот, VK бот, MAX бот, чат-бот, ИИ бот">
+    <title>Гуффи Бот - Умный помощник для ваших чатов</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/guffi_bot.css">
+  </head>
+  <body>
+    <div class="notification-overlay" id="notification">
+      <div class="notification-box">
+        <h2 class="notification-title">Проект приостановлен</h2>
+        <div class="notification-content">
+          К сожалению, разработка бота временно приостановлена. Мы благодарим всех за проявленный интерес и надеемся вернуться к проекту в будущем. Следите за обновлениями! По всем вопросам обращайтесь в <a href="https://vk.com/guffi_72" target="_blank">сообщество VK</a>.
+        </div>
+        <button class="notification-button" onclick="closeNotification()">Понятно</button>
+      </div>
+    </div>
+    <!-- Навигация -->
+    <nav class="navbar">
+      <a href="#" class="logo">
+      <img src="img/guffi.png" alt="Гуффи Бот" class="logo-img">
+      Гуффи Бот
+      </a>
+      <div class="nav-links">
+        <a href="#about">О боте</a>
+        <a href="#features">Возможности</a>
+        <a href="#progress">Разработка</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+      </div>
+    </nav>
+    <!-- Герой секция -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Умный помощник для ваших чатов</h1>
+        <p class="hero-subtitle">Многофункциональный бот с искусственным интеллектом для Telegram, VK и других платформ. Развлекайте участников, модернизируйте чаты и автоматизируйте рутину.</p>
+        <div class="hero-buttons">
+          <a href="#features" class="btn btn-primary">
+          Узнать больше
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- О боте -->
+    <section class="about-section" id="about">
+      <h2 class="section-title">Почему Гуффи Бот?</h2>
+      <div class="about-grid">
+        <div class="about-card animate-on-scroll">
+          <div class="about-icon">🤖</div>
+          <h3>Умный ИИ</h3>
+          <p>Интеграция с современными языковыми моделями для умных и контекстных ответов на ваши вопросы.</p>
+        </div>
+        <div class="about-card animate-on-scroll">
+          <div class="about-icon">🎮</div>
+          <h3>Развлечения</h3>
+          <p>Викторины, игры и интересные команды, которые разнообразят общение в вашем чате.</p>
+        </div>
+        <div class="about-card animate-on-scroll">
+          <div class="about-icon">🛡️</div>
+          <h3>Модерация</h3>
+          <p>Помощь в управлении чатом, автоматическое удаление спама и контроль за нарушителями.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Возможности -->
+    <section class="features-section" id="features">
+      <h2 class="section-title">Возможности</h2>
+      <div class="features-tabs">
+        <button class="tab-btn active" data-tab="telegram">Telegram</button>
+        <button class="tab-btn" data-tab="vk">VK</button>
+      </div>
+      <div class="tab-content active" id="telegram-tab">
+        <div class="commands-grid">
+          <div class="command-card animate-on-scroll">
+            <h4>Основные команды</h4>
+            <ul class="command-list">
+              <li><code>/all</code> — отметить всех участников</li>
+              <li><code>/bot</code> — информация о создателе</li>
+              <li><code>/bio</code> — информация о вас</li>
+              <li><code>/photo</code> — случайная фотография</li>
+            </ul>
+          </div>
+          <div class="command-card animate-on-scroll">
+            <h4>Развлечения</h4>
+            <ul class="command-list">
+              <li><code>/quiz</code> — случайный вопрос</li>
+              <li><code>!o вопрос...</code> — создать опрос</li>
+              <li><code>!m</code> — найти музыку</li>
+              <li><code>!м</code> — найти музыку</li>
+            </ul>
+          </div>
+          <div class="command-card animate-on-scroll">
+            <h4>Утилиты</h4>
+            <ul class="command-list">
+              <li><code>/report текст</code> — сообщить об ошибке</li>
+              <li><code>гуффи запрос</code> — запрос к ИИ</li>
+              <li><code>/help</code> — помощь по командам</li>
+              <li><code>/settings</code> — настройки бота</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content" id="vk-tab">
+        <div class="commands-grid">
+          <div class="command-card animate-on-scroll">
+            <h4>Основные команды VK</h4>
+            <ul class="command-list">
+              <li><code>!команды</code> — список команд</li>
+              <li><code>!бот</code> — информация о создателе</li>
+              <li><code>!помощь</code> — помощь по боту</li>
+            </ul>
+            <div class="important-notice">
+              <p>Находится в разработке!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Прогресс разработки -->
+    <section class="progress-section" id="progress">
+      <h2 class="section-title">Планы развития</h2>
+      <div class="progress-item animate-on-scroll">
+        <div class="progress-header">
+          <div class="progress-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-openai" viewBox="0 0 16 16">
+              <path d="M14.949 6.547a3.94 3.94 0 0 0-.348-3.273 4.11 4.11 0 0 0-4.4-1.934A4.1 4.1 0 0 0 8.423.2 4.15 4.15 0 0 0 6.305.086a4.1 4.1 0 0 0-1.891.948 4.04 4.04 0 0 0-1.158 1.753 4.1 4.1 0 0 0-1.563.679A4 4 0 0 0 .554 4.72a3.99 3.99 0 0 0 .502 4.731 3.94 3.94 0 0 0 .346 3.274 4.11 4.11 0 0 0 4.402 1.933c.382.425.852.764 1.377.995.526.231 1.095.35 1.67.346 1.78.002 3.358-1.132 3.901-2.804a4.1 4.1 0 0 0 1.563-.68 4 4 0 0 0 1.14-1.253 3.99 3.99 0 0 0-.506-4.716m-6.097 8.406a3.05 3.05 0 0 1-1.945-.694l.096-.054 3.23-1.838a.53.53 0 0 0 .265-.455v-4.49l1.366.778q.02.011.025.035v3.722c-.003 1.653-1.361 2.992-3.037 2.996m-6.53-2.75a2.95 2.95 0 0 1-.36-2.01l.095.057L5.29 12.09a.53.53 0 0 0 .527 0l3.949-2.246v1.555a.05.05 0 0 1-.022.041L6.473 13.3c-1.454.826-3.311.335-4.15-1.098m-.85-6.94A3.02 3.02 0 0 1 3.07 3.949v3.785a.51.51 0 0 0 .262.451l3.93 2.237-1.366.779a.05.05 0 0 1-.048 0L2.585 9.342a2.98 2.98 0 0 1-1.113-4.094zm11.216 2.571L8.747 5.576l1.362-.776a.05.05 0 0 1 .048 0l3.265 1.86a3 3 0 0 1 1.173 1.207 2.96 2.96 0 0 1-.27 3.2 3.05 3.05 0 0 1-1.36.997V8.279a.52.52 0 0 0-.276-.445m1.36-2.015-.097-.057-3.226-1.855a.53.53 0 0 0-.53 0L6.249 6.153V4.598a.04.04 0 0 1 .019-.04L9.533 2.7a3.07 3.07 0 0 1 3.257.139c.474.325.843.778 1.066 1.303.223.526.289 1.103.191 1.664zM5.503 8.575 4.139 7.8a.05.05 0 0 1-.026-.037V4.049c0-.57.166-1.127.476-1.607s.752-.864 1.275-1.105a3.08 3.08 0 0 1 3.234.41l-.096.054-3.23 1.838a.53.53 0 0 0-.265.455zm.742-1.577 1.758-1 1.762 1v2l-1.755 1-1.762-1z"/>
+            </svg>
+          </div>
+          <h3 class="progress-title">Интеграция с ИИ</h3>
+        </div>
+        <p>Улучшение ИИ-функционала для более умных и контекстных ответов</p>
+        <div class="progress-bar-container">
+          <div class="progress-bar" data-width="60"></div>
+        </div>
+        <div class="progress-value">60%</div>
+      </div>
+      <div class="progress-item animate-on-scroll">
+        <div class="progress-header">
+          <div class="progress-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M21.579 6.855c.14-.465 0-.806-.662-.806h-2.193c-.558 0-.813.295-.953.619c0 0-1.115 2.719-2.695 4.482c-.51.513-.743.675-1.021.675c-.139 0-.341-.162-.341-.627V6.855c0-.558-.161-.806-.626-.806H9.642c-.348 0-.558.258-.558.504c0 .528.79.65.871 2.138v3.228c0 .707-.127.836-.407.836c-.743 0-2.551-2.729-3.624-5.853c-.209-.607-.42-.852-.98-.852H2.752c-.627 0-.752.295-.752.619c0 .582.743 3.462 3.461 7.271c1.812 2.601 4.363 4.011 6.687 4.011c1.393 0 1.565-.313 1.565-.853v-1.966c0-.626.133-.752.574-.752c.324 0 .882.164 2.183 1.417c1.486 1.486 1.732 2.153 2.567 2.153h2.192c.626 0 .939-.313.759-.931c-.197-.615-.907-1.51-1.849-2.569c-.512-.604-1.277-1.254-1.51-1.579c-.325-.419-.231-.604 0-.976c.001.001 2.672-3.761 2.95-5.04"/>
+            </svg>
+          </div>
+          <h3 class="progress-title">VK версия</h3>
+        </div>
+        <p>Полноценный запуск версии для VK с полным функционалом</p>
+        <div class="progress-bar-container">
+          <div class="progress-bar" data-width="20"></div>
+        </div>
+        <div class="progress-value">20%</div>
+      </div>
+    </section>
+    <!-- Футер -->
+    <footer id="contacts">
+      <div class="footer-content">
+        <div>
+          <a href="#" class="footer-logo">Гуффи Бот</a>
+          <p class="footer-description">Умный помощник для ваших чатов с искусственным интеллектом и множеством функций для развлечения и модерации.</p>
+          <div class="social-links">
+            <a href="https://t.me/guffi_72_bot" target="_blank" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-telegram" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+              </svg>
+            </a>
+            <a href="https://vk.com/guffi_72" target="_blank" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M21.579 6.855c.14-.465 0-.806-.662-.806h-2.193c-.558 0-.813.295-.953.619c0 0-1.115 2.719-2.695 4.482c-.51.513-.743.675-1.021.675c-.139 0-.341-.162-.341-.627V6.855c0-.558-.161-.806-.626-.806H9.642c-.348 0-.558.258-.558.504c0 .528.79.65.871 2.138v3.228c0 .707-.127.836-.407.836c-.743 0-2.551-2.729-3.624-5.853c-.209-.607-.42-.852-.98-.852H2.752c-.627 0-.752.295-.752.619c0 .582.743 3.462 3.461 7.271c1.812 2.601 4.363 4.011 6.687 4.011c1.393 0 1.565-.313 1.565-.853v-1.966c0-.626.133-.752.574-.752c.324 0 .882.164 2.183 1.417c1.486 1.486 1.732 2.153 2.567 2.153h2.192c.626 0 .939-.313.759-.931c-.197-.615-.907-1.51-1.849-2.569c-.512-.604-1.277-1.254-1.51-1.579c-.325-.419-.231-.604 0-.976c.001.001 2.672-3.761 2.95-5.04"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Разработчик</h4>
+          <ul>
+            <li><a href="https://bereznyak72.github.io/">bereznyak72</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Платформы</h4>
+          <ul>
+            <li><a href="#">Telegram</a></li>
+            <li><a href="#">VK (в разработке)</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Разделы</h4>
+          <ul>
+            <li><a href="#about">О боте</a></li>
+            <li><a href="#features">Возможности</a></li>
+            <li><a href="#progress">Разработка</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2025 Гуффи Бот. Все права защищены.</p>
+      </div>
+    </footer>
+    <script>
+      function toggleTheme() {
+          const body = document.body;
+          body.classList.toggle('dark-theme');
+          
+          const isDarkTheme = body.classList.contains('dark-theme');
+          localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+          
+          const themeButton = document.querySelector('.theme-toggle');
+          themeButton.textContent = isDarkTheme ? '☀️' : '🌙';
+      }
+      
+      function applySavedTheme() {
+          const savedTheme = localStorage.getItem('theme');
+          if (savedTheme === 'dark') {
+              document.body.classList.add('dark-theme');
+              document.querySelector('.theme-toggle').textContent = '☀️';
+          } else {
+              document.body.classList.remove('dark-theme');
+              document.querySelector('.theme-toggle').textContent = '🌙';
+          }
+      }
+      
+      function closeNotification() {
+          const notification = document.getElementById('notification');
+          notification.style.display = 'none';
+          sessionStorage.setItem('notificationClosed', 'true');
+      }
+      
+      function initTabs() {
+          const tabBtns = document.querySelectorAll('.tab-btn');
+          const tabContents = document.querySelectorAll('.tab-content');
+          
+          tabBtns.forEach(btn => {
+              btn.addEventListener('click', () => {
+                  tabBtns.forEach(b => b.classList.remove('active'));
+                  tabContents.forEach(c => c.classList.remove('active'));
+                  
+                  btn.classList.add('active');
+                  
+                  const tabId = btn.getAttribute('data-tab') + '-tab';
+                  document.getElementById(tabId).classList.add('active');
+              });
+          });
+      }
+      
+      function animateProgressBars() {
+          const progressBars = document.querySelectorAll('.progress-bar');
+          progressBars.forEach(bar => {
+              const width = bar.getAttribute('data-width');
+              bar.style.width = width + '%';
+          });
+      }
+      
+      function initScrollAnimation() {
+          const elements = document.querySelectorAll('.animate-on-scroll');
+          
+          const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add('visible');
+                  }
+              });
+          }, { threshold: 0.1 });
+          
+          elements.forEach(element => {
+              observer.observe(element);
+          });
+      }
+      
+      document.addEventListener('DOMContentLoaded', function() {
+          applySavedTheme();
+          
+          const notificationClosed = sessionStorage.getItem('notificationClosed');
+          if (notificationClosed !== 'true') {
+              document.getElementById('notification').style.display = 'flex';
+          } else {
+              document.getElementById('notification').style.display = 'none';
+          }
+          
+          initTabs();
+          animateProgressBars();
+          initScrollAnimation();
+          
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+              anchor.addEventListener('click', function (e) {
+                  e.preventDefault();
+                  const target = document.querySelector(this.getAttribute('href'));
+                  if (target) {
+                      target.scrollIntoView({
+                          behavior: 'smooth',
+                          block: 'start'
+                      });
+                  }
+              });
+          });
+      });
+    </script>
+  </body>
+</html>

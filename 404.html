@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Страница не найдена - ошибка 404">
+    <meta name="keywords" content="404, страница не найдена, ошибка">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <title>Страница не найдена - 404</title>
+    <link rel="stylesheet" href="css/404.css">
+  </head>
+  <body>
+    <div class="rain-container" id="rainContainer"></div>
+    <div class="container">
+      <div class="error-content">
+        <div class="umbrella">☔</div>
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Страница уплыла в потоке дождя</h2>
+        <p class="error-message">Кажется, эта страница промокла под ливнем и растворилась в водных потоках. Возможно, она унеслась бурным ручьём или просто спряталась под зонтиком, ожидая, когда дождь утихнет. Не беспокойтесь, даже в самый сильный ливень есть возможность найти укрытие и вернуться к важным страницам.</p>
+        <div class="cta-buttons">
+          <a href="index.html" class="cta-button"><span>🏠</span> Вернуться к уютному дому</a>
+          <a href="projects.html" class="cta-button"><span>🚀</span> Исследовать проекты</a>
+        </div>
+      </div>
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+    <script>
+      function createRain() {
+        const rainContainer = document.getElementById('rainContainer');
+        const containerWidth = window.innerWidth;
+        const dropsCount = Math.floor(containerWidth / 15);
+        
+        rainContainer.innerHTML = '';
+        
+        for (let i = 0; i < dropsCount; i++) {
+          const drop = document.createElement('div');
+          drop.classList.add('drop');
+          
+          const posX = Math.random() * containerWidth;
+          const delay = Math.random() * 2;
+          const duration = 0.3 + Math.random() * 0.4;
+          const length = 15 + Math.random() * 20;
+          
+          drop.style.left = `${posX}px`;
+          drop.style.animationDelay = `${delay}s`;
+          drop.style.animationDuration = `${duration}s`;
+          drop.style.height = `${length}px`;
+          drop.style.opacity = 0.3 + Math.random() * 0.4;
+          
+          rainContainer.appendChild(drop);
+          
+          if (i % 2 === 0) {
+            const splash = document.createElement('div');
+            splash.classList.add('splash');
+            
+            splash.style.left = `${posX}px`;
+            splash.style.bottom = '0';
+            splash.style.animationDelay = `${delay + duration * 0.9}s`;
+            splash.style.width = `${10 + Math.random() * 10}px`;
+            splash.style.height = `${5 + Math.random() * 5}px`;
+            
+            rainContainer.appendChild(splash);
+          }
+        }
+      }
+      
+      function toggleTheme() {
+        const body = document.body;
+        body.classList.toggle('dark-theme');
+        const isDarkTheme = body.classList.contains('dark-theme');
+        localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+      }
+      
+      function applySavedTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+          document.body.classList.add('dark-theme');
+        } else {
+          document.body.classList.remove('dark-theme');
+        }
+      }
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        applySavedTheme();
+        createRain();
+        
+        window.addEventListener('resize', createRain);
+      });
+    </script>
+  </body>
+</html>
