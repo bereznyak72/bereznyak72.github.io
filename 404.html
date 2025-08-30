@@ -19,12 +19,16 @@
         <h2 class="error-title">Страница уплыла в потоке дождя</h2>
         <p class="error-message">Кажется, эта страница промокла под ливнем и растворилась в водных потоках. Возможно, она унеслась бурным ручьём или просто спряталась под зонтиком, ожидая, когда дождь утихнет. Не беспокойтесь, даже в самый сильный ливень есть возможность найти укрытие и вернуться к важным страницам.</p>
         <div class="cta-buttons">
-          <a href="index.html" class="cta-button"><span>🏠</span> Вернуться к уютному дому</a>
-          <a href="projects.html" class="cta-button"><span>🚀</span> Исследовать проекты</a>
+          <a href="index.html" class="cta-button">Вернуться к уютному дому</a>
+          <a href="projects.html" class="cta-button">Исследовать проекты</a>
         </div>
       </div>
     </div>
-    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-brilliance" viewBox="0 0 16 16">
+        <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
+      </svg>
+    </button>
     <script>
       function createRain() {
         const rainContainer = document.getElementById('rainContainer');
