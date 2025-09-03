@@ -12,6 +12,19 @@
   </head>
   <body>
     <div class="rain-container" id="rainContainer"></div>
+    <button class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+    </button>
+    <div class="mobile-menu">
+      <a href="projects.html">Мои проекты</a>
+      <button class="mobile-theme-toggle" onclick="toggleTheme()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-brilliance" viewBox="0 0 16 16">
+          <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
+        </svg>
+      </button>
+    </div>
     <div class="container">
       <header class="header">
         <h1>FULLSTACK JOURNEY</h1>
@@ -153,6 +166,11 @@
         body.classList.toggle('dark-theme');
         const isDarkTheme = body.classList.contains('dark-theme');
         localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+        if (window.innerWidth <= 768) {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+        }
+        updateBlockchatImage();
       }
       
       function applySavedTheme() {
@@ -163,15 +181,22 @@
           document.body.classList.remove('dark-theme');
         }
       }
+
+      const hamburger = document.querySelector('.hamburger');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const themeToggle = document.querySelector('.theme-toggle');
       
-      function animateProgressBars() {
-        const progressBars = document.querySelectorAll('.progress-bar');
-        progressBars.forEach(bar => {
-          const progress = bar.getAttribute('data-progress');
-          setTimeout(() => {
-            bar.style.width = progress + '%';
-          }, 300);
-        });
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+      });
+      
+      function handleThemeToggleVisibility() {
+        if (window.innerWidth <= 768) {
+          themeToggle.style.display = 'none';
+        } else {
+          themeToggle.style.display = 'block';
+        }
       }
       
       document.addEventListener('DOMContentLoaded', function() {
