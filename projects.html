@@ -60,6 +60,18 @@
           <a href="https://bereznyak72.github.io/blockchat-site/" class="details-link">Подробнее</a>
         </div>
         <div class="project-item">
+          <span class="project-type">Проект</span>
+          <div class="image-container">
+            <img src="img/blocklink-black.png" alt="BlockLink" id="blocklink-image">
+          </div>
+          <div class="info">
+            <h3>BlockLink</h3>
+            <p></p>
+            <p class="release-date">Планируемый релиз: <strong>Не определён</strong></p>
+          </div>
+          <a href="#" class="details-link inactive-link">Подробнее</a>
+        </div>
+        <div class="project-item">
           <div>
             <span class="project-type">Проект</span>
             <div class="image-container">
@@ -179,6 +191,7 @@
           mobileMenu.classList.remove('active');
         }
         updateBlockchatImage();
+        updateBlocklinkImage();
       }
       
       function applySavedTheme() {
@@ -189,6 +202,7 @@
           document.body.classList.remove('dark-theme');
         }
         updateBlockchatImage();
+        updateBlocklinkImage();
       }
       
       function toggleFooterContent(event) {
@@ -226,6 +240,12 @@
         const isDarkTheme = document.body.classList.contains('dark-theme');
         const image = document.getElementById('blockchat-image');
         image.src = isDarkTheme ? 'img/blockchat-white.png' : 'img/blockchat-black.png';
+      }
+
+      function updateBlocklinkImage() {
+        const isDarkTheme = document.body.classList.contains('dark-theme');
+        const image = document.getElementById('blocklink-image');
+        image.src = isDarkTheme ? 'img/blocklink-white.png' : 'img/blocklink-black.png';
       }
       
       document.addEventListener('DOMContentLoaded', function() {
