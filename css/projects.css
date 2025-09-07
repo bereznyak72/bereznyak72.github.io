@@ -431,28 +431,45 @@ body {
   line-height: 1.6;
 }
 
+.theme-toggle, .lang-toggle {
+    position: fixed;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 .theme-toggle {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: var(--text-color);
-  color: var(--background-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border: none;
-  font-size: 20px;
-  transition: all 0.3s ease;
-  z-index: 100;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    right: 30px;
+}
+
+.lang-toggle {
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.theme-toggle:hover, .lang-toggle:hover {
+    transform: scale(1.1);
 }
 
 .theme-toggle:hover {
-  transform: scale(1.1) rotate(30deg);
+    transform: scale(1.1) rotate(30deg);
 }
 
 .notification {
@@ -537,20 +554,24 @@ body {
   color: var(--accent-color);
 }
 
-.mobile-theme-toggle {
-  background: none;
-  border: 1px solid var(--text-color);
-  color: var(--text-color);
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: all 0.3s ease;
+.mobile-theme-toggle, .mobile-lang-toggle {
+    background: none;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
-.mobile-theme-toggle:hover {
-  background-color: var(--text-color);
-  color: var(--background-color);
+.mobile-theme-toggle:hover, .mobile-lang-toggle:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
 }
 
 @media (max-width: 768px) {
@@ -570,7 +591,7 @@ body {
   .projects-list {
     grid-template-columns: 1fr;
   }
-  .theme-toggle {
+  .theme-toggle, .lang-toggle {
     display: none;
   }
   .footer-content {

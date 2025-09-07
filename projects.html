@@ -7,13 +7,13 @@
     <meta name="description" content="Портфолио разработчика: учебные и самостоятельные проекты по веб-разработке, программированию и исследованию. Ознакомьтесь с моими работами и прогрессом.">
     <meta name="keywords" content="портфолио, веб-разработка, программирование, учебные проекты, самостоятельные проекты, игры, исследования, Fullstack-разработка">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <title>Мои проекты</title>
+    <title data-i18n="pageTitle">Мои проекты</title>
     <link rel="stylesheet" href="css/projects.css">
   </head>
   <body>
     <div class="rain-container" id="rainContainer"></div>
     <div class="headbar">
-      <a href="index.html">Главная</a>
+      <a href="index.html" data-i18n="home">Главная</a>
     </div>
     <button class="hamburger">
     <span></span>
@@ -21,85 +21,88 @@
     <span></span>
     </button>
     <div class="mobile-menu">
-      <a href="index.html">Главная</a>
+      <a href="index.html" data-i18n="home">Главная</a>
       <button class="mobile-theme-toggle" onclick="toggleTheme()">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-brilliance" viewBox="0 0 16 16">
           <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
         </svg>
       </button>
+      <button class="mobile-lang-toggle" onclick="toggleLanguage()">
+        <span id="mobile-lang-text">EN</span>
+      </button>
     </div>
     <div class="container">
       <header class="header">
-        <h1>Мои проекты</h1>
+        <h1 data-i18n="projectsTitle">Мои проекты</h1>
       </header>
       <section class="projects-list">
         <div class="project-item">
           <div>
-            <span class="project-type">Обучение</span>
+            <span class="project-type" data-i18n="learningType">Обучение</span>
             <div class="image-container">
-              <img src="img/website.jpg" alt="Мой сайт">
+              <img src="img/website.jpg" alt="Мой сайт" data-i18n-alt="websiteAlt">
             </div>
             <div class="info">
-              <h3>Мой веб-сайт</h3>
-              <p>Цель данного сайта — продемонстрировать мои проекты и ресурсы, которые я использовал и использую в процессе своего обучения.</p>
+              <h3 data-i18n="websiteTitle">Мой веб-сайт</h3>
+              <p data-i18n="websiteDescription">Цель данного сайта — продемонстрировать мои проекты и ресурсы, которые я использовал и использую в процессе своего обучения.</p>
             </div>
           </div>
-          <a href="index.html" class="details-link">Подробнее</a>
+          <a href="index.html" class="details-link" data-i18n="detailsLink">Подробнее</a>
         </div>
         <div class="project-item">
           <div class="image-container">
-            <img src="img/blockchat-black.png" alt="BlockChat" id="blockchat-image">
+            <img src="img/blockchat-black.png" alt="BlockChat" id="blockchat-image" data-i18n-alt="blockchatAlt">
           </div>
           <div>
-            <span class="project-type">Проект</span>
+            <span class="project-type" data-i18n="projectType">Проект</span>
             <div class="info">
-              <h3>BlockChat</h3>
-              <p>BlockChat — это мессенджер с прямой peer-to-peer связью между пользователями. Ваши сообщения передаются напрямую, без хранения на серверах.</p>
+              <h3 data-i18n="blockchatTitle">BlockChat</h3>
+              <p data-i18n="blockchatDescription">BlockChat — это мессенджер с прямой peer-to-peer связью между пользователями. Ваши сообщения передаются напрямую, без хранения на серверах.</p>
             </div>
           </div>
-          <a href="https://bereznyak72.github.io/blockchat-site/" class="details-link">Подробнее</a>
+          <a href="https://bereznyak72.github.io/blockchat-site/" class="details-link" data-i18n="detailsLink">Подробнее</a>
         </div>
         <div class="project-item">
-          <span class="project-type">Проект</span>
+          <span class="project-type" data-i18n="projectType">Проект</span>
           <div class="image-container">
-            <img src="img/blocklink-black.png" alt="BlockLink" id="blocklink-image">
+            <img src="img/blocklink-black.png" alt="BlockLink" id="blocklink-image" data-i18n-alt="blocklinkAlt">
           </div>
           <div class="info">
-            <h3>BlockLink</h3>
+            <h3 data-i18n="blocklinkTitle">BlockLink</h3>
             <p></p>
-            <p class="release-date">Планируемый релиз: <strong>Не определён</strong></p>
+            <p class="release-date"><span data-i18n="plannedRelease">Планируемый релиз: </span><strong data-i18n="undefinedDate">Не определён</strong></p>
           </div>
-          <a href="#" class="details-link inactive-link">Подробнее</a>
+          <a href="#" class="details-link inactive-link" data-i18n="detailsLink">Подробнее</a>
         </div>
         <div class="project-item">
           <div>
-            <span class="project-type">Проект</span>
+            <span class="project-type" data-i18n="projectType">Проект</span>
             <div class="image-container">
-              <img src="img/persimmona.png" alt="Расследование Персиммоны">
+              <img src="img/persimmona.png" alt="Расследование Персиммоны" data-i18n-alt="persimmonaAlt">
             </div>
             <div class="info">
-              <h3>Расследование Персиммоны</h3>
-              <p>Детективная приключенческая игра с элементами головоломок и исследования. Вы возьмете на себя роль Персиммоны — талантливой сыщицы, которая вместе со своим помощником Кукурузой пытается раскрыть преступление, произошедшее в их городе.</p>
+              <h3 data-i18n="persimmonaTitle">Расследование Персиммоны</h3>
+              <p data-i18n="persimmonaDescription">Детективная приключенческая игра с элементами головоломок и исследования. Вы возьмете на себя роль Персиммоны — талантливой сыщицы, которая вместе со своим помощником Кукурузой пытается раскрыть преступление, произошедшее в их городе.</p>
             </div>
           </div>
-          <a href="https://bereznyak72.github.io/Persimmona-s-investigation/" class="details-link">Подробнее</a>
+          <a href="https://bereznyak72.github.io/Persimmona-s-investigation/" class="details-link" data-i18n="detailsLink">Подробнее</a>
         </div>
         <div class="project-item">
           <div>
-            <span class="project-type">Обучение</span>
+            <span class="project-type" data-i18n="learningType">Обучение</span>
             <div class="image-container">
-              <img src="img/guffi.png" alt="Бот Гуффи">
+              <img src="img/guffi.png" alt="Бот Гуффи" data-i18n-alt="guffiAlt">
             </div>
             <div class="info">
-              <h3>Бот Гуффи</h3>
-              <p>Этот универсальный помощник был разработан для того, чтобы сделать общение в чате более продуктивным и интересным. Обладая обширными знаниями и богатым опытом своего создателя, бот предлагает широкий спектр функций, который позволяет разнообразить взаимодействие участников группы.</p>
+              <h3 data-i18n="guffiTitle">Бот Гуффи</h3>
+              <p data-i18n="guffiDescription">Этот универсальный помощник был разработан для того, чтобы сделать общение в чате более продуктивным и интересным. Обладая обширными знаниями и богатым опытом своего создателя, бот предлагает широкий спектр функций, который позволяет разнообразить взаимодействие участников группы.</p>
             </div>
-            <a href="guffi_bot.html" class="details-link">Подробнее</a>
+            <a href="guffi_bot.html" class="details-link" data-i18n="detailsLink">Подробнее</a>
           </div>
         </div>
         <div class="project-item">
           <div>
-            <span class="project-type">Проект</span>
+            <span class="project-type" data-i18n="projectType">Проект</span>
             <div class="image-container" style="background-color: #e9e9e9; display: flex; align-items: center; justify-content: center;">
               <div style="text-align: center; color: #777; font-family: 'Roboto Mono', monospace;">
                 <div style="font-size: 40px; margin-bottom: 10px;">
@@ -108,30 +111,30 @@
                     <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
                   </svg>
                 </div>
-                <div>Изображение скоро появится</div>
+                <div data-i18n="imageComingSoon">Изображение скоро появится</div>
               </div>
             </div>
             <div class="info">
-              <h3>ByteMe</h3>
-              <p>Умный бот-ментор, который помогает разработчикам прокачивать навыки через персонализированные задания, автоматическую проверку кода и адаптивный roadmap. Идеально для новичков и junior-разработчиков, которые хотят расти быстрее.</p>
-              <p class="release-date">Планируемый релиз: <strong>Не определён</strong></p>
+              <h3 data-i18n="bytemeTitle">ByteMe</h3>
+              <p data-i18n="bytemeDescription">Умный бот-ментор, который помогает разработчикам прокачивать навыки через персонализированные задания, автоматическую проверку кода и адаптивный roadmap. Идеально для новичков и junior-разработчиков, которые хотят расти быстрее.</p>
+            <p class="release-date"><span data-i18n="plannedRelease">Планируемый релиз: </span><strong data-i18n="undefinedDate">Не определён</strong></p>
             </div>
           </div>
-          <a href="#" class="details-link inactive-link">Подробнее</a>
+          <a href="#" class="details-link inactive-link" data-i18n="detailsLink">Подробнее</a>
         </div>
       </section>
-      <div class="notification" id="notification">
+      <div class="notification" id="notification" data-i18n="linkUnavailable">
         Извините, ссылка пока недоступна
       </div>
       <footer class="footer">
-        <p>© 2025 Все права защищены</p>
-        <button class="footer-info-btn" onclick="toggleFooterContent(event)">Что означают пометки?</button>
+        <p data-i18n="copyright">© 2025 Все права защищены</p>
+        <button class="footer-info-btn" onclick="toggleFooterContent(event)" data-i18n="footerInfoButton">Что означают пометки?</button>
         <div class="footer-content">
-          <h3>Что означают пометки у проектов:</h3>
+          <h3 data-i18n="footerInfoTitle">Что означают пометки у проектов:</h3>
           <ul>
-            <li><strong>Обучение</strong> — проекты, созданные в процессе обучения и отработки новых навыков.</li>
-            <li><strong>Проект</strong> — самостоятельные проекты, разработанные для решения конкретных задач или реализации идей.</li>
-            <li><strong>Заказ</strong> — проекты, выполненные по запросу или заказу сторонних лиц или организаций.</li>
+            <li><strong data-i18n="learningType">Обучение</strong> — <span data-i18n="learningDescription">проекты, созданные в процессе обучения и отработки новых навыков.</span></li>
+            <li><strong data-i18n="projectType">Проект</strong> — <span data-i18n="projectDescription">самостоятельные проекты, разработанные для решения конкретных задач или реализации идей.</span></li>
+            <li><strong data-i18n="orderType">Заказ</strong> — <span data-i18n="orderDescription">проекты, выполненные по запросу или заказу сторонних лиц или организаций.</span></li>
           </ul>
         </div>
       </footer>
@@ -141,7 +144,136 @@
         <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
       </svg>
     </button>
+    <button class="lang-toggle" onclick="toggleLanguage()">
+      <span id="lang-text">EN</span>
+    </button>
     <script>
+      let currentLanguage = 'ru';
+      
+      const translations = {
+        'ru': {
+          'pageTitle': 'Мои проекты',
+          'home': 'Главная',
+          'projects': 'Мои проекты',
+          'projectsTitle': 'Мои проекты',
+          'learningType': 'Обучение',
+          'projectType': 'Проект',
+          'orderType': 'Заказ',
+          'websiteAlt': 'Мой сайт',
+          'websiteTitle': 'Мой веб-сайт',
+          'websiteDescription': 'Цель данного сайта — продемонстрировать мои проекты и ресурсы, которые я использовал и использую в процессе своего обучения.',
+          'blockchatAlt': 'BlockChat',
+          'blockchatTitle': 'BlockChat',
+          'blockchatDescription': 'BlockChat — это мессенджер с прямой peer-to-peer связью между пользователями. Ваши сообщения передаются напрямую, без хранения на серверах.',
+          'blocklinkAlt': 'BlockLink',
+          'blocklinkTitle': 'BlockLink',
+          'persimmonaAlt': 'Расследование Персиммоны',
+          'persimmonaTitle': 'Расследование Персиммоны',
+          'persimmonaDescription': 'Детективная приключенческая игра с элементами головоломок и исследования. Вы возьмете на себя роль Персиммоны — талантливой сыщицы, которая вместе со своим помощником Кукурузой пытается раскрыть преступление, произошедшее в их городе.',
+          'guffiAlt': 'Бот Гуффи',
+          'guffiTitle': 'Бот Гуффи',
+          'guffiDescription': 'Этот универсальный помощник был разработан для того, чтобы сделать общение в чате более продуктивным и интересным. Обладая обширными знаниями и богатым опытом своего создателя, бот предлагает широкий спектр функций, который позволяет разнообразить взаимодействие участников группы.',
+          'bytemeTitle': 'ByteMe',
+          'bytemeDescription': 'Умный бот-ментор, который помогает разработчикам прокачивать навыки через персонализированные задания, автоматическую проверку кода и адаптивный roadmap. Идеально для новичков и junior-разработчиков, которые хотят расти быстрее.',
+          'detailsLink': 'Подробнее',
+          'plannedRelease': 'Планируемый релиз: ',
+          'undefinedDate': 'Не определён',
+          'imageComingSoon': 'Изображение скоро появится',
+          'linkUnavailable': 'Извините, ссылка пока недоступна',
+          'copyright': '© 2025 Все права защищены',
+          'footerInfoButton': 'Что означают пометки?',
+          'footerInfoTitle': 'Что означают пометки у проектов:',
+          'learningDescription': 'проекты, созданные в процессе обучения и отработки новых навыков.',
+          'projectDescription': 'самостоятельные проекты, разработанные для решения конкретных задач или реализации идей.',
+          'orderDescription': 'проекты, выполненные по запросу или заказу сторонних лиц или организаций.',
+          'errorTitle': 'Страница уплыла в потоке дождя',
+          'errorMessage': 'Кажется, эта страница промокла под ливнем и растворилась в водных потоках. Возможно, она унеслась бурным ручьём или просто спряталась под зонтиком, ожидая, когда дождь утихнет. Не беспокойтесь, даже в самый сильный ливень есть возможность найти укрытие и вернуться к важным страницам.',
+          'homeButton': 'Вернуться к уютному дому',
+          'projectsButton': 'Исследовать проекты'
+        },
+        'en': {
+          'pageTitle': 'My Projects',
+          'home': 'Home',
+          'projects': 'My Projects',
+          'projectsTitle': 'My Projects',
+          'learningType': 'Learning',
+          'projectType': 'Project',
+          'orderType': 'Order',
+          'websiteAlt': 'My website',
+          'websiteTitle': 'My Website',
+          'websiteDescription': 'The purpose of this site is to showcase my projects and resources that I have used and am using during my learning process.',
+          'blockchatAlt': 'BlockChat',
+          'blockchatTitle': 'BlockChat',
+          'blockchatDescription': 'BlockChat is a messenger with direct peer-to-peer connection between users. Your messages are transmitted directly, without storage on servers.',
+          'blocklinkAlt': 'BlockLink',
+          'blocklinkTitle': 'BlockLink',
+          'persimmonaAlt': 'Persimmona\'s Investigation',
+          'persimmonaTitle': 'Persimmona\'s Investigation',
+          'persimmonaDescription': 'A detective adventure game with puzzle and exploration elements. You will take on the role of Persimmona - a talented detective who, together with her assistant Corn, tries to solve a crime that occurred in their city.',
+          'guffiAlt': 'Guffi Bot',
+          'guffiTitle': 'Guffi Bot',
+          'guffiDescription': 'This versatile assistant was developed to make chat communication more productive and interesting. Possessing extensive knowledge and rich experience of its creator, the bot offers a wide range of functions that diversify the interaction of group members.',
+          'bytemeTitle': 'ByteMe',
+          'bytemeDescription': 'A smart mentor bot that helps developers improve their skills through personalized tasks, automatic code checking, and adaptive roadmap. Perfect for beginners and junior developers who want to grow faster.',
+          'detailsLink': 'Details',
+          'plannedRelease': 'Planned release: ',
+          'undefinedDate': 'Undefined',
+          'imageComingSoon': 'Image coming soon',
+          'linkUnavailable': 'Sorry, the link is not available yet',
+          'copyright': '© 2025 All rights reserved',
+          'footerInfoButton': 'What do the labels mean?',
+          'footerInfoTitle': 'What the project labels mean:',
+          'learningDescription': 'projects created during the learning process and practicing new skills.',
+          'projectDescription': 'independent projects developed to solve specific problems or implement ideas.',
+          'orderDescription': 'projects completed at the request or order of third parties or organizations.',
+          'errorTitle': 'Page drifted away in the rain stream',
+          'errorMessage': 'It seems this page got soaked in the downpour and dissolved in the water streams. Perhaps it was carried away by a turbulent stream or simply hid under an umbrella, waiting for the rain to subside. Don\'t worry, even in the heaviest downpour there is an opportunity to find shelter and return to important pages.',
+          'homeButton': 'Return to cozy home',
+          'projectsButton': 'Explore projects'
+        }
+      };
+
+      function toggleLanguage() {
+        currentLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
+        applyLanguage();
+        localStorage.setItem('language', currentLanguage);
+        updateLanguageButton();
+      }
+
+      function applyLanguage() {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          if (translations[currentLanguage][key]) {
+            element.textContent = translations[currentLanguage][key];
+          }
+        });
+
+        document.querySelectorAll('[data-i18n-alt]').forEach(element => {
+          const key = element.getAttribute('data-i18n-alt');
+          if (translations[currentLanguage][key]) {
+            element.alt = translations[currentLanguage][key];
+          }
+        });
+      }
+
+      function updateLanguageButton() {
+        const langText = document.getElementById('lang-text');
+        const mobileLangText = document.getElementById('mobile-lang-text');
+        const text = currentLanguage === 'ru' ? 'EN' : 'RU';
+        
+        if (langText) langText.textContent = text;
+        if (mobileLangText) mobileLangText.textContent = text;
+      }
+
+      function applySavedLanguage() {
+        const savedLanguage = localStorage.getItem('language');
+        if (savedLanguage) {
+          currentLanguage = savedLanguage;
+        }
+        applyLanguage();
+        updateLanguageButton();
+      }
+
       function createRain() {
         const rainContainer = document.getElementById('rainContainer');
         const containerWidth = window.innerWidth;
@@ -250,6 +382,7 @@
       
       document.addEventListener('DOMContentLoaded', function() {
         applySavedTheme();
+        applySavedLanguage();
         createRain();
         handleThemeToggleVisibility();
         
@@ -259,7 +392,7 @@
         inactiveLinks.forEach(link => {
           link.addEventListener('click', function(e) {
             e.preventDefault();
-            notification.textContent = 'Извините, ссылка пока недоступна';
+            notification.textContent = translations[currentLanguage]['linkUnavailable'];
             notification.classList.add('show');
             
             setTimeout(function() {
