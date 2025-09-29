@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="img/byteme.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,417 +9,515 @@
     <title>ByteMe - AI наставник для разработчиков</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/byteme.css">
-</head>
-<body class="font-sans">
+  </head>
+  <body class="font-sans">
     <!-- Навигация -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <div class="logo-icon">
-                    <img src="img/byteme.png" alt="Logo" width="24px">
-                </div>
-                <span class="logo-text">ByteMe</span>
-            </div>
-            <div class="nav-links">
-                <a href="#features" class="nav-link">Возможности</a>
-                <a href="#roadmap" class="nav-link">Этапы</a>
-            </div>
-            <a href="#cta" class="primary-button">
-                Попробовать бета
-            </a>
+      <div class="nav-container">
+        <div class="nav-logo">
+          <div class="logo-icon">
+            <img src="img/byteme.png" alt="Logo" width="24px">
+          </div>
+          <span class="logo-text">ByteMe</span>
         </div>
+        <div class="nav-links">
+          <a href="#features" class="nav-link">Возможности</a>
+          <a href="#roadmap" class="nav-link">Этапы</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+        </div>
+        <a href="#cta" class="primary-button">
+        Попробовать бета
+        </a>
+      </div>
     </nav>
-
     <!-- Герой-секция -->
     <section id="main" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        <span class="gradient-text">ByteMe</span> — твой AI наставник в программировании
-                    </h1>
-                    <p class="hero-description">
-                        Персонализированные задания, автоматическая проверка кода и игровая система прогресса. 
-                        Стань лучшим разработчиком с помощью искусственного интеллекта.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#cta" class="primary-button">
-                            Начать обучение
-                        </a>
-                        <a href="#roadmap" class="secondary-button">
-                            Следить за развитием
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="visual-bg"></div>
-                    <div class="code-example">
-                        <div class="code-header">
-                            <div class="window-controls">
-                                <div class="control red"></div>
-                                <div class="control yellow"></div>
-                                <div class="control green"></div>
-                            </div>
-                        </div>
-                        <div class="code-message bot">
-                            <p class="message-text">Bot: Привет! Сегодня работаем с React.</p>
-                            <p class="message-text">Напиши компонент кнопки с пропсами size и variant.</p>
-                        </div>
-                        <div class="code-message user">
-                            <p class="message-text">Вы: <span class="code-snippet">function Button({ size, variant }) { ... }</span></p>
-                        </div>
-                        <div class="code-message bot">
-                            <p class="message-text">Bot: Отлично! ★★★★☆</p>
-                            <p class="message-text">Совет: Добавь PropTypes для документирования.</p>
-                        </div>
-                    </div>
-                </div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              <span class="gradient-text">ByteMe</span> — твой AI наставник в программировании
+            </h1>
+            <p class="hero-description">
+              Персонализированные задания, автоматическая проверка кода и игровая система прогресса. 
+              Стань лучшим разработчиком с помощью искусственного интеллекта.
+            </p>
+            <div class="hero-buttons">
+              <a href="#cta" class="primary-button">
+              Начать обучение
+              </a>
+              <a href="#roadmap" class="secondary-button">
+              Следить за развитием
+              </a>
             </div>
+          </div>
+          <div class="hero-visual">
+            <div class="visual-bg"></div>
+            <div class="code-example">
+              <div class="code-header">
+                <div class="window-controls">
+                  <div class="control red"></div>
+                  <div class="control yellow"></div>
+                  <div class="control green"></div>
+                </div>
+              </div>
+              <div class="code-message bot">
+                <p class="message-text">Bot: Привет! Сегодня работаем с React.</p>
+                <p class="message-text">Напиши компонент кнопки с пропсами size и variant.</p>
+              </div>
+              <div class="code-message user">
+                <p class="message-text">Вы: <span class="code-snippet">function Button({ size, variant }) { ... }</span></p>
+              </div>
+              <div class="code-message bot">
+                <p class="message-text">Bot: Отлично! ★★★★☆</p>
+                <p class="message-text">Совет: Добавь PropTypes для документирования.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-
     <!-- Возможности -->
     <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">Как <span class="gradient-text">ByteMe</span> поможет тебе расти</h2>
-            <p class="section-description">
-                Индивидуальный подход к обучению программированию с использованием современных технологий
-            </p>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">AI-генерация заданий</h3>
-                    <p class="feature-description">
-                        Персонализированные задачи под твой уровень и цели. От простых алгоритмов до реальных проектов.
-                    </p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Проверка кода</h3>
-                    <p class="feature-description">
-                        Автоматический анализ твоего кода с детальными комментариями и советами по улучшению.
-                    </p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Геймификация</h3>
-                    <p class="feature-description">
-                        Уровни, бейджи и рейтинги мотивируют продолжать обучение и достигать новых высот.
-                    </p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Персональный roadmap</h3>
-                    <p class="feature-description">
-                        Четкий план развития от новичка до профессионала с рекомендациями что изучать дальше.
-                    </p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Комьюнити</h3>
-                    <p class="feature-description">
-                        Общайся с другими учениками, участвуй в соревнованиях и делись достижениями.
-                    </p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Мультиплатформенность</h3>
-                    <p class="feature-description">
-                        Работает в Telegram, веб-версии и мобильном приложении. Учись где и когда удобно.
-                    </p>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Как <span class="gradient-text">ByteMe</span> поможет тебе расти</h2>
+        <p class="section-description">
+          Индивидуальный подход к обучению программированию с использованием современных технологий
+        </p>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
             </div>
+            <h3 class="feature-title">AI-генерация заданий</h3>
+            <p class="feature-description">
+              Персонализированные задачи под твой уровень и цели. От простых алгоритмов до реальных проектов.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Проверка кода</h3>
+            <p class="feature-description">
+              Автоматический анализ твоего кода с детальными комментариями и советами по улучшению.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Геймификация</h3>
+            <p class="feature-description">
+              Уровни, бейджи и рейтинги мотивируют продолжать обучение и достигать новых высот.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Персональный roadmap</h3>
+            <p class="feature-description">
+              Четкий план развития от новичка до профессионала с рекомендациями что изучать дальше.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Комьюнити</h3>
+            <p class="feature-description">
+              Общайся с другими учениками, участвуй в соревнованиях и делись достижениями.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Мультиплатформенность</h3>
+            <p class="feature-description">
+              Работает в Telegram, веб-версии и мобильном приложении. Учись где и когда удобно.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
-
     <!-- Дорожная карта -->
     <section id="roadmap" class="roadmap">
-        <div class="container">
-            <h2 class="section-title">Дорожная карта <span class="gradient-text">развития</span></h2>
-            <p class="section-description">
-                Следи за нашим прогрессом и ожидаемыми обновлениями
-            </p>
-            
-            <div class="roadmap-container">
-                <div class="roadmap-items">
-                    <!-- Этап 1 -->
-                    <div class="roadmap-item">
-                        <div class="roadmap-number">1</div>
-                        <div class="roadmap-content">
-                            <div class="roadmap-header">
-                                <h3 class="roadmap-title">Прототип Telegram-бота</h3>
-                                <span class="status-badge in-progress">В работе</span>
-                            </div>
-                            <p class="roadmap-description">
-                                Базовый функционал бота с ручными заданиями и простой проверкой кода.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Этап 2 -->
-                    <div class="roadmap-item">
-                        <div class="roadmap-number">2</div>
-                        <div class="roadmap-content">
-                            <div class="roadmap-header">
-                                <h3 class="roadmap-title">Интеграция AI</h3>
-                                <span class="status-badge planned">В планах</span>
-                            </div>
-                            <p class="roadmap-description">
-                                Добавление GPT для генерации заданий и анализа кода. Улучшение prompt-инжиниринга.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Этап 3 -->
-                    <div class="roadmap-item">
-                        <div class="roadmap-number">3</div>
-                        <div class="roadmap-content">
-                            <div class="roadmap-header">
-                                <h3 class="roadmap-title">Веб-дашборд</h3>
-                                <span class="status-badge planned">В планах</span>
-                            </div>
-                            <p class="roadmap-description">
-                                Личный кабинет с прогрессом, статистикой и рекомендациями.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Этап 4 -->
-                    <div class="roadmap-item">
-                        <div class="roadmap-number">4</div>
-                        <div class="roadmap-content">
-                            <div class="roadmap-header">
-                                <h3 class="roadmap-title">Геймификация</h3>
-                                <span class="status-badge planned">В планах</span>
-                            </div>
-                            <p class="roadmap-description">
-                                Система уровней, бейджей и соревнований между пользователями.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Этап 5 -->
-                    <div class="roadmap-item">
-                        <div class="roadmap-number">5</div>
-                        <div class="roadmap-content">
-                            <div class="roadmap-header">
-                                <h3 class="roadmap-title">Публичный релиз</h3>
-                                <span class="status-badge planned">В планах</span>
-                            </div>
-                            <p class="roadmap-description">
-                                Официальный запуск платформы.
-                            </p>
-                        </div>
-                    </div>
+      <div class="container">
+        <h2 class="section-title">Дорожная карта <span class="gradient-text">развития</span></h2>
+        <p class="section-description">
+          Следи за нашим прогрессом и ожидаемыми обновлениями
+        </p>
+        <div class="roadmap-container">
+          <div class="roadmap-items">
+            <!-- Этап 1 -->
+            <div class="roadmap-item">
+              <div class="roadmap-number">1</div>
+              <div class="roadmap-content">
+                <div class="roadmap-header">
+                  <h3 class="roadmap-title">Прототип Telegram-бота</h3>
+                  <span class="status-badge in-progress">В работе</span>
                 </div>
+                <p class="roadmap-description">
+                  Базовый функционал бота с ручными заданиями и простой проверкой кода.
+                </p>
+              </div>
             </div>
+            <!-- Этап 2 -->
+            <div class="roadmap-item">
+              <div class="roadmap-number">2</div>
+              <div class="roadmap-content">
+                <div class="roadmap-header">
+                  <h3 class="roadmap-title">Интеграция AI</h3>
+                  <span class="status-badge planned">В планах</span>
+                </div>
+                <p class="roadmap-description">
+                  Добавление GPT для генерации заданий и анализа кода. Улучшение prompt-инжиниринга.
+                </p>
+              </div>
+            </div>
+            <!-- Этап 3 -->
+            <div class="roadmap-item">
+              <div class="roadmap-number">3</div>
+              <div class="roadmap-content">
+                <div class="roadmap-header">
+                  <h3 class="roadmap-title">Веб-дашборд</h3>
+                  <span class="status-badge planned">В планах</span>
+                </div>
+                <p class="roadmap-description">
+                  Личный кабинет с прогрессом, статистикой и рекомендациями.
+                </p>
+              </div>
+            </div>
+            <!-- Этап 4 -->
+            <div class="roadmap-item">
+              <div class="roadmap-number">4</div>
+              <div class="roadmap-content">
+                <div class="roadmap-header">
+                  <h3 class="roadmap-title">Геймификация</h3>
+                  <span class="status-badge planned">В планах</span>
+                </div>
+                <p class="roadmap-description">
+                  Система уровней, бейджей и соревнований между пользователями.
+                </p>
+              </div>
+            </div>
+            <!-- Этап 5 -->
+            <div class="roadmap-item">
+              <div class="roadmap-number">5</div>
+              <div class="roadmap-content">
+                <div class="roadmap-header">
+                  <h3 class="roadmap-title">Публичный релиз</h3>
+                  <span class="status-badge planned">В планах</span>
+                </div>
+                <p class="roadmap-description">
+                  Официальный запуск платформы.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2 class="section-title">Часто задаваемые <span class="gradient-text">вопросы</span></h2>
+        <p class="section-description">
+          Ответы на самые популярные вопросы о платформе
+        </p>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Как работает AI-наставник?</h3>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>Наш AI анализирует ваш текущий уровень, цели обучения и предпочтения, чтобы создавать персонализированные задания. Он проверяет ваш код, дает детальную обратную связь и предлагает следующие шаги для развития.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Какие языки программирования поддерживаются?</h3>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>На старте поддерживаются JavaScript, Python, Java и C++. Мы постоянно добавляем новые языки и технологии в зависимости от спроса сообщества.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Нужно ли платить за использование?</h3>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>Базовый функционал доступен бесплатно. На данный момент платная подписка не планируется.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Как присоединиться к бета-тестированию?</h3>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>В данный момент тестирование бота недоступно. Мы работаем над запуском и скоро всё будет готово!</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Будет ли мобильное приложение?</h3>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>Да! Мобильное приложение для iOS и Android находится в планах развития. Следите за обновлениями в нашем roadmap.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- CTA и Сообщество -->
     <section id="cta" class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <div class="cta-badge">
-                    <span class="badge-text">Бета-тестирование</span>
-                </div>
-                <h2 class="cta-title">Готов начать <span class="gradient-text">прокачивать</span> свои навыки?</h2>
-                <p class="cta-description">
-                    Присоединяйся к бета-тестированию и получи ранний доступ к платформе. 
-                    Помоги нам сделать ByteMe лучше!
-                </p>
-                <div class="cta-buttons">
-                    <a id="bot" class="secondary-button" style="user-select: none; cursor: pointer;">
-                        Попробовать в Telegram
-                    </a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="cta-content">
+          <div class="cta-badge">
+            <span class="badge-text">Бета-тестирование</span>
+          </div>
+          <h2 class="cta-title">Готов начать <span class="gradient-text">прокачивать</span> свои навыки?</h2>
+          <p class="cta-description">
+            Присоединяйся к бета-тестированию и получи ранний доступ к платформе. 
+            Помоги нам сделать ByteMe лучше!
+          </p>
+          <div class="cta-buttons">
+            <a id="bot" class="secondary-button" style="user-select: none; cursor: pointer;">
+            Попробовать в Telegram
+            </a>
+          </div>
         </div>
+      </div>
     </section>
-
     <!-- Футер -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <div class="logo-icon">
-                            <img src="img/byteme.png" alt="Logo" width="24px">
-                        </div>
-                        <span class="logo-text">ByteMe</span>
-                    </div>
-                    <p class="footer-description">
-                        AI-наставник для разработчиков. Учись, практикуйся и становись лучше с каждым днем.
-                    </p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="footer-heading">Навигация</h3>
-                    <ul class="footer-links">
-                        <li><a href="#main" class="footer-link">Главная</a></li>
-                        <li><a href="#features" class="footer-link">Возможности</a></li>
-                        <li><a href="#roadmap" class="footer-link">Этапы</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="footer-heading">Контакты</h3>
-                    <ul class="footer-links">
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="footer-icon" viewBox="0 0 16 16">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
-                            </svg>
-                            <a href="#" id="to-channel" class="footer-link">Telegram-канал</a>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                            </svg>
-                            <a href="#" id="to-chat" class="footer-link">Telegram-чат</a>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-                            </svg>
-                            <a href="index.html" class="footer-link">Сайт разработчика</a>
-                        </li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <img src="img/byteme.png" alt="Logo" width="24px">
+              </div>
+              <span class="logo-text">ByteMe</span>
             </div>
-            
-            <div class="footer-bottom">
-                <p>© 2025 ByteMe. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <svg class="modal-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            <p class="footer-description">
+              AI-наставник для разработчиков. Учись, практикуйся и становись лучше с каждым днем.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3 class="footer-heading">Навигация</h3>
+            <ul class="footer-links">
+              <li><a href="#main" class="footer-link">Главная</a></li>
+              <li><a href="#features" class="footer-link">Возможности</a></li>
+              <li><a href="#roadmap" class="footer-link">Этапы</a></li>
+              <li><a href="#faq" class="footer-link">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3 class="footer-heading">Контакты</h3>
+            <ul class="footer-links">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="footer-icon" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
                 </svg>
-                <h3 class="modal-title">Внимание</h3>
-            </div>
-            <div class="modal-body">
-                <p class="modal-message" id="modal-message">Сообщение</p>
-            </div>
-            <div class="modal-footer">
-                <button class="modal-button" id="modal-close">Понятно</button>
-            </div>
+                <a href="#" id="to-channel" class="footer-link">Telegram-канал</a>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                </svg>
+                <a href="#" id="to-chat" class="footer-link">Telegram-чат</a>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                </svg>
+                <a href="index.html" class="footer-link">Сайт разработчика</a>
+              </li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>© 2025 ByteMe. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <svg class="modal-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+          </svg>
+          <h3 class="modal-title">Внимание</h3>
+        </div>
+        <div class="modal-body">
+          <p class="modal-message" id="modal-message">Сообщение</p>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-button" id="modal-close">Понятно</button>
+        </div>
+      </div>
     </div>
-
     <script>
-// Плавная прокрутка для якорных ссылок
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Элементы модального окна
-const modal = document.getElementById('modal');
-const modalMessage = document.getElementById('modal-message');
-const modalClose = document.getElementById('modal-close');
-
-// Функция показа модального окна
-function showModal(message) {
-    modalMessage.textContent = message;
-    modal.classList.add('show');
-    document.body.style.overflow = 'hidden';
-    
-    // Прокрутка модального окна вверх на мобильных устройствах
-    if (window.innerWidth <= 480) {
-        setTimeout(() => {
-            modal.scrollTop = 0;
-        }, 50);
-    }
-}
-
-// Функция скрытия модального окна
-function hideModal() {
-    modal.classList.add('closing');
-    setTimeout(() => {
-        modal.classList.remove('show', 'closing');
-        document.body.style.overflow = '';
-    }, 300);
-}
-
-// Обработчики для кнопок
-document.getElementById('bot').addEventListener('click', function() {
-    showModal('В данный момент тестирование бота недоступно. Мы работаем над запуском и скоро всё будет готово!');
-});
-
-document.getElementById('to-channel').addEventListener('click', function(e) {
-    e.preventDefault();
-    showModal('Telegram-канал пока недоступен. Следите за обновлениями на сайте!');
-});
-
-document.getElementById('to-chat').addEventListener('click', function(e) {
-    e.preventDefault();
-    showModal('Telegram-чат сообщества откроется в ближайшее время. Оставайтесь на связи!');
-});
-
-// Закрытие модального окна
-modalClose.addEventListener('click', hideModal);
-
-// Закрытие модального окна при клике вне его
-modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
-        hideModal();
-    }
-});
-
-// Закрытие модального окна по клавише Escape
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modal.classList.contains('show')) {
-        hideModal();
-    }
-});
-
-// Предотвращение прокрутки body когда модальное окно открыто
-modal.addEventListener('touchmove', function(e) {
-    if (modal.classList.contains('show')) {
-        e.preventDefault();
-    }
-}, { passive: false });
+      // Плавная прокрутка для якорных ссылок
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+              e.preventDefault();
+              const target = document.querySelector(this.getAttribute('href'));
+              if (target) {
+                  target.scrollIntoView({
+                      behavior: 'smooth'
+                  });
+              }
+          });
+      });
+      
+      // Элементы модального окна
+      const modal = document.getElementById('modal');
+      const modalMessage = document.getElementById('modal-message');
+      const modalClose = document.getElementById('modal-close');
+      
+      // Функция показа модального окна
+      function showModal(message) {
+          modalMessage.textContent = message;
+          modal.classList.add('show');
+          document.body.style.overflow = 'hidden';
+          
+          // Прокрутка модального окна вверх на мобильных устройствах
+          if (window.innerWidth <= 480) {
+              setTimeout(() => {
+                  modal.scrollTop = 0;
+              }, 50);
+          }
+      }
+      
+      // Функция скрытия модального окна
+      function hideModal() {
+          modal.classList.add('closing');
+          setTimeout(() => {
+              modal.classList.remove('show', 'closing');
+              document.body.style.overflow = '';
+          }, 300);
+      }
+      
+      // Обработчики для кнопок
+      document.getElementById('bot').addEventListener('click', function() {
+          showModal('В данный момент тестирование бота недоступно. Мы работаем над запуском и скоро всё будет готово!');
+      });
+      
+      document.getElementById('to-channel').addEventListener('click', function(e) {
+          e.preventDefault();
+          showModal('Telegram-канал пока недоступен. Следите за обновлениями на сайте!');
+      });
+      
+      document.getElementById('to-chat').addEventListener('click', function(e) {
+          e.preventDefault();
+          showModal('Telegram-чат сообщества откроется в ближайшее время. Оставайтесь на связи!');
+      });
+      
+      // Закрытие модального окна
+      modalClose.addEventListener('click', hideModal);
+      
+      // Закрытие модального окна при клике вне его
+      modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+              hideModal();
+          }
+      });
+      
+      // Закрытие модального окна по клавише Escape
+      document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && modal.classList.contains('show')) {
+              hideModal();
+          }
+      });
+      
+      // Предотвращение прокрутки body когда модальное окно открыто
+      modal.addEventListener('touchmove', function(e) {
+          if (modal.classList.contains('show')) {
+              e.preventDefault();
+          }
+      }, { passive: false });
+      
+      // Анимация появления при скролле
+      const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('animate-in');
+              }
+          });
+      }, observerOptions);
+      
+      // Наблюдаем за элементами для анимации
+      document.addEventListener('DOMContentLoaded', function() {
+          const animatedElements = document.querySelectorAll('.feature-card, .roadmap-item, .faq-item, .cta-content');
+          
+          animatedElements.forEach(element => {
+              observer.observe(element);
+          });
+      });
+      
+      // FAQ аккордеон
+      document.querySelectorAll('.faq-question').forEach(question => {
+          question.addEventListener('click', () => {
+              const item = question.parentElement;
+              const answer = question.nextElementSibling;
+              
+              // Закрываем все остальные открытые вопросы
+              document.querySelectorAll('.faq-item').forEach(otherItem => {
+                  if (otherItem !== item && otherItem.classList.contains('active')) {
+                      otherItem.classList.remove('active');
+                      otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                      otherItem.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                  }
+              });
+              
+              // Переключаем текущий вопрос
+              item.classList.toggle('active');
+              
+              if (item.classList.contains('active')) {
+                  answer.style.maxHeight = answer.scrollHeight + 'px';
+                  question.querySelector('.faq-icon').style.transform = 'rotate(180deg)';
+              } else {
+                  answer.style.maxHeight = null;
+                  question.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+              }
+          });
+      });
     </script>
-</body>
+  </body>
 </html>
