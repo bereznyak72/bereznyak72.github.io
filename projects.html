@@ -20,6 +20,7 @@
     <span></span>
     <span></span>
     </button>
+
     <div class="mobile-menu">
       <a href="index.html" data-i18n="home">Главная</a>
       <button class="mobile-theme-toggle" onclick="toggleTheme()">
@@ -28,13 +29,15 @@
         </svg>
       </button>
       <button class="mobile-lang-toggle" onclick="toggleLanguage()">
-        <span id="mobile-lang-text">EN</span>
+      <span id="mobile-lang-text">EN</span>
       </button>
     </div>
+
     <div class="container">
       <header class="header">
         <h1 data-i18n="projectsTitle">Мои проекты</h1>
       </header>
+
       <section class="projects-list">
         <div class="project-item">
           <div>
@@ -49,6 +52,7 @@
           </div>
           <a href="index.html" class="details-link" data-i18n="detailsLink">Подробнее</a>
         </div>
+
         <div class="project-item">
           <div class="image-container">
             <img src="img/blockchat-black.png" alt="BlockChat" id="blockchat-image" data-i18n-alt="blockchatAlt">
@@ -62,18 +66,21 @@
           </div>
           <a href="https://bereznyak72.github.io/blockchat-site/" class="details-link" data-i18n="detailsLink">Подробнее</a>
         </div>
+
         <div class="project-item">
-          <span class="project-type" data-i18n="projectType">Проект</span>
           <div class="image-container">
-            <img src="img/blocklink-black.png" alt="BlockLink" id="blocklink-image" data-i18n-alt="blocklinkAlt">
+            <img src="img/byteme.png" alt="ByteMe" data-i18n-alt="blockchatAlt">
           </div>
-          <div class="info">
-            <h3 data-i18n="blocklinkTitle">BlockLink</h3>
-            <p></p>
-            <p class="release-date"><span data-i18n="plannedRelease">Планируемый релиз: </span><strong data-i18n="undefinedDate">Не определён</strong></p>
+          <div>
+            <span class="project-type" data-i18n="projectType">Проект</span>
+            <div class="info">
+              <h3 data-i18n="bytemeTitle">ByteMe</h3>
+              <p data-i18n="bytemeDescription">Умный бот-ментор, который помогает разработчикам прокачивать навыки через персонализированные задания, автоматическую проверку кода и адаптивный roadmap. Идеально для новичков и junior-разработчиков, которые хотят расти быстрее.</p>
+            </div>
           </div>
-          <a href="#" class="details-link inactive-link" data-i18n="detailsLink">Подробнее</a>
+          <a href="byteme.html" class="details-link" data-i18n="detailsLink">Подробнее</a>
         </div>
+
         <div class="project-item">
           <div>
             <span class="project-type" data-i18n="projectType">Проект</span>
@@ -87,6 +94,7 @@
           </div>
           <a href="https://bereznyak72.github.io/Persimmona-s-investigation/" class="details-link" data-i18n="detailsLink">Подробнее</a>
         </div>
+
         <div class="project-item">
           <div>
             <span class="project-type" data-i18n="learningType">Обучение</span>
@@ -100,32 +108,12 @@
             <a href="guffi_bot.html" class="details-link" data-i18n="detailsLink">Подробнее</a>
           </div>
         </div>
-        <div class="project-item">
-          <div>
-            <span class="project-type" data-i18n="projectType">Проект</span>
-            <div class="image-container" style="background-color: #e9e9e9; display: flex; align-items: center; justify-content: center;">
-              <div style="text-align: center; color: #777; font-family: 'Roboto Mono', monospace;">
-                <div style="font-size: 40px; margin-bottom: 10px;">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
-                  </svg>
-                </div>
-                <div data-i18n="imageComingSoon">Изображение скоро появится</div>
-              </div>
-            </div>
-            <div class="info">
-              <h3 data-i18n="bytemeTitle">ByteMe</h3>
-              <p data-i18n="bytemeDescription">Умный бот-ментор, который помогает разработчикам прокачивать навыки через персонализированные задания, автоматическую проверку кода и адаптивный roadmap. Идеально для новичков и junior-разработчиков, которые хотят расти быстрее.</p>
-            <p class="release-date"><span data-i18n="plannedRelease">Планируемый релиз: </span><strong data-i18n="undefinedDate">Не определён</strong></p>
-            </div>
-          </div>
-          <a href="#" class="details-link inactive-link" data-i18n="detailsLink">Подробнее</a>
-        </div>
       </section>
+
       <div class="notification" id="notification" data-i18n="linkUnavailable">
         Извините, ссылка пока недоступна
       </div>
+
       <footer class="footer">
         <p data-i18n="copyright">© 2025 Все права защищены</p>
         <button class="footer-info-btn" onclick="toggleFooterContent(event)" data-i18n="footerInfoButton">Что означают пометки?</button>
@@ -139,14 +127,17 @@
         </div>
       </footer>
     </div>
+
     <button class="theme-toggle" onclick="toggleTheme()">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-brilliance" viewBox="0 0 16 16">
         <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
       </svg>
     </button>
+
     <button class="lang-toggle" onclick="toggleLanguage()">
-      <span id="lang-text">EN</span>
+    <span id="lang-text">EN</span>
     </button>
+
     <script>
       let currentLanguage = 'ru';
       
@@ -232,14 +223,14 @@
           'projectsButton': 'Explore projects'
         }
       };
-
+      
       function toggleLanguage() {
         currentLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
         applyLanguage();
         localStorage.setItem('language', currentLanguage);
         updateLanguageButton();
       }
-
+      
       function applyLanguage() {
         document.querySelectorAll('[data-i18n]').forEach(element => {
           const key = element.getAttribute('data-i18n');
@@ -247,7 +238,7 @@
             element.textContent = translations[currentLanguage][key];
           }
         });
-
+      
         document.querySelectorAll('[data-i18n-alt]').forEach(element => {
           const key = element.getAttribute('data-i18n-alt');
           if (translations[currentLanguage][key]) {
@@ -255,7 +246,7 @@
           }
         });
       }
-
+      
       function updateLanguageButton() {
         const langText = document.getElementById('lang-text');
         const mobileLangText = document.getElementById('mobile-lang-text');
@@ -264,7 +255,7 @@
         if (langText) langText.textContent = text;
         if (mobileLangText) mobileLangText.textContent = text;
       }
-
+      
       function applySavedLanguage() {
         const savedLanguage = localStorage.getItem('language');
         if (savedLanguage) {
@@ -273,7 +264,7 @@
         applyLanguage();
         updateLanguageButton();
       }
-
+      
       function createRain() {
         const rainContainer = document.getElementById('rainContainer');
         const containerWidth = window.innerWidth;
@@ -373,7 +364,7 @@
         const image = document.getElementById('blockchat-image');
         image.src = isDarkTheme ? 'img/blockchat-white.png' : 'img/blockchat-black.png';
       }
-
+      
       function updateBlocklinkImage() {
         const isDarkTheme = document.body.classList.contains('dark-theme');
         const image = document.getElementById('blocklink-image');
