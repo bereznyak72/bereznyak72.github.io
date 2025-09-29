@@ -56,7 +56,6 @@ body {
     padding: 1.5rem 1rem;
     background-color: var(--dark);
     border-bottom: 1px solid var(--gray);
-    position: sticky;
     top: 0;
     z-index: 100;
 }
@@ -490,6 +489,44 @@ body {
 .cta-buttons {
     display: flex;
     justify-content: center;
+}
+
+.cta-badge {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.badge-text {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(234, 88, 12, 0.2) 100%);
+    color: var(--primary);
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.15);
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 4px 12px rgba(249, 115, 22, 0.15);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(249, 115, 22, 0.3), 0 0 20px rgba(249, 115, 22, 0.1);
+    }
+}
+
+.badge-text {
+    animation: pulse-glow 3s ease-in-out infinite;
 }
 
 /* Футер */
