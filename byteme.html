@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="img/byteme.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="ByteMe - AI наставник для разработчиков">
+    <meta name="keywords" content="программирование, обучение, AI, разработка, код">
     <title>ByteMe - AI наставник для разработчиков</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/byteme.css">
   </head>
-  <body class="font-sans">
+  <body>
     <!-- Навигация -->
     <nav class="navbar">
-      <div class="nav-container">
-        <div class="nav-logo">
+      <div class="container nav-container">
+        <a href="#" class="nav-logo">
           <div class="logo-icon">
-            <img src="img/byteme.png" alt="Logo" width="24px">
+            <img src="img/byteme.png" alt="ByteMe Logo" width="30">
           </div>
           <span class="logo-text">ByteMe</span>
-        </div>
+        </a>
         <div class="nav-links">
           <a href="#features" class="nav-link">Возможности</a>
           <a href="#roadmap" class="nav-link">Этапы</a>
@@ -32,7 +32,7 @@
     </nav>
     <!-- Герой-секция -->
     <section id="main" class="hero">
-      <div class="hero-container">
+      <div class="container">
         <div class="hero-content">
           <div class="hero-text">
             <h1 class="hero-title">
@@ -52,25 +52,24 @@
             </div>
           </div>
           <div class="hero-visual">
-            <div class="visual-bg"></div>
-            <div class="code-example">
+            <div class="code-window">
               <div class="code-header">
                 <div class="window-controls">
                   <div class="control red"></div>
                   <div class="control yellow"></div>
                   <div class="control green"></div>
                 </div>
+                <div>chat.js</div>
+                <div class="typing-indicator" id="typing-indicator">
+                  <span>ByteMe AI печатает</span>
+                  <div class="typing-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                </div>
               </div>
-              <div class="code-message bot">
-                <p class="message-text">Bot: Привет! Сегодня работаем с React.</p>
-                <p class="message-text">Напиши компонент кнопки с пропсами size и variant.</p>
-              </div>
-              <div class="code-message user">
-                <p class="message-text">Вы: <span class="code-snippet">function Button({ size, variant }) { ... }</span></p>
-              </div>
-              <div class="code-message bot">
-                <p class="message-text">Bot: Отлично! ★★★★☆</p>
-                <p class="message-text">Совет: Добавь PropTypes для документирования.</p>
+              <div class="code-body" id="chat-container">
               </div>
             </div>
           </div>
@@ -85,70 +84,70 @@
           Индивидуальный подход к обучению программированию с использованием современных технологий
         </p>
         <div class="features-grid">
-          <div class="feature-card">
+          <div class="feature-card animate-in">
             <div class="feature-icon">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
               </svg>
             </div>
-            <h3 class="feature-title">AI-генерация заданий</h3>
+            <h3 class="feature-title">Персонализированные задания</h3>
             <p class="feature-description">
-              Персонализированные задачи под твой уровень и цели. От простых алгоритмов до реальных проектов.
+              AI анализирует ваш уровень и предлагает задачи, которые помогут именно вам развиваться в нужном направлении.
             </p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card animate-in" style="animation-delay: 0.1s;">
             <div class="feature-icon">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
               </svg>
             </div>
-            <h3 class="feature-title">Проверка кода</h3>
+            <h3 class="feature-title">Автоматическая проверка кода</h3>
             <p class="feature-description">
-              Автоматический анализ твоего кода с детальными комментариями и советами по улучшению.
+              Мгновенная обратная связь по вашему коду с детальным разбором ошибок и предложениями по улучшению.
             </p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card animate-in" style="animation-delay: 0.2s;">
             <div class="feature-icon">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 class="feature-title">Геймификация</h3>
+            <h3 class="feature-title">Игровая система прогресса</h3>
             <p class="feature-description">
-              Уровни, бейджи и рейтинги мотивируют продолжать обучение и достигать новых высот.
+              Зарабатывайте очки, получайте достижения и соревнуйтесь с другими разработчиками в рейтинговой таблице.
             </p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card animate-in" style="animation-delay: 0.3s;">
             <div class="feature-icon">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
             </div>
-            <h3 class="feature-title">Персональный roadmap</h3>
+            <h3 class="feature-title">Сообщество разработчиков</h3>
             <p class="feature-description">
-              Четкий план развития от новичка до профессионала с рекомендациями что изучать дальше.
+              Общайтесь с единомышленниками, делитесь решениями и находите наставников среди опытных программистов.
             </p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-            </div>
-            <h3 class="feature-title">Комьюнити</h3>
-            <p class="feature-description">
-              Общайся с другими учениками, участвуй в соревнованиях и делись достижениями.
-            </p>
-          </div>
-          <div class="feature-card">
+          <div class="feature-card animate-in" style="animation-delay: 0.4s;">
             <div class="feature-icon">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <h3 class="feature-title">Мультиплатформенность</h3>
+            <h3 class="feature-title">Актуальные технологии</h3>
             <p class="feature-description">
-              Работает в Telegram, веб-версии и мобильном приложении. Учись где и когда удобно.
+              Изучайте современные фреймворки и библиотеки: React, Vue, Node.js, Python, и многое другое.
+            </p>
+          </div>
+          <div class="feature-card animate-in" style="animation-delay: 0.5s;">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Подготовка к собеседованиям</h3>
+            <p class="feature-description">
+              Специальные модули для подготовки к техническим собеседованиям в ведущие IT-компании.
             </p>
           </div>
         </div>
@@ -156,75 +155,70 @@
     </section>
     <!-- Дорожная карта -->
     <section id="roadmap" class="roadmap">
-      <div class="container">
+      <div class="container roadmap-container">
         <h2 class="section-title">Дорожная карта <span class="gradient-text">развития</span></h2>
         <p class="section-description">
           Следи за нашим прогрессом и ожидаемыми обновлениями
         </p>
-        <div class="roadmap-container">
+        <div class="roadmap-timeline">
           <div class="roadmap-items">
-            <!-- Этап 1 -->
             <div class="roadmap-item">
-              <div class="roadmap-number">1</div>
+              <div class="roadmap-marker">1</div>
               <div class="roadmap-content">
                 <div class="roadmap-header">
                   <h3 class="roadmap-title">Прототип Telegram-бота</h3>
-                  <span class="status-badge in-progress">В работе</span>
+                  <div class="status-badge in-progress">В работе</div>
                 </div>
                 <p class="roadmap-description">
                   Базовый функционал бота с ручными заданиями и простой проверкой кода.
                 </p>
               </div>
             </div>
-            <!-- Этап 2 -->
             <div class="roadmap-item">
-              <div class="roadmap-number">2</div>
+              <div class="roadmap-marker">2</div>
               <div class="roadmap-content">
                 <div class="roadmap-header">
                   <h3 class="roadmap-title">Интеграция AI</h3>
-                  <span class="status-badge planned">В планах</span>
+                  <div class="status-badge planned">В планах</div>
                 </div>
                 <p class="roadmap-description">
                   Добавление GPT для генерации заданий и анализа кода. Улучшение prompt-инжиниринга.
                 </p>
               </div>
             </div>
-            <!-- Этап 3 -->
             <div class="roadmap-item">
-              <div class="roadmap-number">3</div>
+              <div class="roadmap-marker">3</div>
               <div class="roadmap-content">
                 <div class="roadmap-header">
                   <h3 class="roadmap-title">Веб-дашборд</h3>
-                  <span class="status-badge planned">В планах</span>
+                  <div class="status-badge planned">В планах</div>
                 </div>
                 <p class="roadmap-description">
-                  Личный кабинет с прогрессом, статистикой и рекомендациями.
+                  Личный кабинет с прогрессом, статистикой и рекомендациями. React + Node.js.
                 </p>
               </div>
             </div>
-            <!-- Этап 4 -->
             <div class="roadmap-item">
-              <div class="roadmap-number">4</div>
+              <div class="roadmap-marker">4</div>
               <div class="roadmap-content">
                 <div class="roadmap-header">
                   <h3 class="roadmap-title">Геймификация</h3>
-                  <span class="status-badge planned">В планах</span>
+                  <div class="status-badge planned">В планах</div>
                 </div>
                 <p class="roadmap-description">
                   Система уровней, бейджей и соревнований между пользователями.
                 </p>
               </div>
             </div>
-            <!-- Этап 5 -->
             <div class="roadmap-item">
-              <div class="roadmap-number">5</div>
+              <div class="roadmap-marker">5</div>
               <div class="roadmap-content">
                 <div class="roadmap-header">
                   <h3 class="roadmap-title">Публичный релиз</h3>
-                  <span class="status-badge planned">В планах</span>
+                  <div class="status-badge planned">В планах</div>
                 </div>
                 <p class="roadmap-description">
-                  Официальный запуск платформы.
+                  Официальный запуск платформы с маркетинговой кампанией.
                 </p>
               </div>
             </div>
@@ -298,21 +292,21 @@
         </div>
       </div>
     </section>
-    <!-- CTA и Сообщество -->
+    <!-- CTA -->
     <section id="cta" class="cta">
       <div class="container">
         <div class="cta-content">
           <div class="cta-badge">
-            <span class="badge-text">Бета-тестирование</span>
+            <span class="badge-text">Бета-доступ открыт</span>
           </div>
-          <h2 class="cta-title">Готов начать <span class="gradient-text">прокачивать</span> свои навыки?</h2>
+          <h2 class="cta-title">Начни свой путь в программировании с <span class="gradient-text">ByteMe</span></h2>
           <p class="cta-description">
-            Присоединяйся к бета-тестированию и получи ранний доступ к платформе. 
-            Помоги нам сделать ByteMe лучше!
+            Присоединяйся к бета-тестированию и получи ранний доступ ко всем функциям платформы. 
+            Помоги нам сделать обучение программированию лучше!
           </p>
           <div class="cta-buttons">
-            <a id="bot" class="secondary-button" style="user-select: none; cursor: pointer;">
-            Попробовать в Telegram
+            <a href="#" class="primary-button" id="join-beta">
+            Присоединиться к бета-тесту
             </a>
           </div>
         </div>
@@ -322,153 +316,78 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
-          <div class="footer-section">
+          <div>
             <div class="footer-logo">
               <div class="logo-icon">
-                <img src="img/byteme.png" alt="Logo" width="24px">
+                <img src="img/byteme.png" alt="ByteMe Logo" width="30">
               </div>
               <span class="logo-text">ByteMe</span>
             </div>
             <p class="footer-description">
-              AI-наставник для разработчиков. Учись, практикуйся и становись лучше с каждым днем.
+              AI-наставник для разработчиков. Персонализированное обучение программированию с автоматической проверкой кода.
             </p>
           </div>
-          <div class="footer-section">
-            <h3 class="footer-heading">Навигация</h3>
+          <div>
+            <h3 class="footer-heading">Платформа</h3>
             <ul class="footer-links">
-              <li><a href="#main" class="footer-link">Главная</a></li>
-              <li><a href="#features" class="footer-link">Возможности</a></li>
-              <li><a href="#roadmap" class="footer-link">Этапы</a></li>
-              <li><a href="#faq" class="footer-link">FAQ</a></li>
+              <li>
+                <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <a href="#features" class="footer-link">Возможности</a>
+              </li>
+              <li>
+                <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <a href="#roadmap" class="footer-link">Этапы развития</a>
+              </li>
+              <li>
+                <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <a href="#faq" class="footer-link">FAQ</a>
+              </li>
             </ul>
           </div>
-          <div class="footer-section">
+          <div>
             <h3 class="footer-heading">Контакты</h3>
             <ul class="footer-links">
               <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="footer-icon" viewBox="0 0 16 16">
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1">
+                  <path  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
                 </svg>
-                <a href="#" id="to-channel" class="footer-link">Telegram-канал</a>
-              </li>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                </svg>
-                <a href="#" id="to-chat" class="footer-link">Telegram-чат</a>
-              </li>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-                </svg>
-                <a href="index.html" class="footer-link">Сайт разработчика</a>
+                <a href="https://bereznyak72.github.io/" class="footer-link">Сайт разработчика</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>© 2025 ByteMe. Все права защищены.</p>
+          <p>&copy; 2025 ByteMe. Все права защищены.</p>
         </div>
       </div>
     </footer>
-    <div id="modal" class="modal">
+    <!-- Модальное окно -->
+    <div class="modal" id="beta-modal">
       <div class="modal-content">
         <div class="modal-header">
           <svg class="modal-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
           </svg>
-          <h3 class="modal-title">Внимание</h3>
+          <h2 class="modal-title">Бета-доступ</h2>
         </div>
         <div class="modal-body">
-          <p class="modal-message" id="modal-message">Сообщение</p>
+          <p class="modal-message">
+            Спасибо за интерес к ByteMe! В настоящее время мы проводим закрытое бета-тестирование платформы. 
+            Мы сообщим на сайте, как только откроем доступ для новых пользователей.
+          </p>
         </div>
         <div class="modal-footer">
-          <button class="modal-button" id="modal-close">Понятно</button>
+          <button class="modal-button" id="close-modal">Понятно</button>
         </div>
       </div>
     </div>
     <script>
-      // Плавная прокрутка для якорных ссылок
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', function (e) {
-              e.preventDefault();
-              const target = document.querySelector(this.getAttribute('href'));
-              if (target) {
-                  target.scrollIntoView({
-                      behavior: 'smooth'
-                  });
-              }
-          });
-      });
-      
-      // Элементы модального окна
-      const modal = document.getElementById('modal');
-      const modalMessage = document.getElementById('modal-message');
-      const modalClose = document.getElementById('modal-close');
-      
-      // Функция показа модального окна
-      function showModal(message) {
-          modalMessage.textContent = message;
-          modal.classList.add('show');
-          document.body.style.overflow = 'hidden';
-          
-          // Прокрутка модального окна вверх на мобильных устройствах
-          if (window.innerWidth <= 480) {
-              setTimeout(() => {
-                  modal.scrollTop = 0;
-              }, 50);
-          }
-      }
-      
-      // Функция скрытия модального окна
-      function hideModal() {
-          modal.classList.add('closing');
-          setTimeout(() => {
-              modal.classList.remove('show', 'closing');
-              document.body.style.overflow = '';
-          }, 300);
-      }
-      
-      // Обработчики для кнопок
-      document.getElementById('bot').addEventListener('click', function() {
-          showModal('В данный момент тестирование бота недоступно. Мы работаем над запуском и скоро всё будет готово!');
-      });
-      
-      document.getElementById('to-channel').addEventListener('click', function(e) {
-          e.preventDefault();
-          showModal('Telegram-канал пока недоступен. Следите за обновлениями на сайте!');
-      });
-      
-      document.getElementById('to-chat').addEventListener('click', function(e) {
-          e.preventDefault();
-          showModal('Telegram-чат сообщества откроется в ближайшее время. Оставайтесь на связи!');
-      });
-      
-      // Закрытие модального окна
-      modalClose.addEventListener('click', hideModal);
-      
-      // Закрытие модального окна при клике вне его
-      modal.addEventListener('click', function(e) {
-          if (e.target === modal) {
-              hideModal();
-          }
-      });
-      
-      // Закрытие модального окна по клавише Escape
-      document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape' && modal.classList.contains('show')) {
-              hideModal();
-          }
-      });
-      
-      // Предотвращение прокрутки body когда модальное окно открыто
-      modal.addEventListener('touchmove', function(e) {
-          if (modal.classList.contains('show')) {
-              e.preventDefault();
-          }
-      }, { passive: false });
-      
-      // Анимация появления при скролле
       const observerOptions = {
           threshold: 0.1,
           rootMargin: '0px 0px -50px 0px'
@@ -478,45 +397,285 @@
           entries.forEach(entry => {
               if (entry.isIntersecting) {
                   entry.target.classList.add('animate-in');
+                  observer.unobserve(entry.target);
               }
           });
       }, observerOptions);
       
-      // Наблюдаем за элементами для анимации
-      document.addEventListener('DOMContentLoaded', function() {
-          const animatedElements = document.querySelectorAll('.feature-card, .roadmap-item, .faq-item, .cta-content');
-          
-          animatedElements.forEach(element => {
-              observer.observe(element);
+      document.addEventListener('DOMContentLoaded', () => {
+          document.querySelectorAll('.feature-card, .roadmap-item, .faq-item').forEach(el => {
+              observer.observe(el);
           });
-      });
       
-      // FAQ аккордеон
-      document.querySelectorAll('.faq-question').forEach(question => {
-          question.addEventListener('click', () => {
-              const item = question.parentElement;
-              const answer = question.nextElementSibling;
-              
-              // Закрываем все остальные открытые вопросы
-              document.querySelectorAll('.faq-item').forEach(otherItem => {
-                  if (otherItem !== item && otherItem.classList.contains('active')) {
-                      otherItem.classList.remove('active');
-                      otherItem.querySelector('.faq-answer').style.maxHeight = null;
-                      otherItem.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
-                  }
+          const faqItems = document.querySelectorAll('.faq-item');
+          faqItems.forEach(item => {
+              const question = item.querySelector('.faq-question');
+              question.addEventListener('click', () => {
+                  faqItems.forEach(otherItem => {
+                      if (otherItem !== item) {
+                          otherItem.classList.remove('active');
+                      }
+                  });
+                  
+                  item.classList.toggle('active');
               });
-              
-              // Переключаем текущий вопрос
-              item.classList.toggle('active');
-              
-              if (item.classList.contains('active')) {
-                  answer.style.maxHeight = answer.scrollHeight + 'px';
-                  question.querySelector('.faq-icon').style.transform = 'rotate(180deg)';
-              } else {
-                  answer.style.maxHeight = null;
-                  question.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+          });
+      
+          const betaModal = document.getElementById('beta-modal');
+          const joinBetaButton = document.getElementById('join-beta');
+          const closeModalButton = document.getElementById('close-modal');
+      
+          joinBetaButton.addEventListener('click', (e) => {
+              e.preventDefault();
+              betaModal.classList.add('show');
+          });
+      
+          closeModalButton.addEventListener('click', () => {
+              betaModal.classList.add('closing');
+              setTimeout(() => {
+                  betaModal.classList.remove('show', 'closing');
+              }, 300);
+          });
+      
+          betaModal.addEventListener('click', (e) => {
+              if (e.target === betaModal) {
+                  betaModal.classList.add('closing');
+                  setTimeout(() => {
+                      betaModal.classList.remove('show', 'closing');
+                  }, 300);
               }
           });
+      
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+              anchor.addEventListener('click', function (e) {
+                  e.preventDefault();
+                  
+                  const targetId = this.getAttribute('href');
+                  if (targetId === '#') return;
+                  
+                  const targetElement = document.querySelector(targetId);
+                  if (targetElement) {
+                      const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 80;
+                      
+                      window.scrollTo({
+                          top: offsetTop,
+                          behavior: 'smooth'
+                      });
+                  }
+              });
+          });
+      
+          const navbar = document.querySelector('.navbar');
+          window.addEventListener('scroll', () => {
+              if (window.scrollY > 100) {
+                  navbar.style.padding = '0.75rem 0';
+                  navbar.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
+              } else {
+                  navbar.style.padding = '1.25rem 0';
+                  navbar.style.backgroundColor = 'rgba(10, 10, 10, 0.9)';
+              }
+          });
+      
+          setTimeout(simulateChat, 2000);
+      });
+      
+      // Имитация чата
+      const chatMessages = [
+      {
+      type: 'bot',
+      delay: 1000,
+      content: `
+          <div class="message-header">
+              <div class="message-author">ByteMe AI</div>
+              <div class="message-time">только что</div>
+          </div>
+          <div class="message-text">Привет! Добро пожаловать в ByteMe. Сегодня мы будем работать с React.</div>
+          <div class="message-text">Давай начнём с создания компонента кнопки. Напиши компонент Button с пропсами size и variant.</div>
+      `
+      },
+      {
+      type: 'user',
+      delay: 4000,
+      content: `
+          <div class="message-header">
+              <div class="message-author">Вы</div>
+              <div class="message-time">2 мин назад</div>
+          </div>
+          <div class="message-text">
+              <span class="code-snippet">function Button({ size, variant, children }) {\n  return (\n    &lt;button className={\`btn \${size} \${variant}\`}&gt;\n      {children}\n    &lt;/button&gt;\n  );\n}</span>
+          </div>
+      `
+      },
+      {
+      type: 'bot',
+      delay: 2000,
+      content: `
+          <div class="message-header">
+              <div class="message-author">ByteMe AI</div>
+              <div class="message-time">1 мин назад</div>
+          </div>
+          <div class="message-text">Отлично! Компонент выглядит хорошо, но есть несколько моментов для улучшения:</div>
+          <div class="message-text">
+              <div class="rating">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star empty">★</span>
+              </div>
+          </div>
+          <div class="message-text">• Добавь PropTypes для документирования пропсов</div>
+          <div class="message-text">• Рассмотри использование CSS modules вместо строковых классов</div>
+          <div class="message-text">• Добавь значения по умолчанию для пропсов</div>
+      `
+      },
+      {
+      type: 'bot',
+      delay: 3000,
+      content: `
+          <div class="message-header">
+              <div class="message-author">ByteMe AI</div>
+              <div class="message-time">только что</div>
+          </div>
+          <div class="message-text">Хочешь попробовать улучшить компонент? Я могу предложить несколько вариантов решения.</div>
+      `
+      }
+      ];
+      
+      let chatInstance = null;
+      let chatTimeout = null;
+      
+      function simulateChat(restart = false) {
+      const chatContainer = document.getElementById('chat-container');
+      const typingIndicator = document.getElementById('typing-indicator');
+      
+      if (restart && chatTimeout) {
+      clearTimeout(chatTimeout);
+      chatTimeout = null;
+      }
+      
+      if (restart) {
+      chatContainer.innerHTML = '';
+      }
+      
+      if (chatInstance && !restart && !chatInstance.isPaused) {
+      return;
+      }
+      
+      let currentMessageIndex = restart ? 0 : chatContainer.children.length;
+      let isPaused = false;
+      
+      function scrollToBottom() {
+      setTimeout(() => {
+          chatContainer.scrollTo({
+              top: chatContainer.scrollHeight,
+              behavior: 'smooth'
+          });
+      }, 100);
+      }
+      
+      function showNextMessage() {
+      if (currentMessageIndex >= chatMessages.length || isPaused) {
+          return;
+      }
+      
+      const message = chatMessages[currentMessageIndex];
+      
+      if (message.type === 'bot') {
+          typingIndicator.style.display = 'flex';
+          scrollToBottom();
+      }
+      
+      chatTimeout = setTimeout(() => {
+          if (message.type === 'bot') {
+              typingIndicator.style.display = 'none';
+          }
+      
+          const messageElement = document.createElement('div');
+          messageElement.className = `code-message ${message.type === 'bot' ? 'bot' : 'user'}`;
+          messageElement.innerHTML = `
+              <div class="message-avatar">${message.type === 'bot' ? ' <img src="img/byteme.png" alt="ByteMe Logo" width="20">' : 'Вы'}</div>
+              <div class="message-content">
+                  ${message.content}
+              </div>
+          `;
+      
+          chatContainer.appendChild(messageElement);
+          
+          scrollToBottom();
+          
+          currentMessageIndex++;
+          showNextMessage();
+      }, message.delay);
+      }
+      
+      chatInstance = {
+      isPaused: false,
+      pause: () => { 
+          isPaused = true;
+          chatInstance.isPaused = true;
+          if (chatTimeout) {
+              clearTimeout(chatTimeout);
+              chatTimeout = null;
+          }
+          typingIndicator.style.display = 'none';
+      },
+      resume: () => { 
+          isPaused = false;
+          chatInstance.isPaused = false;
+          showNextMessage();
+      },
+      restart: () => {
+          isPaused = false;
+          chatInstance.isPaused = false;
+          currentMessageIndex = 0;
+          chatContainer.innerHTML = '';
+          if (chatTimeout) {
+              clearTimeout(chatTimeout);
+              chatTimeout = null;
+          }
+          showNextMessage();
+      }
+      };
+      
+      showNextMessage();
+      
+      return chatInstance;
+      }
+      
+      document.addEventListener('DOMContentLoaded', () => {
+      const codeWindow = document.querySelector('.code-window');
+      const chatControls = document.createElement('div');
+      chatControls.className = 'chat-controls';
+      chatControls.innerHTML = `
+      <button class="chat-button" id="restart-chat">
+          Перезапустить
+      </button>
+      <button class="chat-button" id="pause-chat">
+          Пауза
+      </button>
+      `;
+      codeWindow.appendChild(chatControls);
+      
+      document.getElementById('restart-chat').addEventListener('click', () => {
+      simulateChat(true);
+      const pauseButton = document.getElementById('pause-chat');
+      pauseButton.innerHTML = 'Пауза';
+      });
+      
+      document.getElementById('pause-chat').addEventListener('click', function() {
+      if (chatInstance) {
+          if (!chatInstance.isPaused) {
+              chatInstance.pause();
+              this.innerHTML = 'Продолжить';
+          } else {
+              chatInstance.resume();
+              this.innerHTML = 'Пауза';
+          }
+      }
+      });
+      
+      setTimeout(() => simulateChat(), 1000);
       });
     </script>
   </body>
