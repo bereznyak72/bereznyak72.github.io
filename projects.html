@@ -314,7 +314,6 @@
           mobileMenu.classList.remove('active');
         }
         updateBlockchatImage();
-        updateBlocklinkImage();
       }
       
       function applySavedTheme() {
@@ -325,7 +324,6 @@
           document.body.classList.remove('dark-theme');
         }
         updateBlockchatImage();
-        updateBlocklinkImage();
       }
       
       function toggleFooterContent(event) {
@@ -363,12 +361,6 @@
         const isDarkTheme = document.body.classList.contains('dark-theme');
         const image = document.getElementById('blockchat-image');
         image.src = isDarkTheme ? 'img/blockchat-white.png' : 'img/blockchat-black.png';
-      }
-      
-      function updateBlocklinkImage() {
-        const isDarkTheme = document.body.classList.contains('dark-theme');
-        const image = document.getElementById('blocklink-image');
-        image.src = isDarkTheme ? 'img/blocklink-white.png' : 'img/blocklink-black.png';
       }
       
       document.addEventListener('DOMContentLoaded', function() {
