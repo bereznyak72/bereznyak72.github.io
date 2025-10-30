@@ -77,6 +77,20 @@
 
       <div class="project-item">
         <div class="project-header">
+        </div>
+        <div class="image-container">
+          <img src="img/vechno-black.png" alt="Мой сайт" id="vechno-image" data-i18n-alt="vechnoAlt">
+        </div>
+        <div class="info">
+          <h3 data-i18n="vechnoTitle">Вечный Возврат</h3>
+          <p data-i18n="vechnoDescription">Архив литературных переживаний и сердечных ран. Исследуйте хроники разбитых сердец в зеркале мировой литературы.</p>
+          <div class="project-tech"></div>
+        </div>
+      <a href="#" class="details-link inactive-link" data-i18n="detailsLink">Подробнее</a>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
           <span class="project-type" data-i18n="projectType">Проект</span>
         </div>
         <div class="image-container">
@@ -184,6 +198,9 @@
         'websiteAlt': 'Мой сайт',
         'websiteTitle': 'Мой веб-сайт',
         'websiteDescription': 'Цель данного сайта — продемонстрировать мои проекты и ресурсы, которые я использовал и использую в процессе своего обучения.',
+        'vechnoTitle': 'Вечный Возврат',
+        'vechnoDescription': 'Архив литературных переживаний и сердечных ран. Исследуйте хроники разбитых сердец в зеркале мировой литературы.',
+        'vechnoAlt': 'Вечный Возврат',
         'blockchatAlt': 'BlockChat',
         'blockchatTitle': 'BlockChat',
         'blockchatDescription': 'BlockChat — это мессенджер с прямой peer-to-peer связью между пользователями. Ваши сообщения передаются напрямую, без хранения на серверах.',
@@ -216,6 +233,9 @@
         'websiteAlt': 'My Website',
         'websiteTitle': 'My Website',
         'websiteDescription': 'The purpose of this site is to showcase my projects and resources that I have used and am using during my learning process.',
+        'vechnoTitle': 'Eternal Return',
+        'vechnoDescription': 'Archive of literary experiences and heart wounds. Explore the chronicles of broken hearts in the mirror of world literature.',
+        'vechnoAlt': 'Eternal Return',
         'blockchatAlt': 'BlockChat',
         'blockchatTitle': 'BlockChat',
         'blockchatDescription': 'BlockChat is a messenger with direct peer-to-peer connection between users. Your messages are transmitted directly, without being stored on servers.',
@@ -275,6 +295,10 @@
       if (blockchatImage) {
         blockchatImage.src = isDark ? 'img/blockchat-white.png' : 'img/blockchat-black.png';
       }
+      const vechnoImage = document.getElementById('vechno-image');
+      if (vechnoImage) {
+        vechnoImage.src = isDark ? 'img/vechno.png' : 'img/vechno-black.png';
+      }
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
       showNotification(isDark ? 'Темная тема включена' : 'Светлая тема включена');
     }
@@ -329,6 +353,10 @@
         const blockchatImage = document.getElementById('blockchat-image');
         if (blockchatImage) {
           blockchatImage.src = 'img/blockchat-white.png';
+        }
+      const vechnoImage = document.getElementById('vechno-image');
+        if (vechnoImage) {
+          vechnoImage.src = 'img/vechno.png';
         }
       }
 
