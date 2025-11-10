@@ -1,316 +1,451 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Личный сайт Fullstack-разработчика: проекты, прогресс обучения и ресурсы для начинающих. Исследуйте мои работы и вдохновляйтесь программированием!">
-    <meta name="keywords" content="Fullstack-разработка, веб-разработка, программирование, проекты, обучение, портфолио, исследования">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <title data-i18n="pageTitle">Моё портфолио</title>
-    <link rel="stylesheet" href="css/index.css">
-  </head>
-  <body>
-    <div class="rain-container" id="rainContainer"></div>
-    <button class="hamburger">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Личный сайт Fullstack-разработчика: проекты, прогресс обучения и ресурсы для начинающих. Исследуйте мои работы и вдохновляйтесь программированием!">
+  <meta name="keywords" content="Fullstack-разработка, веб-разработка, программирование, проекты, обучение, портфолио, исследования">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <title data-i18n="pageTitle">Моё портфолио</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="rain-container" id="rainContainer"></div>
+  
+  <!-- Навигация -->
+  <button class="hamburger">
     <span></span>
     <span></span>
     <span></span>
-    </button>
-    <div class="mobile-menu">
-      <a href="projects.html" data-i18n="projects">Мои проекты</a>
-      <button class="mobile-theme-toggle" onclick="toggleTheme()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-brilliance" viewBox="0 0 16 16">
-          <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
-        </svg>
-      </button>
-      <button class="mobile-lang-toggle" onclick="toggleLanguage()">
-        <span id="mobile-lang-text">EN</span>
-      </button>
-    </div>
-    <div class="container">
-      <header class="header">
-        <h1 data-i18n="portfolioTitle">PORTFOLIO</h1>
-        <p data-i18n="welcomeMessage">Привет! Я начинающий Fullstack-разработчик, исследующий мир программирования и создающий проекты под звуки ночного дождя</p>
-        <div class="cta-buttons">
-          <a href="projects.html" class="cta-button" data-i18n="projectsButton">Мои проекты</a>
-        </div>
-      </header>
-      <section class="section">
-        <div class="section-header">
-          <h2 class="section-title" data-i18n="aboutTitle">Обо мне</h2>
-          <p class="section-subtitle" data-i18n="aboutSubtitle">Исследую технологии и создаю решения</p>
-        </div>
-        <div class="about-content">
-          <p data-i18n="aboutText">Я увлечён созданием веб-приложений и исследованием технологий. Моя цель — стать Fullstack-разработчиком, соединяя backend и frontend для решения реальных задач. Этот сайт — мой способ показать себя, поделиться знаниями и вдохновить других.</p>
-        </div>
-      </section>
-      <section class="section">
-        <div class="section-header">
-          <h2 class="section-title" data-i18n="stackTitle">Стек технологий</h2>
-          <p class="section-subtitle" data-i18n="stackSubtitle">Постоянное развитие и освоение новых технологий</p>
-        </div>
-        <div class="stack-grid">
-          <div class="stack-item">
-            <div class="stack-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" viewBox="0 0 50 50">
-                <path d="M 25 2 C 20.941406 2 18.1875 2.96875 16.4375 4.375 C 14.6875 5.78125 14 7.589844 14 9.09375 L 14 14 L 24 14 L 24 15 L 9.09375 15 C 7.265625 15 5.410156 15.792969 4.09375 17.46875 C 2.777344 19.144531 2 21.644531 2 25 C 2 28.355469 2.777344 30.855469 4.09375 32.53125 C 5.410156 34.207031 7.265625 35 9.09375 35 L 14 35 L 14 40.90625 C 14 42.410156 14.6875 44.21875 16.4375 45.625 C 18.1875 47.03125 20.941406 48 25 48 C 29.058594 48 31.8125 47.03125 33.5625 45.625 C 35.3125 44.21875 36 42.410156 36 40.90625 L 36 36 L 26 36 L 26 35 L 40.90625 35 C 42.734375 35 44.589844 34.207031 45.90625 32.53125 C 47.222656 30.855469 48 28.355469 48 25 C 48 21.644531 47.222656 19.144531 45.90625 17.46875 C 44.589844 15.792969 42.734375 15 40.90625 15 L 36 15 L 36 9.09375 C 36 7.550781 35.316406 5.738281 33.5625 4.34375 C 31.808594 2.949219 29.054688 2 25 2 Z M 25 4 C 28.746094 4 31.015625 4.875 32.3125 5.90625 C 33.609375 6.9375 34 8.136719 34 9.09375 L 34 21 C 34 22.65625 32.65625 24 31 24 L 19 24 C 16.941406 24 15.167969 25.269531 14.40625 27.0625 C 14.277344 27.359375 14.160156 27.675781 14.09375 28 C 14.027344 28.324219 14 28.65625 14 29 L 14 33 L 9.09375 33 C 7.824219 33 6.648438 32.503906 5.6875 31.28125 C 4.726563 30.058594 4 28.042969 4 25 C 4 21.957031 4.726563 19.941406 5.6875 18.71875 C 6.648438 17.496094 7.824219 17 9.09375 17 L 26 17 L 26 12 L 16 12 L 16 9.09375 C 16 8.199219 16.386719 6.980469 17.6875 5.9375 C 18.988281 4.894531 21.257813 4 25 4 Z M 20 7 C 18.898438 7 18 7.898438 18 9 C 18 10.101563 18.898438 11 20 11 C 21.101563 11 22 10.101563 22 9 C 22 7.898438 21.101563 7 20 7 Z M 36 17 L 40.90625 17 C 42.175781 17 43.351563 17.496094 44.3125 18.71875 C 45.273438 19.941406 46 21.957031 46 25 C 46 28.042969 45.273438 30.058594 44.3125 31.28125 C 43.351563 32.503906 42.175781 33 40.90625 33 L 24 33 L 24 38 L 34 38 L 34 40.90625 C 34 41.800781 33.613281 43.019531 32.3125 44.0625 C 31.011719 45.105469 28.742188 46 25 46 C 21.257813 46 18.988281 45.105469 17.6875 44.0625 C 16.386719 43.019531 16 41.800781 16 40.90625 L 16 29 C 16 28.792969 16.023438 28.601563 16.0625 28.40625 C 16.34375 27.039063 17.550781 26 19 26 L 31 26 C 33.746094 26 36 23.746094 36 21 Z M 30 39 C 28.898438 39 28 39.898438 28 41 C 28 42.101563 28.898438 43 30 43 C 31.101563 43 32 42.101563 32 41 C 32 39.898438 31.101563 39 30 39 Z"></path>
-              </svg>
-            </div>
-            <h3>Python</h3>
-          </div>
-          <div class="stack-item">
-            <div class="stack-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" viewBox="0 0 50 50">
-                <path d="M 43.335938 4 L 6.667969 4 C 5.195313 4 4 5.195313 4 6.667969 L 4 43.332031 C 4 44.804688 5.195313 46 6.667969 46 L 43.332031 46 C 44.804688 46 46 44.804688 46 43.335938 L 46 6.667969 C 46 5.195313 44.804688 4 43.335938 4 Z M 27 36.183594 C 27 40.179688 24.65625 42 21.234375 42 C 18.140625 42 15.910156 39.925781 15 38 L 18.144531 36.097656 C 18.75 37.171875 19.671875 38 21 38 C 22.269531 38 23 37.503906 23 35.574219 L 23 23 L 27 23 Z M 35.675781 42 C 32.132813 42 30.121094 40.214844 29 38 L 32 36 C 32.816406 37.335938 33.707031 38.613281 35.589844 38.613281 C 37.171875 38.613281 38 37.824219 38 36.730469 C 38 35.425781 37.140625 34.960938 35.402344 34.199219 L 34.449219 33.789063 C 31.695313 32.617188 29.863281 31.148438 29.863281 28.039063 C 29.863281 25.179688 32.046875 23 35.453125 23 C 37.878906 23 39.621094 23.84375 40.878906 26.054688 L 37.910156 27.964844 C 37.253906 26.789063 36.550781 26.328125 35.453125 26.328125 C 34.335938 26.328125 33.628906 27.039063 33.628906 27.964844 C 33.628906 29.109375 34.335938 29.570313 35.972656 30.28125 L 36.925781 30.691406 C 40.171875 32.078125 42 33.496094 42 36.683594 C 42 40.117188 39.300781 42 35.675781 42 Z"></path>
-              </svg>
-            </div>
-            <h3>JavaScript</h3>
-          </div>
-          <div class="stack-item">
-            <div class="stack-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" viewBox="0 0 32 32">
-                <path d="M11.677 13.196l-0.289-3.387 12.536 0.004 0.287-3.268-16.421-0.004 0.87 9.983h11.374l-0.406 4.270-3.627 1.002-3.683-1.009-0.234-2.630h-3.252l0.411 5.198 6.757 1.807 6.704-1.798 0.927-10.166h-11.954zM2.914 1.045h26.172l-2.38 26.874-10.734 3.037-10.673-3.038z"></path>
-              </svg>
-            </div>
-            <h3>HTML</h3>
-          </div>
-          <div class="stack-item">
-            <div class="stack-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-css" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V0zM4.59 7.498q-.908 0-1.455.508-.547.507-.547 1.484v3.106q0 .986.527 1.484t1.406.498q.576 0 1.016-.224.45-.225.703-.674.255-.45.254-1.114v-.185h-1.22v.176q0 .449-.186.683t-.527.235q-.372-.01-.557-.264-.186-.255-.186-.752V9.686q0-.547.166-.811.177-.264.577-.264.321 0 .517.225.195.224.195.693v.205h1.23V9.52q0-.674-.243-1.124a1.55 1.55 0 0 0-.664-.673q-.42-.225-1.006-.225m4.214-.01q-.586 0-1.006.244a1.67 1.67 0 0 0-.635.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.304.42.967.732l.469.215q.44.186.625.43.186.244.186.635 0 .478-.166.703-.157.224-.528.224-.360 0-.547-.244-.185-.243-.205-.752H6.87q.02.996.498 1.524.479.527 1.387.527t1.416-.518.508-1.484q0-.81-.332-1.289-.333-.479-1.045-.79l-.45-.196q-.39-.166-.556-.381-.165-.214-.166-.576 0-.4.166-.596.175-.195.508-.195.360 0 .508.234.156.234.175.703h1.123q-.03-.976-.498-1.484-.468-.518-1.308-.518m4.057 0q-.585 0-1.006.244a1.67 1.70 0 0 0-.634.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.438.186.625.43.185.244.185.635 0 .478-.166.703-.156.224-.527.224-.361.001-.547-.244-.186-.243-.205-.752h-1.162q.02.996.498 1.524.479.527 1.386.527.909 0 1.417-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.165-.596.177-.195.508-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.47-.518-1.309-.518"/>
-              </svg>
-            </div>
-            <h3>CSS</h3>
-          </div>
-          <div class="stack-item">
-            <div class="stack-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-tux" viewBox="0 0 16 16">
-                <path d="M8.996 4.497c.104-.076.1-.168.186-.158s.022.102-.098.207c-.12.104-.308.243-.46.323-.291.152-.631.336-.993.336s-.647-.167-.853-.33c-.102-.082-.186-.162-.248-.221-.11-.086-.096-.207-.052-.204.075.01.087.109.134.153.064.06.144.137.241.214.195.154.454.304.778.304s.702-.19.932-.32c.13-.073.297-.204.433-.304M7.34 3.781c.055-.02.123-.031.174-.003.011.006.024.021.02.034-.012.038-.074.032-.11.50-.032.017-.057.052-.093.054-.034 0-.086-.012-.09-.046-.007-.044.058-.072.1-.089m.581-.003c.05-.028.119-.018.173.003.041.017.106.045.1.09-.004.033-.057.046-.09.045-.036-.002-.062-.037-.093-.053-.036-.019-.098-.013-.11-.051-.004-.013.008-.028.02-.034"/>
-                <path fill-rule="evenodd" d="M8.446.019c2.521.003 2.38 2.66 2.364 4.093-.01.939.509 1.574 1.04 2.244.474.56 1.095 1.38 1.45 2.32.29.765.402 1.613.115 2.465a.8.8 0 0 1 .254.152l.001.002c.207.175.271.447.329.698.058.252.112.488.224.615.344.382.494.667.48.922-.015.254-.203.43-.435.57-.465.28-1.164.491-1.586 1.002-.443.527-.99.83-1.505.871a1.25 1.25 0 0 1-1.256-.716v-.001a1 1 0 0 1-.078-.21c-.67.038-1.252-.165-1.718-.128-.687.038-1.116.204-1.506.206-.151.331-.445.547-.808.63-.5.114-1.126 0-1.743-.324-.577-.306-1.31-.278-1.85-.39-.27-.057-.51-.157-.626-.384-.116-.226-.095-.538.07-.988.051-.16.012-.398-.026-.648a2.5 2.5 0 0 1-.037-.369c0-.133.022-.265.087-.386v-.002c.14-.266.368-.377.577-.451s.397-.125.53-.258c.143-.15.27-.374.443-.56q.036-.037.073-.07c-.081-.538.007-1.105.192-1.662.393-1.18 1.223-2.314 1.811-3.014.502-.713.65-1.287.701-2.016.042-.997-.705-3.974 2.112-4.2q.168-.015.321-.013m2.596 10.866-.03.016c-.223.121-.348.337-.427.656-.08.32-.107.733-.13 1.206v.001c-.023.37-.192.824-.310 1.267s-.176.862-.036 1.128v.002c.226.452.608.636 1.051.601s.947-.304 1.36-.795c.474-.576 1.218-.796 1.638-1.050.21-.126.324-.242.333-.4.009-.157-.097-.403-.425-.767-.17-.192-.217-.462-.274-.710-.056-.247-.122-.468-.260-.585l-.001-.001c-.18-.157-.356-.17-.565-.164q-.069.001-.140.005c-.239.275-.805.612-1.197.508-.359-.09-.562-.508-.587-.918m-7.204.03H3.83c-.189.002-.314.09-.440.225-.149.158-.276.382-.445.560v.002h-.002c-.183.184-.414.239-.610.310-.195.069-.353.143-.460.350v.002c-.085.155-.066.378-.029.624.038.245.096.507.018.746v.002l-.001.002c-.157.427-.155.678-.082.822.074.143.235.22.480.272.493.103 1.26.069 1.906.410.583.305 1.168.404 1.598.305.431-.098.712-.369.750-.867v-.002c.029-.292-.195-.673-.485-1.052-.290-.38-.633-.752-.795-1.090v-.002l-.610-1.110c-.210-.286-.430-.462-.680-.500a1 1 0 0 0-.106-.008M9.584 4.85c-.140.2-.386.37-.695.467-.147.048-.302.17-.495.280a1.3 1.3 0 0 1-.740.190.97.97 0 0 1-.582-.227c-.140-.113-.250-.237-.394-.322a3 3 0 0 1-.192-.126c-.063 1.179-.850 2.658-1.226 3.511a5.4 5.4 0 0 0-.430 1.917c-.68-.906-.184-2.066.081-2.568.297-.550.343-.701.270-.649-.266.436-.685 1.13-.848 1.844-.085.372-.100.749.010 1.097.110.349.345.670.766.931.573.351.963.703 1.193 1.015s.302.584.230.777a.4.4 0 0 1-.212.220.7.7 0 0 1-.307.056l.184.235c.094.124.186.249.266.375 1.179.805 2.567.496 3.568-.218.100-.342.197-.664.212-.903.024-.474.050-.896.136-1.245s.244-.634.530-.791a1 1 0 0 1 .138-.061q.005-.045.013-.087c.082-.546.569-.572 1.180-.303.588.266.810.499.710.814h.130c.122-.398-.133-.690-.822-1.025l-.137-.060a2.35 2.35 0 0 0-.012-1.113c-.188-.790-.704-1.490-1.098-1.838-.072-.003-.065.060.081.203.363.333 1.156 1.532.727 2.644a1.2 1.2 0 0 0-.342-.043c-.164-.907-.543-1.660-.735-2.014-.359-.668-.918-2.036-1.158-2.983M7.72 3.503a1 1 0 0 0-.312.053c-.268.093-.447.286-.559.391-.022.021-.050.040-.119.091s-.172.126-.321.238q-.198.151-.130.380c.046.150.192.325.459.476.166.098.280.230.410.334a1 1 0 0 0 .215.133.9.9 0 0 0 .298.066c.282.017.490-.068.673-.173s.340-.233.518-.290c.365-.115.627-.345.709-.564a.37.37 0 0 0-.010-.309c-.048-.096-.148-.187-.318-.257h-.001c-.354-.151-.507-.162-.705-.290-.321-.207-.587-.280-.807-.279m-.89-1.122h-.025a.4.4 0 0 0-.278.135.76.76 0 0 0-.191.334 1.2 1.2 0 0 0-.051.445v.001c.010.162.041.299.102.436.050.116.109.204.183.274l.089-.065.117-.090-.023-.018a.4.4 0 0 1-.110-.161.7.7 0 0 1-.054-.220v-.010a.7.7 0 0 1 .014-.234.4.4 0 0 1 .080-.179q.056-.069.126-.073h.013a.18.18 0 0 1 .123.050c.045.040.080.090.110.162a.7.7 0 0 1 .054.220v.010a.7.7 0 0 1-.002.170 1.1 1.1 0 0 1 .317-.143 1.3 1.3 0 0 0 .002-.194V3.23a1.2 1.2 0 0 0-.102-.437.8.8 0 0 0-.227-.310.4.4 0 0 0-.268-.102m1.95-.155a.63.63 0 0 0-.394.140.9.9 0 0 0-.287.376 1.2 1.2 0 0 0-.100.510v.015q0 .079.010.152c.114.027.278.074.406.138a1 1 0 0 1-.011-.172.8.8 0 0 1 .058-.278.5.5 0 0 1 .139-.200.26.26 0 0 1 .182-.069.26.26 0 0 1 .178.081c.055.054.094.120.124.210.029.086.042.170.040.270l-.002.012a.8.8 0 0 1-.057.277c-.024.059-.089.106-.122.145.046.016.090.030.146.052a5 5 0 0 1 .248.102 1.2 1.2 0 0 0 .244-.763 1.2 1.2 0 0 0-.110-.495.9.9 0 0 0-.294-.370.64.64 0 0 0-.390-.133z"/>
-              </svg>
-            </div>
-            <h3>Linux</h3>
-          </div>
-          <div class="stack-item">
-            <div class="stack-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" viewBox="0 0 50 50">
-                <path d="M 28.1875 0 C 30.9375 6.363281 18.328125 10.292969 17.15625 15.59375 C 16.082031 20.464844 24.648438 26.125 24.65625 26.125 C 23.355469 24.109375 22.398438 22.449219 21.09375 19.3125 C 18.886719 14.007813 34.535156 9.207031 28.1875 0 Z M 36.5625 8.8125 C 36.5625 8.8125 25.5 9.523438 24.9375 16.59375 C 24.6875 19.742188 27.847656 21.398438 27.9375 23.6875 C 28.011719 25.558594 26.0625 27.125 26.0625 27.125 C 26.0625 27.125 29.609375 26.449219 30.71875 23.59375 C 31.949219 20.425781 28.320313 18.285156 28.6875 15.75 C 29.039063 13.324219 36.5625 8.8125 36.5625 8.8125 Z M 19.1875 25.15625 C 19.1875 25.15625 9.0625 25.011719 9.0625 27.875 C 9.0625 30.867188 22.316406 31.089844 31.78125 29.25 C 31.78125 29.25 34.296875 27.519531 34.96875 26.875 C 28.765625 28.140625 14.625 28.28125 14.625 27.1875 C 14.625 26.179688 19.1875 25.15625 19.1875 25.15625 Z M 38.65625 25.15625 C 37.664063 25.234375 36.59375 25.617188 35.625 26.3125 C 37.90625 25.820313 39.84375 27.234375 39.84375 28.84375 C 39.84375 32.46875 34.59375 35.875 34.59375 35.875 C 34.59375 35.875 42.71875 34.953125 42.71875 29 C 42.71875 26.296875 40.839844 24.984375 38.65625 25.15625 Z M 16.75 30.71875 C 15.195313 30.71875 12.875 31.9375 12.875 33.09375 C 12.875 35.417969 24.5625 37.207031 33.21875 33.8125 L 30.21875 31.96875 C 24.351563 33.847656 13.546875 33.234375 16.75 30.71875 Z M 18.1875 35.9375 C 16.058594 35.9375 14.65625 37.222656 14.65625 38.1875 C 14.65625 41.171875 27.371094 41.472656 32.40625 38.4375 L 29.21875 36.40625 C 25.457031 37.996094 16.015625 38.238281 18.1875 35.9375 Z M 11.09375 38.625 C 7.625 38.554688 5.375 40.113281 5.375 41.40625 C 5.375 48.28125 40.875 47.964844 40.875 40.9375 C 40.875 39.769531 39.527344 39.203125 39.03125 38.9375 C 41.933594 45.65625 9.96875 45.121094 9.96875 41.15625 C 9.96875 40.253906 12.320313 39.390625 14.5 39.8125 L 12.65625 38.75 C 12.113281 38.667969 11.589844 38.636719 11.09375 38.625 Z M 44.625 43.25 C 39.226563 48.367188 25.546875 50.222656 11.78125 47.0625 C 25.542969 52.695313 44.558594 49.535156 44.625 43.25 Z"></path>
-              </svg>
-            </div>
-            <h3>Java</h3>
-            <p data-i18n="learningInProgress">В процессе обучения</p>
-          </div>
-          <div class="stack-item">
-            <div class="stack-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-database" viewBox="0 0 16 16">
-                <path d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313M13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A5 5 0 0 0 13 5.698M14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A5 5 0 0 0 13 8.698m0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525"/>
-              </svg>
-            </div>
-            <h3>PostgreSQL</h3>
-            <p data-i18n="learningInProgress">В процессе обучения</p>
-          </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="section-header">
-          <h2 class="section-title" data-i18n="contactTitle">Связаться со мной</h2>
-          <p class="section-subtitle" data-i18n="contactSubtitle">Есть идеи или вопросы? Напишите мне!</p>
-        </div>
-        <div class="contact-content">
-          <p data-i18n="contactText">Я всегда открыт для новых проектов и сотрудничества. Давайте создавать что-то удивительное вместе!</p>
-          <div class="contact-links">
-            <a href="https://github.com/bereznyak72" target="_blank" class="contact-link">GitHub</a>
-            <a href="https://t.me/a5276" target="_blank" class="contact-link">Telegram</a>
-          </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <p data-i18n="copyright">© 2025 Все права защищены</p>
-        <p>
-          <span data-i18n="createdWith">Создано с</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
-            <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
-          </svg>
-          Fullstack Journey
-        </p>
-      </footer>
-    </div>
-    <button class="theme-toggle" onclick="toggleTheme()">
+  </button>
+  
+  <div class="mobile-menu">
+    <a href="#projects" data-i18n="projects">Мои проекты</a>
+    <button class="mobile-theme-toggle" onclick="toggleTheme()">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-brilliance" viewBox="0 0 16 16">
         <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
       </svg>
     </button>
-    <button class="lang-toggle" onclick="toggleLanguage()">
-      <span id="lang-text">EN</span>
+    <button class="mobile-lang-toggle" onclick="toggleLanguage()">
+      <span id="mobile-lang-text">EN</span>
     </button>
-    <script>
-      let currentLanguage = 'ru';
-      
-      const translations = {
-        'ru': {
-          'pageTitle': 'Моё портфолио',
-          'home': 'Главная',
-          'projects': 'Мои проекты',
-          'portfolioTitle': 'PORTFOLIO',
-          'welcomeMessage': 'Привет! Я начинающий Fullstack-разработчик, исследующий мир программирования и создающий проекты под звуки ночного дождя',
-          'projectsButton': 'Мои проекты',
-          'aboutTitle': 'Обо мне',
-          'aboutSubtitle': 'Исследую технологии и создаю решения',
-          'aboutText': 'Я увлечён созданием веб-приложений и исследованием технологий. Моя цель — стать Fullstack-разработчиком, соединяя backend и frontend для решения реальных задач. Этот сайт — мой способ показать себя, поделиться знаниями и вдохновить других.',
-          'stackTitle': 'Стек технологий',
-          'stackSubtitle': 'Постоянное развитие и освоение новых технологий',
-          'learningInProgress': 'В процессе обучения',
-          'contactTitle': 'Связаться со мной',
-          'contactSubtitle': 'Есть идеи или вопросы? Напишите мне!',
-          'contactText': 'Я всегда открыт для новых проектов и сотрудничества. Давайте создавать что-то удивительное вместе!',
-          'copyright': '© 2025 Все права защищены',
-          'createdWith': 'Создано с',
-          'errorTitle': 'Страница уплыла в потоке дождя',
-          'errorMessage': 'Кажется, эта страница промокла под ливнем и растворилась в водных потоках. Возможно, она унеслась бурным ручьём или просто спряталась под зонтиком, ожидая, когда дождь утихнет. Не беспокойтесь, даже в самый сильный ливень есть возможность найти укрытие и вернуться к важным страницам.',
-          'homeButton': 'Вернуться к уютному дому'
-        },
-        'en': {
-          'pageTitle': 'My portfolio',
-          'home': 'Home',
-          'projects': 'My Projects',
-          'portfolioTitle': 'PORTFOLIO',
-          'welcomeMessage': 'Hello! I\'m a beginner Fullstack developer exploring the world of programming and creating projects to the sounds of night rain.',
-          'projectsButton': 'My Projects',
-          'aboutTitle': 'About Me',
-          'aboutSubtitle': 'Exploring technologies and creating solutions',
-          'aboutText': 'I\'m passionate about creating web applications and exploring technologies. My goal is to become a Fullstack developer, connecting backend and frontend to solve real-world problems. This website is my way of showing myself, sharing knowledge and inspiring others.',
-          'stackTitle': 'Technology Stack',
-          'stackSubtitle': 'Continuous development and mastering new technologies',
-          'learningInProgress': 'In learning process',
-          'contactTitle': 'Contact Me',
-          'contactSubtitle': 'Have ideas or questions? Write to me!',
-          'contactText': 'I\'m always open to new projects and collaborations. Let\'s create something amazing together!',
-          'copyright': '© 2025 All rights reserved',
-          'createdWith': 'Created with',
-          'errorTitle': 'Page drifted away in the rain stream',
-          'errorMessage': 'It seems this page got soaked in the downpour and dissolved in the water streams. Perhaps it was carried away by a turbulent stream or simply hid under an umbrella, waiting for the rain to subside. Don\'t worry, even in the heaviest downpour there is an opportunity to find shelter and return to important pages.',
-          'homeButton': 'Return to cozy home'
+  </div>
+  
+  <div class="container">
+    <!-- Герой-секция -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title" data-i18n="portfolioTitle">PORTFOLIO</h1>
+        <p class="hero-subtitle" data-i18n="welcomeMessage">Привет! Я начинающий Fullstack-разработчик, исследующий мир программирования и создающий проекты под звуки ночного дождя</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary" data-i18n="projectsButton">Мои проекты</a>
+          <a href="#contact" class="btn btn-secondary" data-i18n="contactButton">Связаться</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span data-i18n="scrollDown">Прокрутите вниз</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+        </svg>
+      </div>
+    </section>
+    
+    <!-- Обо мне -->
+    <section class="section" id="about">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="aboutTitle">Обо мне</h2>
+        <p class="section-subtitle" data-i18n="aboutSubtitle">Исследую технологии и создаю решения</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-content">
+          <p data-i18n="aboutText">Я увлечён созданием веб-приложений и исследованием технологий. Моя цель — стать Fullstack-разработчиком, соединяя backend и frontend для решения реальных задач. Этот сайт — мой способ показать себя, поделиться знаниями и вдохновить других.</p>
+          <p data-i18n="aboutText2">В свободное время я изучаю новые технологии, экспериментирую с кодом и участвую в open-source проектах. Мне нравится решать сложные задачи и постоянно развиваться в сфере IT.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Навыки -->
+    <section class="section" id="skills">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="stackTitle">Навыки и технологии</h2>
+        <p class="section-subtitle" data-i18n="stackSubtitle">Постоянное развитие и освоение новых технологий</p>
+      </div>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3 data-i18n="frontendTitle">Frontend</h3>
+          <ul class="skill-list">
+            <li data-i18n="htmlCss">HTML5 & CSS3</li>
+            <li data-i18n="javascript">JavaScript (ES6+)</li>
+            <li data-i18n="bootstrap">Bootstrap</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3 data-i18n="backendTitle">Backend</h3>
+          <ul class="skill-list">
+            <li data-i18n="python">Python</li>
+            <li data-i18n="nodejs">Node.js</li>
+            <li data-i18n="restApi">RESTful APIs</li>
+            <li data-i18n="postgresql">PostgreSQL</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3 data-i18n="toolsTitle">Инструменты</h3>
+          <ul class="skill-list">
+            <li data-i18n="git">Git & GitHub</li>
+            <li data-i18n="docker">Docker</li>
+            <li data-i18n="linux">Linux</li>
+            <li data-i18n="vscode">VS Code</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Проекты -->
+    <section class="section" id="projects">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="projectsTitle">Мои проекты</h2>
+        <p class="section-subtitle" data-i18n="projectsSubtitle">Исследуйте мои работы в веб-разработке и программировании</p>
+      </div>
+      <div class="projects-preview">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/blockchat-black.png" height="200px" alt="BlockChat">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">BlockChat</h3>
+            <p class="project-description" data-i18n="blockchatDesc">Мессенджер с прямой peer-to-peer связью между пользователями. Ваши сообщения передаются напрямую, без хранения на серверах.</p>
+            <a href="https://bereznyak72.github.io/blockchat-site/" target="_blank" class="project-link" data-i18n="learnMore">Подробнее →</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/vechno-black.png" height="200px" alt="Вечный Возврат">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title" data-i18n="eternalReturnTitle">Вечный Возврат</h3>
+            <p class="project-description" data-i18n="eternalReturnDesc">Архив литературных переживаний и сердечных ран. Исследуйте хроники разбитых сердец в зеркале мировой литературы.</p>
+            <a href="https://bereznyak72.github.io/eternal_return/" target="_blank" class="project-link" data-i18n="learnMore">Подробнее →</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/byteme.png" height="200px" alt="ByteMe">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">ByteMe</h3>
+            <p class="project-description" data-i18n="bytemeDesc">Умный бот-ментор, который помогает разработчикам прокачивать навыки через персонализированные задания, автоматическую проверку кода и адаптивный roadmap.</p>
+            <a href="https://bereznyak72.github.io/byteme.html" target="_blank" class="project-link" data-i18n="learnMore">Подробнее →</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/persimmona.png" height="200px" alt="Расследование Персиммоны">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title" data-i18n="persimmonaTitle">Расследование Персиммоны</h3>
+            <p class="project-description" data-i18n="persimmonaDesc">Детективная приключенческая игра с элементами головоломок и исследования. Вы возьмете на себя роль Персиммоны — талантливой сыщицы.</p>
+            <a href="https://bereznyak72.github.io/Persimmona-s-investigation/" target="_blank" class="project-link" data-i18n="learnMore">Подробнее →</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/guffi.png" height="200px" alt="Бот Гуффи">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title" data-i18n="guffiTitle">Бот Гуффи</h3>
+            <p class="project-description" data-i18n="guffiDesc">Этот универсальный помощник был разработан для того, чтобы сделать общение в чате более продуктивным и интересным.</p>
+            <a href="https://bereznyak72.github.io/guffi_bot.html" target="_blank" class="project-link" data-i18n="learnMore">Подробнее →</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/logo.png" height="200px" alt="Мой веб-сайт">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title" data-i18n="websiteTitle">Мой веб-сайт</h3>
+            <p class="project-description" data-i18n="websiteDesc">Цель данного сайта — продемонстрировать мои проекты и ресурсы, которые я использовал и использую в процессе своего обучения.</p>
+            <a href="#" class="project-link" data-i18n="learnMore">Подробнее →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Контакты -->
+    <section class="section" id="contact">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="contactTitle">Связаться со мной</h2>
+        <p class="section-subtitle" data-i18n="contactSubtitle">Есть идеи или вопросы? Напишите мне!</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-links">
+            <a href="https://github.com/bereznyak72" target="_blank" class="contact-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              GitHub
+            </a>
+            <a href="https://t.me/a5276" target="_blank" class="contact-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+              </svg>
+              Telegram
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Футер -->
+    <footer class="footer">
+      <p data-i18n="copyright">© 2025 Все права защищены</p>
+    </footer>
+  </div>
+  
+  <!-- Кнопки переключения темы и языка -->
+  <button class="theme-toggle" onclick="toggleTheme()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-brilliance" viewBox="0 0 16 16">
+      <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
+    </svg>
+  </button>
+  <button class="lang-toggle" onclick="toggleLanguage()">
+    <span id="lang-text">EN</span>
+  </button>
+  
+  <script>
+    let currentLanguage = 'ru';
+    
+    const translations = {
+      'ru': {
+        'pageTitle': 'Моё портфолио',
+        'home': 'Главная',
+        'projects': 'Мои проекты',
+        'portfolioTitle': 'PORTFOLIO',
+        'welcomeMessage': 'Привет! Я начинающий Fullstack-разработчик, исследующий мир программирования и создающий проекты под звуки ночного дождя',
+        'projectsButton': 'Мои проекты',
+        'contactButton': 'Связаться',
+        'scrollDown': 'Прокрутите вниз',
+        'aboutTitle': 'Обо мне',
+        'aboutSubtitle': 'Исследую технологии и создаю решения',
+        'aboutText': 'Я увлечён созданием веб-приложений и исследованием технологий. Моя цель — стать Fullstack-разработчиком, соединяя backend и frontend для решения реальных задач. Этот сайт — мой способ показать себя, поделиться знаниями и вдохновить других.',
+        'aboutText2': 'В свободное время я изучаю новые технологии, экспериментирую с кодом и участвую в open-source проектах. Мне нравится решать сложные задачи и постоянно развиваться в сфере IT.',
+        'stackTitle': 'Навыки и технологии',
+        'stackSubtitle': 'Постоянное развитие и освоение новых технологий',
+        'frontendTitle': 'Frontend',
+        'htmlCss': 'HTML5 & CSS3',
+        'javascript': 'JavaScript (ES6+)',
+        'bootstrap': 'Bootstrap',
+        'backendTitle': 'Backend',
+        'python': 'Python',
+        'nodejs': 'Node.js',
+        'restApi': 'RESTful APIs',
+        'postgresql': 'PostgreSQL',
+        'toolsTitle': 'Инструменты',
+        'git': 'Git & GitHub',
+        'docker': 'Docker',
+        'linux': 'Linux',
+        'vscode': 'VS Code',
+        'projectsTitle': 'Мои проекты',
+        'projectsSubtitle': 'Исследуйте мои работы в веб-разработке и программировании',
+        'blockchatDesc': 'Мессенджер с прямой peer-to-peer связью между пользователями. Ваши сообщения передаются напрямую, без хранения на серверах.',
+        'eternalReturnTitle': 'Вечный Возврат',
+        'eternalReturnDesc': 'Архив литературных переживаний и сердечных ран. Исследуйте хроники разбитых сердец в зеркале мировой литературы.',
+        'bytemeDesc': 'Умный бот-ментор, который помогает разработчикам прокачивать навыки через персонализированные задания, автоматическую проверку кода и адаптивный roadmap.',
+        'persimmonaTitle': 'Расследование Персиммоны',
+        'persimmonaDesc': 'Детективная приключенческая игра с элементами головоломок и исследования. Вы возьмете на себя роль Персиммоны — талантливой сыщицы.',
+        'guffiTitle': 'Бот Гуффи',
+        'guffiDesc': 'Этот универсальный помощник был разработан для того, чтобы сделать общение в чате более продуктивным и интересным.',
+        'websiteTitle': 'Мой веб-сайт',
+        'websiteDesc': 'Цель данного сайта — продемонстрировать мои проекты и ресурсы, которые я использовал и использую в процессе своего обучения.',
+        'learnMore': 'Подробнее →',
+        'contactTitle': 'Связаться со мной',
+        'contactSubtitle': 'Есть идеи или вопросы? Напишите мне!',
+        'copyright': '© 2025 Все права защищены',
+      },
+      'en': {
+        'pageTitle': 'My portfolio',
+        'home': 'Home',
+        'projects': 'My Projects',
+        'portfolioTitle': 'PORTFOLIO',
+        'welcomeMessage': 'Hello! I\'m a beginner Fullstack developer exploring the world of programming and creating projects to the sounds of night rain.',
+        'projectsButton': 'My Projects',
+        'contactButton': 'Contact',
+        'scrollDown': 'Scroll down',
+        'aboutTitle': 'About Me',
+        'aboutSubtitle': 'Exploring technologies and creating solutions',
+        'aboutText': 'I\'m passionate about creating web applications and exploring technologies. My goal is to become a Fullstack developer, connecting backend and frontend to solve real-world problems. This website is my way of showing myself, sharing knowledge and inspiring others.',
+        'aboutText2': 'In my free time I study new technologies, experiment with code and participate in open-source projects. I enjoy solving complex problems and constantly developing in the IT field.',
+        'stackTitle': 'Skills and Technologies',
+        'stackSubtitle': 'Continuous development and mastering new technologies',
+        'frontendTitle': 'Frontend',
+        'htmlCss': 'HTML5 & CSS3',
+        'javascript': 'JavaScript (ES6+)',
+        'bootstrap': 'Bootstrap',
+        'backendTitle': 'Backend',
+        'python': 'Python',
+        'nodejs': 'Node.js',
+        'restApi': 'RESTful APIs',
+        'postgresql': 'PostgreSQL',
+        'toolsTitle': 'Tools',
+        'git': 'Git & GitHub',
+        'docker': 'Docker',
+        'linux': 'Linux',
+        'vscode': 'VS Code',
+        'projectsTitle': 'My Projects',
+        'projectsSubtitle': 'Explore my work in web development and programming',
+        'blockchatDesc': 'Messenger with direct peer-to-peer connection between users. Your messages are transmitted directly, without being stored on servers.',
+        'eternalReturnTitle': 'Eternal Return',
+        'eternalReturnDesc': 'Archive of literary experiences and heart wounds. Explore the chronicles of broken hearts in the mirror of world literature.',
+        'bytemeDesc': 'Smart mentor bot that helps developers improve their skills through personalized tasks, automatic code review and adaptive roadmap.',
+        'persimmonaTitle': 'Persimmona\'s Investigation',
+        'persimmonaDesc': 'Detective adventure game with puzzle and exploration elements. You will take on the role of Persimmona - a talented detective.',
+        'guffiTitle': 'Guffi Bot',
+        'guffiDesc': 'This universal assistant was developed to make chat communication more productive and interesting.',
+        'websiteTitle': 'My Website',
+        'websiteDesc': 'The purpose of this site is to demonstrate my projects and resources that I have used and use in my learning process.',
+        'learnMore': 'Learn More →',
+        'contactTitle': 'Contact Me',
+        'contactSubtitle': 'Have ideas or questions? Write to me!',
+        'copyright': '© 2025 All rights reserved',
+      }
+    };
+
+    function toggleLanguage() {
+      currentLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
+      applyLanguage();
+      localStorage.setItem('language', currentLanguage);
+      updateLanguageButton();
+    }
+
+    function applyLanguage() {
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[currentLanguage][key]) {
+          element.textContent = translations[currentLanguage][key];
         }
-      };
-
-      function toggleLanguage() {
-        currentLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
-        applyLanguage();
-        localStorage.setItem('language', currentLanguage);
-        updateLanguageButton();
-      }
-
-      function applyLanguage() {
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-          const key = element.getAttribute('data-i18n');
-          if (translations[currentLanguage][key]) {
-            element.textContent = translations[currentLanguage][key];
-          }
-        });
-      }
-
-      function updateLanguageButton() {
-        const langText = document.getElementById('lang-text');
-        const mobileLangText = document.getElementById('mobile-lang-text');
-        const text = currentLanguage === 'ru' ? 'EN' : 'RU';
-        
-        if (langText) langText.textContent = text;
-        if (mobileLangText) mobileLangText.textContent = text;
-      }
-
-      function applySavedLanguage() {
-        const savedLanguage = localStorage.getItem('language');
-        if (savedLanguage) {
-          currentLanguage = savedLanguage;
-        }
-        applyLanguage();
-        updateLanguageButton();
-      }
-
-      function createRain() {
-        const rainContainer = document.getElementById('rainContainer');
-        const containerWidth = window.innerWidth;
-        const dropsCount = Math.floor(containerWidth / 15);
-        
-        rainContainer.innerHTML = '';
-        
-        for (let i = 0; i < dropsCount; i++) {
-          const drop = document.createElement('div');
-          drop.classList.add('drop');
-          
-          const posX = Math.random() * containerWidth;
-          const delay = Math.random() * 2;
-          const duration = 0.3 + Math.random() * 0.4;
-          const length = 15 + Math.random() * 20;
-          
-          drop.style.left = `${posX}px`;
-          drop.style.animationDelay = `${delay}s`;
-          drop.style.animationDuration = `${duration}s`;
-          drop.style.height = `${length}px`;
-          drop.style.opacity = 0.3 + Math.random() * 0.4;
-          
-          rainContainer.appendChild(drop);
-          
-          if (i % 2 === 0) {
-            const splash = document.createElement('div');
-            splash.classList.add('splash');
-            
-            splash.style.left = `${posX}px`;
-            splash.style.bottom = '0';
-            splash.style.animationDelay = `${delay + duration * 0.9}s`;
-            splash.style.width = `${10 + Math.random() * 10}px`;
-            splash.style.height = `${5 + Math.random() * 5}px`;
-            
-            rainContainer.appendChild(splash);
-          }
-        }
-      }
-      
-      function toggleTheme() {
-        const body = document.body;
-        body.classList.toggle('dark-theme');
-        const isDarkTheme = body.classList.contains('dark-theme');
-        localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
-        if (window.innerWidth <= 768) {
-          hamburger.classList.remove('active');
-          mobileMenu.classList.remove('active');
-        }
-      }
-      
-      function applySavedTheme() {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-          document.body.classList.add('dark-theme');
-        } else {
-          document.body.classList.remove('dark-theme');
-        }
-      }
-
-      const hamburger = document.querySelector('.hamburger');
-      const mobileMenu = document.querySelector('.mobile-menu');
-      const themeToggle = document.querySelector('.theme-toggle');
-      
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
       });
+    }
+
+    function updateLanguageButton() {
+      const langText = document.getElementById('lang-text');
+      const mobileLangText = document.getElementById('mobile-lang-text');
+      const text = currentLanguage === 'ru' ? 'EN' : 'RU';
       
-      function handleThemeToggleVisibility() {
-        if (window.innerWidth <= 768) {
-          themeToggle.style.display = 'none';
-        } else {
-          themeToggle.style.display = 'block';
+      if (langText) langText.textContent = text;
+      if (mobileLangText) mobileLangText.textContent = text;
+    }
+
+    function applySavedLanguage() {
+      const savedLanguage = localStorage.getItem('language');
+      if (savedLanguage) {
+        currentLanguage = savedLanguage;
+      }
+      applyLanguage();
+      updateLanguageButton();
+    }
+
+    function createRain() {
+      const rainContainer = document.getElementById('rainContainer');
+      const containerWidth = window.innerWidth;
+      const dropsCount = Math.floor(containerWidth / 15);
+      
+      rainContainer.innerHTML = '';
+      
+      for (let i = 0; i < dropsCount; i++) {
+        const drop = document.createElement('div');
+        drop.classList.add('drop');
+        
+        const posX = Math.random() * containerWidth;
+        const delay = Math.random() * 2;
+        const duration = 0.3 + Math.random() * 0.4;
+        const length = 15 + Math.random() * 20;
+        
+        drop.style.left = `${posX}px`;
+        drop.style.animationDelay = `${delay}s`;
+        drop.style.animationDuration = `${duration}s`;
+        drop.style.height = `${length}px`;
+        drop.style.opacity = 0.3 + Math.random() * 0.4;
+        
+        rainContainer.appendChild(drop);
+        
+        if (i % 2 === 0) {
+          const splash = document.createElement('div');
+          splash.classList.add('splash');
+          
+          splash.style.left = `${posX}px`;
+          splash.style.bottom = '0';
+          splash.style.animationDelay = `${delay + duration * 0.9}s`;
+          splash.style.width = `${10 + Math.random() * 10}px`;
+          splash.style.height = `${5 + Math.random() * 5}px`;
+          
+          rainContainer.appendChild(splash);
         }
       }
+    }
+  
+    function updateProjectImages() {
+      const isDark = document.body.classList.contains('dark-theme');
       
-      document.addEventListener('DOMContentLoaded', function() {
-        applySavedTheme();
-        applySavedLanguage();
-        createRain();
-        
-        window.addEventListener('resize', createRain);
+      const projectImages = document.querySelectorAll('.project-image img');
+      projectImages.forEach(img => {
+        const src = img.getAttribute('src');
+        if (src.includes('blockchat')) {
+          img.src = isDark ?  'img/blockchat-black.png' : 'img/blockchat-white.png';
+        } else if (src.includes('vechno')) {
+          img.src = isDark ? 'img/vechno-black.png' : 'img/vechno.png';
+        }
       });
-    </script>
-  </body>
+    }
+
+    function toggleTheme() {
+      const body = document.body;
+      body.classList.toggle('dark-theme');
+      const isDarkTheme = body.classList.contains('dark-theme');
+      localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+      
+      updateProjectImages();
+      
+      if (window.innerWidth <= 768) {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      }
+    }
+
+    function applySavedTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+      } else {
+        document.body.classList.remove('dark-theme');
+      }
+      updateProjectImages();
+    }
+
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const themeToggle = document.querySelector('.theme-toggle');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+    
+    function handleThemeToggleVisibility() {
+      if (window.innerWidth <= 768) {
+        themeToggle.style.display = 'none';
+      } else {
+        themeToggle.style.display = 'block';
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      applySavedTheme();
+      applySavedLanguage();
+      createRain();
+      
+      window.addEventListener('resize', createRain);
+    });
+  </script>
+</body>
 </html>
