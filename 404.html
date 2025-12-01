@@ -19,7 +19,7 @@
     </button>
     <div class="mobile-menu">
       <a href="index.html" data-i18n="home">Главная</a>
-      <a href="projects.html" data-i18n="projects">Мои проекты</a>
+      <a href="index.html#projects" data-i18n="projects">Мои проекты</a>
       <button class="mobile-theme-toggle" onclick="toggleTheme()">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-brilliance" viewBox="0 0 16 16">
           <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
@@ -37,7 +37,7 @@
         <p class="error-message" data-i18n="errorMessage">Кажется, эта страница промокла под ливнем и растворилась в водных потоках. Возможно, она унеслась бурным ручьём или просто спряталась под зонтиком, ожидая, когда дождь утихнет. Не беспокойтесь, даже в самый сильный ливень есть возможность найти укрытие и вернуться к важным страницам.</p>
         <div class="cta-buttons">
           <a href="index.html" class="cta-button" data-i18n="homeButton">Вернуться к уютному дому</a>
-          <a href="projects.html" class="cta-button" data-i18n="projectsButton">Исследовать проекты</a>
+          <a href="index.html#projects" class="cta-button" data-i18n="projectsButton">Исследовать проекты</a>
         </div>
       </div>
     </div>
@@ -78,6 +78,11 @@
         applyLanguage();
         localStorage.setItem('language', currentLanguage);
         updateLanguageButton();
+        
+        if (window.innerWidth <= 768) {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+        }
       }
 
       function applyLanguage() {
@@ -182,6 +187,27 @@
           themeToggle.style.display = 'block';
         }
       }
+
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            if (window.innerWidth <= 768) {
+              hamburger.classList.remove('active');
+              mobileMenu.classList.remove('active');
+            }
+            
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
       
       document.addEventListener('DOMContentLoaded', function() {
         applySavedTheme();
