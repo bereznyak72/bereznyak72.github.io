@@ -11,7 +11,11 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-  <div class="rain-container" id="rainContainer"></div>
+  <!-- ДОЖДЬ -->
+  <!-- <div class="rain-container" id="rainContainer"></div> -->
+  
+  <!-- СНЕГ -->
+  <div class="snow-container" id="snowContainer"></div>
   
   <!-- Навигация -->
   <button class="hamburger">
@@ -40,7 +44,7 @@
     <section class="hero-section">
       <div class="hero-content">
         <h1 class="hero-title" data-i18n="portfolioTitle">PORTFOLIO</h1>
-        <p class="hero-subtitle" data-i18n="welcomeMessage">Привет! Я начинающий Fullstack-разработчик, исследующий мир программирования и создающий проекты под звуки ночного дождя</p>
+        <p class="hero-subtitle" data-i18n="welcomeMessage">Привет! Я начинающий специалист в области Fullstack-разработки, увлечённый изучением программирования и созданием интересных и полезных проектов.</p>
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary" data-i18n="projectsButton">Мои проекты</a>
           <a href="#contact" class="btn btn-secondary" data-i18n="contactButton">Связаться</a>
@@ -225,7 +229,7 @@
         'home': 'Главная',
         'projects': 'Мои проекты',
         'portfolioTitle': 'PORTFOLIO',
-        'welcomeMessage': 'Привет! Я начинающий Fullstack-разработчик, исследующий мир программирования и создающий проекты под звуки ночного дождя',
+        'welcomeMessage': 'Привет! Я начинающий специалист в области Fullstack-разработки, увлечённый изучением программирования и созданием интересных и полезных проектов.',
         'projectsButton': 'Мои проекты',
         'contactButton': 'Связаться',
         'scrollDown': 'Прокрутите вниз',
@@ -271,7 +275,7 @@
         'home': 'Home',
         'projects': 'My Projects',
         'portfolioTitle': 'PORTFOLIO',
-        'welcomeMessage': 'Hello! I\'m a beginner Fullstack developer exploring the world of programming and creating projects to the sounds of night rain.',
+        'welcomeMessage': 'Hello! I am a novice specialist in the field of Fullstack development, passionate about learning programming and creating interesting and useful projects.',
         'projectsButton': 'My Projects',
         'contactButton': 'Contact',
         'scrollDown': 'Scroll down',
@@ -353,6 +357,7 @@
       updateLanguageButton();
     }
 
+    /* ДОЖДЬ
     function createRain() {
       const rainContainer = document.getElementById('rainContainer');
       const containerWidth = window.innerWidth;
@@ -391,7 +396,66 @@
         }
       }
     }
-  
+    */
+
+    function createSnowfall() {
+      const snowContainer = document.getElementById('snowContainer');
+      const containerWidth = window.innerWidth;
+      const snowflakesCount = Math.floor(containerWidth / 20);
+      
+      snowContainer.innerHTML = '';
+      
+      for (let i = 0; i < snowflakesCount; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        
+        const size = 2 + Math.random() * 8;
+        const posX = Math.random() * containerWidth;
+        const delay = Math.random() * 5;
+        const duration = 5 + Math.random() * 15;
+        
+        snowflake.style.width = `${size}px`;
+        snowflake.style.height = `${size}px`;
+        snowflake.style.left = `${posX}px`;
+        
+        const swayAmount = Math.random() * 30 - 15;
+        
+        const style = document.createElement('style');
+        const animationName = `snow-fall-${i}`;
+        
+        style.textContent = `
+          @keyframes ${animationName} {
+            0% {
+              transform: translateY(-100px) translateX(0px) rotate(0deg);
+              opacity: 0;
+            }
+            10% {
+              opacity: 0.8;
+            }
+            90% {
+              opacity: 0.8;
+            }
+            100% {
+              transform: translateY(100vh) translateX(${swayAmount}px) rotate(360deg);
+              opacity: 0;
+            }
+          }
+        `;
+        
+        document.head.appendChild(style);
+
+        snowflake.style.animation = `${animationName} ${duration}s linear ${delay}s infinite`;
+        
+        snowflake.style.opacity = 0.5 + Math.random() * 0.5;
+        
+        if (Math.random() > 0.7) {
+          snowflake.style.borderRadius = '30% 70% 70% 30% / 30% 30% 70% 70%';
+        }
+        
+        snowContainer.appendChild(snowflake);
+      }
+    }
+
     function updateProjectImages() {
       const isDark = document.body.classList.contains('dark-theme');
       
@@ -471,9 +535,11 @@
     document.addEventListener('DOMContentLoaded', function() {
       applySavedTheme();
       applySavedLanguage();
-      createRain();
+      // createRain()
+      createSnowfall();
       
-      window.addEventListener('resize', createRain);
+      // window.addEventListener('resize', createRain);
+      window.addEventListener('resize', createSnowfall);
     });
   </script>
 </body>

@@ -7,6 +7,7 @@
     --inverse-text: #fff;
     --section-spacing: 50px;
     --rain-color: rgba(0, 0, 0, 0.2);
+    --snow-color: rgba(0, 0, 0, 0.3);
 }
 
 .dark-theme {
@@ -17,6 +18,7 @@
     --text-color: #fff;
     --inverse-text: #000;
     --rain-color: rgba(255, 255, 255, 0.3);
+    --snow-color: rgba(255, 255, 255, 0.6);
 }
 
 * {
@@ -52,6 +54,8 @@ body {
     z-index: 1;
 }
 
+/* ДОЖДЬ */
+/*
 .rain-container {
     position: fixed;
     top: 0;
@@ -112,6 +116,61 @@ body {
     100% {
         opacity: 0;
         transform: scale(1.5);
+    }
+}
+*/
+
+/* СНЕГ */
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    background-color: var(--snow-color);
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+@keyframes snow-fall {
+    0% {
+        transform: translateY(-100px) translateX(0px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(100vh) translateX(var(--sway-distance)) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes snow-sway {
+    0% {
+        --sway-distance: 0px;
+    }
+    25% {
+        --sway-distance: 10px;
+    }
+    50% {
+        --sway-distance: 0px;
+    }
+    75% {
+        --sway-distance: -10px;
+    }
+    100% {
+        --sway-distance: 0px;
     }
 }
 
