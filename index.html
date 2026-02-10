@@ -12,10 +12,10 @@
 </head>
 <body>
   <!-- ДОЖДЬ -->
-  <!-- <div class="rain-container" id="rainContainer"></div> -->
+  <div class="rain-container" id="rainContainer"></div>
   
   <!-- СНЕГ -->
-  <div class="snow-container" id="snowContainer"></div>
+  <!-- <div class="snow-container" id="snowContainer"></div> -->
   
   <!-- Навигация -->
   <button class="hamburger">
@@ -357,7 +357,7 @@
       updateLanguageButton();
     }
 
-    /* ДОЖДЬ
+    // ДОЖДЬ
     function createRain() {
       const rainContainer = document.getElementById('rainContainer');
       const containerWidth = window.innerWidth;
@@ -396,8 +396,8 @@
         }
       }
     }
-    */
 
+    /* СНЕГ
     function createSnowfall() {
       const snowContainer = document.getElementById('snowContainer');
       const containerWidth = window.innerWidth;
@@ -455,6 +455,7 @@
         snowContainer.appendChild(snowflake);
       }
     }
+    */
 
     function updateProjectImages() {
       const isDark = document.body.classList.contains('dark-theme');
@@ -535,11 +536,11 @@
     document.addEventListener('DOMContentLoaded', function() {
       applySavedTheme();
       applySavedLanguage();
-      // createRain()
-      createSnowfall();
+      createRain()
+      // createSnowfall();
       
-      // window.addEventListener('resize', createRain);
-      window.addEventListener('resize', createSnowfall);
+      window.addEventListener('resize', createRain);
+      // window.addEventListener('resize', createSnowfall);
     });
   </script>
 </body>

@@ -55,7 +55,6 @@ body {
 }
 
 /* ДОЖДЬ */
-/*
 .rain-container {
     position: fixed;
     top: 0;
@@ -118,9 +117,8 @@ body {
         transform: scale(1.5);
     }
 }
-*/
 
-/* СНЕГ */
+/* СНЕГ
 .snow-container {
     position: fixed;
     top: 0;
@@ -173,6 +171,7 @@ body {
         --sway-distance: 0px;
     }
 }
+*/
 
 .hamburger {
     display: none;
