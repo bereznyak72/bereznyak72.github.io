@@ -14,9 +14,6 @@
   <!-- ДОЖДЬ -->
   <div class="rain-container" id="rainContainer"></div>
   
-  <!-- СНЕГ -->
-  <!-- <div class="snow-container" id="snowContainer"></div> -->
-  
   <!-- Навигация -->
   <button class="hamburger">
     <span></span>
@@ -78,31 +75,71 @@
         <h2 class="section-title" data-i18n="stackTitle">Навыки и технологии</h2>
         <p class="section-subtitle" data-i18n="stackSubtitle">Постоянное развитие и освоение новых технологий</p>
       </div>
-      <div class="skills-container">
-        <div class="skill-category">
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-palette" viewBox="0 0 16 16">
+              <path d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m4 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M5.5 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+              <path d="M16 8c0 3.15-1.866 2.585-3.567 2.07C11.42 9.763 10.465 9.473 10 10c-.603.683-.475 1.819-.351 2.92C9.826 14.495 9.996 16 8 16a8 8 0 1 1 8-8m-8 7c.611 0 .654-.171.655-.176.078-.146.124-.464.07-1.119-.014-.168-.037-.37-.061-.591-.052-.464-.112-1.005-.118-1.462-.01-.707.083-1.61.704-2.314.369-.417.845-.578 1.272-.618.404-.038.812.026 1.16.104.343.077.702.186 1.025.284l.028.008c.346.105.658.199.953.266.653.148.904.083.991.024C14.717 9.38 15 9.161 15 8a7 7 0 1 0-7 7"/>
+            </svg>
+          </div>
           <h3 data-i18n="frontendTitle">Frontend</h3>
-          <ul class="skill-list">
-            <li data-i18n="htmlCss">HTML5 & CSS3</li>
-            <li data-i18n="javascript">JavaScript (ES6+)</li>
-            <li data-i18n="bootstrap">Bootstrap</li>
+          <ul class="skill-items">
+            <li>
+              <span data-i18n="htmlCss">HTML5 & CSS3</span>
+            </li>
+            <li>
+              <span data-i18n="javascript">JavaScript (ES6+)</span>
+            </li>
+            <li>
+              <span data-i18n="bootstrap">Bootstrap</span>
+            </li>
           </ul>
         </div>
-        <div class="skill-category">
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+              <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"/>
+            </svg>
+          </div>
           <h3 data-i18n="backendTitle">Backend</h3>
-          <ul class="skill-list">
-            <li data-i18n="python">Python</li>
-            <li data-i18n="nodejs">Node.js</li>
-            <li data-i18n="restApi">RESTful APIs</li>
-            <li data-i18n="postgresql">PostgreSQL</li>
+          <ul class="skill-items">
+            <li>
+              <span data-i18n="python">Python</span>
+            </li>
+            <li>
+              <span data-i18n="nodejs">Node.js</span>
+            </li>
+            <li>
+              <span data-i18n="restApi">RESTful APIs</span>
+            </li>
+            <li>
+              <span data-i18n="postgresql">PostgreSQL</span>
+            </li>
           </ul>
         </div>
-        <div class="skill-category">
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
+              <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
+            </svg>
+          </div>
           <h3 data-i18n="toolsTitle">Инструменты</h3>
-          <ul class="skill-list">
-            <li data-i18n="git">Git & GitHub</li>
-            <li data-i18n="docker">Docker</li>
-            <li data-i18n="linux">Linux</li>
-            <li data-i18n="vscode">VS Code</li>
+          <ul class="skill-items">
+            <li>
+              <span data-i18n="git">Git & GitHub</span>
+            </li>
+            <li>
+              <span data-i18n="docker">Docker</span>
+            </li>
+            <li>
+              <span data-i18n="linux">Linux</span>
+            </li>
+            <li>
+              <span data-i18n="vscode">VS Code</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -397,66 +434,6 @@
       }
     }
 
-    /* СНЕГ
-    function createSnowfall() {
-      const snowContainer = document.getElementById('snowContainer');
-      const containerWidth = window.innerWidth;
-      const snowflakesCount = Math.floor(containerWidth / 20);
-      
-      snowContainer.innerHTML = '';
-      
-      for (let i = 0; i < snowflakesCount; i++) {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        
-        const size = 2 + Math.random() * 8;
-        const posX = Math.random() * containerWidth;
-        const delay = Math.random() * 5;
-        const duration = 5 + Math.random() * 15;
-        
-        snowflake.style.width = `${size}px`;
-        snowflake.style.height = `${size}px`;
-        snowflake.style.left = `${posX}px`;
-        
-        const swayAmount = Math.random() * 30 - 15;
-        
-        const style = document.createElement('style');
-        const animationName = `snow-fall-${i}`;
-        
-        style.textContent = `
-          @keyframes ${animationName} {
-            0% {
-              transform: translateY(-100px) translateX(0px) rotate(0deg);
-              opacity: 0;
-            }
-            10% {
-              opacity: 0.8;
-            }
-            90% {
-              opacity: 0.8;
-            }
-            100% {
-              transform: translateY(100vh) translateX(${swayAmount}px) rotate(360deg);
-              opacity: 0;
-            }
-          }
-        `;
-        
-        document.head.appendChild(style);
-
-        snowflake.style.animation = `${animationName} ${duration}s linear ${delay}s infinite`;
-        
-        snowflake.style.opacity = 0.5 + Math.random() * 0.5;
-        
-        if (Math.random() > 0.7) {
-          snowflake.style.borderRadius = '30% 70% 70% 30% / 30% 30% 70% 70%';
-        }
-        
-        snowContainer.appendChild(snowflake);
-      }
-    }
-    */
-
     function updateProjectImages() {
       const isDark = document.body.classList.contains('dark-theme');
       
@@ -537,10 +514,8 @@
       applySavedTheme();
       applySavedLanguage();
       createRain()
-      // createSnowfall();
       
       window.addEventListener('resize', createRain);
-      // window.addEventListener('resize', createSnowfall);
     });
   </script>
 </body>
