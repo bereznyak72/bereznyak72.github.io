@@ -14,6 +14,9 @@
   <!-- ДОЖДЬ -->
   <div class="rain-container" id="rainContainer"></div>
   
+  <!-- СНЕГ -->
+  <!-- <div class="snow-container" id="snowContainer"></div> -->
+
   <!-- Навигация -->
   <button class="hamburger">
     <span></span>
@@ -62,9 +65,18 @@
         <p class="section-subtitle" data-i18n="aboutSubtitle">Исследую технологии и создаю решения</p>
       </div>
       <div class="about-grid">
-        <div class="about-content">
-          <p data-i18n="aboutText">Я увлечён созданием веб-приложений и исследованием технологий. Моя цель — стать Fullstack-разработчиком, соединяя backend и frontend для решения реальных задач. Этот сайт — мой способ показать себя, поделиться знаниями и вдохновить других.</p>
-          <p data-i18n="aboutText2">В свободное время я изучаю новые технологии, экспериментирую с кодом и участвую в open-source проектах. Мне нравится решать сложные задачи и постоянно развиваться в сфере IT.</p>
+        <div class="about-card">
+          <div class="about-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+              <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+              <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.44a2.4 2.4 0 0 1 1.56 0h.72a1.5 1.5 0 0 0 1.44-1.17L6.3 10H10l.34 2.83A1.5 1.5 0 0 0 11.78 14h.72a2.4 2.4 0 0 1 1.56 0h.44a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2z"/>
+            </svg>
+          </div>
+          <h3 data-i18n="aboutHeading">Мой путь в разработке</h3>
+          <div class="about-content">
+            <p data-i18n="aboutText">Я увлечён созданием веб-приложений и исследованием технологий. Моя цель — стать Fullstack-разработчиком, соединяя backend и frontend для решения реальных задач. Этот сайт — мой способ показать себя, поделиться знаниями и вдохновить других.</p>
+            <p data-i18n="aboutText2">В свободное время я изучаю новые технологии, экспериментирую с кодом и участвую в open-source проектах. Мне нравится решать сложные задачи и постоянно развиваться в сфере IT.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -272,6 +284,7 @@
         'scrollDown': 'Прокрутите вниз',
         'aboutTitle': 'Обо мне',
         'aboutSubtitle': 'Исследую технологии и создаю решения',
+        'aboutHeading': 'Мой путь в разработке',
         'aboutText': 'Я увлечён созданием веб-приложений и исследованием технологий. Моя цель — стать Fullstack-разработчиком, соединяя backend и frontend для решения реальных задач. Этот сайт — мой способ показать себя, поделиться знаниями и вдохновить других.',
         'aboutText2': 'В свободное время я изучаю новые технологии, экспериментирую с кодом и участвую в open-source проектах. Мне нравится решать сложные задачи и постоянно развиваться в сфере IT.',
         'stackTitle': 'Навыки и технологии',
@@ -318,6 +331,7 @@
         'scrollDown': 'Scroll down',
         'aboutTitle': 'About Me',
         'aboutSubtitle': 'Exploring technologies and creating solutions',
+        'aboutHeading': 'My journey in development',
         'aboutText': 'I\'m passionate about creating web applications and exploring technologies. My goal is to become a Fullstack developer, connecting backend and frontend to solve real-world problems. This website is my way of showing myself, sharing knowledge and inspiring others.',
         'aboutText2': 'In my free time I study new technologies, experiment with code and participate in open-source projects. I enjoy solving complex problems and constantly developing in the IT field.',
         'stackTitle': 'Skills and Technologies',
@@ -434,6 +448,66 @@
       }
     }
 
+    /* СНЕГ
+    function createSnowfall() {
+      const snowContainer = document.getElementById('snowContainer');
+      const containerWidth = window.innerWidth;
+      const snowflakesCount = Math.floor(containerWidth / 20);
+      
+      snowContainer.innerHTML = '';
+      
+      for (let i = 0; i < snowflakesCount; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        
+        const size = 2 + Math.random() * 8;
+        const posX = Math.random() * containerWidth;
+        const delay = Math.random() * 5;
+        const duration = 5 + Math.random() * 15;
+        
+        snowflake.style.width = `${size}px`;
+        snowflake.style.height = `${size}px`;
+        snowflake.style.left = `${posX}px`;
+        
+        const swayAmount = Math.random() * 30 - 15;
+        
+        const style = document.createElement('style');
+        const animationName = `snow-fall-${i}`;
+        
+        style.textContent = `
+          @keyframes ${animationName} {
+            0% {
+              transform: translateY(-100px) translateX(0px) rotate(0deg);
+              opacity: 0;
+            }
+            10% {
+              opacity: 0.8;
+            }
+            90% {
+              opacity: 0.8;
+            }
+            100% {
+              transform: translateY(100vh) translateX(${swayAmount}px) rotate(360deg);
+              opacity: 0;
+            }
+          }
+        `;
+        
+        document.head.appendChild(style);
+
+        snowflake.style.animation = `${animationName} ${duration}s linear ${delay}s infinite`;
+        
+        snowflake.style.opacity = 0.5 + Math.random() * 0.5;
+        
+        if (Math.random() > 0.7) {
+          snowflake.style.borderRadius = '30% 70% 70% 30% / 30% 30% 70% 70%';
+        }
+        
+        snowContainer.appendChild(snowflake);
+      }
+    }
+    */
+
     function updateProjectImages() {
       const isDark = document.body.classList.contains('dark-theme');
       
@@ -514,8 +588,11 @@
       applySavedTheme();
       applySavedLanguage();
       createRain()
+      // createSnowfall();
+
       
       window.addEventListener('resize', createRain);
+      // window.addEventListener('resize', createSnowfall);
     });
   </script>
 </body>
