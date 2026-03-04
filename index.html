@@ -163,10 +163,10 @@
         <h2 class="section-title" data-i18n="projectsTitle">Мои проекты</h2>
         <p class="section-subtitle" data-i18n="projectsSubtitle">Исследуйте мои работы в веб-разработке и программировании</p>
       </div>
-      <div class="projects-preview">
+      <div class="projects-grid">
         <div class="project-card">
           <div class="project-image">
-            <img src="img/blockchat-black.png" height="200px" alt="BlockChat">
+            <img src="img/blockchat-black.png" alt="BlockChat">
           </div>
           <div class="project-content">
             <h3 class="project-title">BlockChat</h3>
@@ -176,7 +176,7 @@
         </div>
         <div class="project-card">
           <div class="project-image">
-            <img src="img/vechno-black.png" height="200px" alt="Вечный Возврат">
+            <img src="img/vechno-black.png" alt="Вечный Возврат">
           </div>
           <div class="project-content">
             <h3 class="project-title" data-i18n="eternalReturnTitle">Вечный Возврат</h3>
@@ -186,7 +186,7 @@
         </div>
         <div class="project-card">
           <div class="project-image">
-            <img src="https://github.com/bereznyak72/ByteMe/blob/main/img/logo1.png?raw=true" height="200px" alt="ByteMe">
+            <img src="https://github.com/bereznyak72/ByteMe/blob/main/img/logo1.png?raw=true" alt="ByteMe">
           </div>
           <div class="project-content">
             <h3 class="project-title">ByteMe</h3>
@@ -196,7 +196,7 @@
         </div>
         <div class="project-card">
           <div class="project-image">
-            <img src="img/persimmona.png" height="200px" alt="Расследование Персиммоны">
+            <img src="img/persimmona.png" alt="Расследование Персиммоны">
           </div>
           <div class="project-content">
             <h3 class="project-title" data-i18n="persimmonaTitle">Расследование Персиммоны</h3>
@@ -206,7 +206,7 @@
         </div>
         <div class="project-card">
           <div class="project-image">
-            <img src="img/guffi.png" height="200px" alt="Бот Гуффи">
+            <img src="img/guffi.png" alt="Бот Гуффи">
           </div>
           <div class="project-content">
             <h3 class="project-title" data-i18n="guffiTitle">Бот Гуффи</h3>
@@ -216,7 +216,7 @@
         </div>
         <div class="project-card">
           <div class="project-image">
-            <img src="img/logo.png" height="200px" alt="Мой веб-сайт">
+            <img src="img/logo.png" alt="Мой веб-сайт">
           </div>
           <div class="project-content">
             <h3 class="project-title" data-i18n="websiteTitle">Мой веб-сайт</h3>
@@ -515,9 +515,9 @@
       projectImages.forEach(img => {
         const src = img.getAttribute('src');
         if (src.includes('blockchat')) {
-          img.src = isDark ?  'img/blockchat-black.png' : 'img/blockchat-white.png';
+          img.src = isDark ?  'img/blockchat-white.png' : 'img/blockchat-black.png';
         } else if (src.includes('vechno')) {
-          img.src = isDark ? 'img/vechno-black.png' : 'img/vechno.png';
+          img.src = isDark ? 'img/vechno.png' : 'img/vechno-black.png';
         }
       });
     }
