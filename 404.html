@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,213 +9,253 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <title data-i18n="pageTitle">Страница не найдена - 404</title>
     <link rel="stylesheet" href="css/404.css">
-  </head>
-  <body>
+</head>
+<body>
     <div class="rain-container" id="rainContainer"></div>
+    
     <button class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </button>
+    
     <div class="mobile-menu">
-      <a href="index.html" data-i18n="home">Главная</a>
-      <a href="index.html#projects" data-i18n="projects">Мои проекты</a>
-      <button class="mobile-theme-toggle" onclick="toggleTheme()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-brilliance" viewBox="0 0 16 16">
-          <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
-        </svg>
-      </button>
-      <button class="mobile-lang-toggle" onclick="toggleLanguage()">
-        <span id="mobile-lang-text">EN</span>
-      </button>
-    </div>
-    <div class="container">
-      <div class="error-content">
-        <div class="umbrella">☔</div>
-        <h1 class="error-code">404</h1>
-        <h2 class="error-title" data-i18n="errorTitle">Страница уплыла в потоке дождя</h2>
-        <p class="error-message" data-i18n="errorMessage">Кажется, эта страница промокла под ливнем и растворилась в водных потоках. Возможно, она унеслась бурным ручьём или просто спряталась под зонтиком, ожидая, когда дождь утихнет. Не беспокойтесь, даже в самый сильный ливень есть возможность найти укрытие и вернуться к важным страницам.</p>
-        <div class="cta-buttons">
-          <a href="index.html" class="cta-button" data-i18n="homeButton">Вернуться к уютному дому</a>
-          <a href="index.html#projects" class="cta-button" data-i18n="projectsButton">Исследовать проекты</a>
+        <a href="index.html" data-i18n="home">Главная</a>
+        <a href="index.html#projects" data-i18n="projects">Мои проекты</a>
+        <div class="mobile-menu-buttons">
+            <button class="mobile-theme-toggle" onclick="toggleTheme()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-brilliance" viewBox="0 0 16 16">
+                    <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
+                </svg>
+            </button>
+            <button class="mobile-lang-toggle" onclick="toggleLanguage()">
+                <span id="mobile-lang-text">EN</span>
+            </button>
         </div>
-      </div>
     </div>
+    
+    <div class="container">
+        <div class="section-header">
+            <div class="error-code">404</div>
+            <h2 class="section-title" data-i18n="errorTitle">Страница не найдена</h2>
+        </div>
+        
+        <div class="error-content">
+            <div class="umbrella">
+              <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="currentColor" class="bi bi-cloud-drizzle" viewBox="0 0 16 16">
+                <path d="M4.158 12.025a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m-3.5 1.5a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m.747-8.498a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 11H13a3 3 0 0 0 .405-5.973M8.5 2a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4 4 0 0 1 8.5 2"/>
+              </svg>
+            </div>
+            <h2 class="error-title" data-i18n="errorSubtitle">Страница уплыла в потоке дождя</h2>
+            <p class="error-message" data-i18n="errorMessage">Кажется, эта страница промокла под ливнем и растворилась в водных потоках. Возможно, она унеслась бурным ручьём или просто спряталась под зонтиком, ожидая, когда дождь утихнет. Не беспокойтесь, даже в самый сильный ливень есть возможность найти укрытие и вернуться к важным страницам.</p>
+            
+            <div class="cta-buttons">
+                <a href="index.html" class="cta-button" data-i18n="homeButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+                        <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+                    </svg>
+                    <span data-i18n="homeButton">Вернуться к уютному дому</span>
+                </a>
+                <a href="index.html#projects" class="cta-button" data-i18n="projectsButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm9.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0v-9a.5.5 0 0 1 .5-.5zm-4 0a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0v-9a.5.5 0 0 1 .5-.5zm-4 0a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0v-9a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    <span data-i18n="projectsButton">Исследовать проекты</span>
+                </a>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p data-i18n="copyright">© 2026 Все права защищены</p>
+        </footer>
+    </div>
+    
     <button class="theme-toggle" onclick="toggleTheme()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-brilliance" viewBox="0 0 16 16">
-        <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
-      </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-brilliance" viewBox="0 0 16 16">
+            <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
+        </svg>
     </button>
+    
     <button class="lang-toggle" onclick="toggleLanguage()">
-      <span id="lang-text">EN</span>
+        <span id="lang-text">EN</span>
     </button>
+    
     <script>
-      let currentLanguage = 'ru';
-      
-      const translations = {
-        'ru': {
-          'pageTitle': 'Страница не найдена - 404',
-          'home': 'Главная',
-          'projects': 'Мои проекты',
-          'errorTitle': 'Страница уплыла в потоке дождя',
-          'errorMessage': 'Кажется, эта страница промокла под ливнем и растворилась в водных потоках. Возможно, она унеслась бурным ручьём или просто спряталась под зонтиком, ожидая, когда дождь утихнет. Не беспокойтесь, даже в самый сильный ливень есть возможность найти укрытие и вернуться к важным страницам.',
-          'homeButton': 'Вернуться к уютному дому',
-          'projectsButton': 'Исследовать проекты'
-        },
-        'en': {
-          'pageTitle': 'Page not found - 404',
-          'home': 'Home',
-          'projects': 'My Projects',
-          'errorTitle': 'Page drifted away in the rain stream',
-          'errorMessage': 'It seems this page got soaked in the downpour and dissolved in the water streams. Perhaps it was carried away by a turbulent stream or simply hid under an umbrella, waiting for the rain to subside. Don\'t worry, even in the heaviest downpour there is an opportunity to find shelter and return to important pages.',
-          'homeButton': 'Return to cozy home',
-          'projectsButton': 'Explore projects'
-        }
-      };
-
-      function toggleLanguage() {
-        currentLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
-        applyLanguage();
-        localStorage.setItem('language', currentLanguage);
-        updateLanguageButton();
+        let currentLanguage = 'ru';
         
-        if (window.innerWidth <= 768) {
-          hamburger.classList.remove('active');
-          mobileMenu.classList.remove('active');
-        }
-      }
-
-      function applyLanguage() {
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-          const key = element.getAttribute('data-i18n');
-          if (translations[currentLanguage][key]) {
-            element.textContent = translations[currentLanguage][key];
-          }
-        });
-      }
-
-      function updateLanguageButton() {
-        const langText = document.getElementById('lang-text');
-        const mobileLangText = document.getElementById('mobile-lang-text');
-        const text = currentLanguage === 'ru' ? 'EN' : 'RU';
-        
-        if (langText) langText.textContent = text;
-        if (mobileLangText) mobileLangText.textContent = text;
-      }
-
-      function applySavedLanguage() {
-        const savedLanguage = localStorage.getItem('language');
-        if (savedLanguage) {
-          currentLanguage = savedLanguage;
-        }
-        applyLanguage();
-        updateLanguageButton();
-      }
-      
-      function createRain() {
-        const rainContainer = document.getElementById('rainContainer');
-        const containerWidth = window.innerWidth;
-        const dropsCount = Math.floor(containerWidth / 15);
-        
-        rainContainer.innerHTML = '';
-        
-        for (let i = 0; i < dropsCount; i++) {
-          const drop = document.createElement('div');
-          drop.classList.add('drop');
-          
-          const posX = Math.random() * containerWidth;
-          const delay = Math.random() * 2;
-          const duration = 0.3 + Math.random() * 0.4;
-          const length = 15 + Math.random() * 20;
-          
-          drop.style.left = `${posX}px`;
-          drop.style.animationDelay = `${delay}s`;
-          drop.style.animationDuration = `${duration}s`;
-          drop.style.height = `${length}px`;
-          drop.style.opacity = 0.3 + Math.random() * 0.4;
-          
-          rainContainer.appendChild(drop);
-          
-          if (i % 2 === 0) {
-            const splash = document.createElement('div');
-            splash.classList.add('splash');
-            
-            splash.style.left = `${posX}px`;
-            splash.style.bottom = '0';
-            splash.style.animationDelay = `${delay + duration * 0.9}s`;
-            splash.style.width = `${10 + Math.random() * 10}px`;
-            splash.style.height = `${5 + Math.random() * 5}px`;
-            
-            rainContainer.appendChild(splash);
-          }
-        }
-      }
-      
-      function toggleTheme() {
-        const body = document.body;
-        body.classList.toggle('dark-theme');
-        const isDarkTheme = body.classList.contains('dark-theme');
-        localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
-        if (window.innerWidth <= 768) {
-          hamburger.classList.remove('active');
-          mobileMenu.classList.remove('active');
-        }
-      }
-      
-      function applySavedTheme() {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-          document.body.classList.add('dark-theme');
-        } else {
-          document.body.classList.remove('dark-theme');
-        }
-      }
-
-      const hamburger = document.querySelector('.hamburger');
-      const mobileMenu = document.querySelector('.mobile-menu');
-      const themeToggle = document.querySelector('.theme-toggle');
-      
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-      });
-      
-      function handleThemeToggleVisibility() {
-        if (window.innerWidth <= 768) {
-          themeToggle.style.display = 'none';
-        } else {
-          themeToggle.style.display = 'block';
-        }
-      }
-
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
-          
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            if (window.innerWidth <= 768) {
-              hamburger.classList.remove('active');
-              mobileMenu.classList.remove('active');
+        const translations = {
+            'ru': {
+                'pageTitle': 'Страница не найдена - 404',
+                'home': 'Главная',
+                'projects': 'Мои проекты',
+                'errorTitle': 'Страница не найдена',
+                'errorSubtitle': 'Страница уплыла в потоке дождя',
+                'errorMessage': 'Кажется, эта страница промокла под ливнем и растворилась в водных потоках. Возможно, она унеслась бурным ручьём или просто спряталась под зонтиком, ожидая, когда дождь утихнет. Не беспокойтесь, даже в самый сильный ливень есть возможность найти укрытие и вернуться к важным страницам.',
+                'homeButton': 'Вернуться к уютному дому',
+                'projectsButton': 'Исследовать проекты',
+                'copyright': '© 2026 Все права защищены'
+            },
+            'en': {
+                'pageTitle': 'Page not found - 404',
+                'home': 'Home',
+                'projects': 'My Projects',
+                'errorTitle': 'Page not found',
+                'errorSubtitle': 'Page drifted away in the rain stream',
+                'errorMessage': 'It seems this page got soaked in the downpour and dissolved in the water streams. Perhaps it was carried away by a turbulent stream or simply hid under an umbrella, waiting for the rain to subside. Don\'t worry, even in the heaviest downpour there is an opportunity to find shelter and return to important pages.',
+                'homeButton': 'Return to cozy home',
+                'projectsButton': 'Explore projects',
+                'copyright': '© 2026 All rights reserved'
             }
+        };
+
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
+            applyLanguage();
+            localStorage.setItem('language', currentLanguage);
+            updateLanguageButton();
             
-            targetElement.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
+            if (window.innerWidth <= 768) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        }
+
+        function applyLanguage() {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLanguage][key]) {
+                    if (element.tagName === 'TITLE') {
+                        element.textContent = translations[currentLanguage][key];
+                    } else {
+                        element.textContent = translations[currentLanguage][key];
+                    }
+                }
             });
-          }
-        });
-      });
-      
-      document.addEventListener('DOMContentLoaded', function() {
-        applySavedTheme();
-        applySavedLanguage();
-        createRain();
+        }
+
+        function updateLanguageButton() {
+            const langText = document.getElementById('lang-text');
+            const mobileLangText = document.getElementById('mobile-lang-text');
+            const text = currentLanguage === 'ru' ? 'EN' : 'RU';
+            
+            if (langText) langText.textContent = text;
+            if (mobileLangText) mobileLangText.textContent = text;
+        }
+
+        function applySavedLanguage() {
+            const savedLanguage = localStorage.getItem('language');
+            if (savedLanguage) {
+                currentLanguage = savedLanguage;
+            }
+            applyLanguage();
+            updateLanguageButton();
+        }
         
-        window.addEventListener('resize', createRain);
-      });
+        function createRain() {
+            const rainContainer = document.getElementById('rainContainer');
+            const containerWidth = window.innerWidth;
+            const dropsCount = Math.floor(containerWidth / 15);
+            
+            rainContainer.innerHTML = '';
+            
+            for (let i = 0; i < dropsCount; i++) {
+                const drop = document.createElement('div');
+                drop.classList.add('drop');
+                
+                const posX = Math.random() * containerWidth;
+                const delay = Math.random() * 2;
+                const duration = 0.3 + Math.random() * 0.4;
+                const length = 15 + Math.random() * 20;
+                
+                drop.style.left = `${posX}px`;
+                drop.style.animationDelay = `${delay}s`;
+                drop.style.animationDuration = `${duration}s`;
+                drop.style.height = `${length}px`;
+                drop.style.opacity = 0.3 + Math.random() * 0.4;
+                
+                rainContainer.appendChild(drop);
+                
+                if (i % 2 === 0) {
+                    const splash = document.createElement('div');
+                    splash.classList.add('splash');
+                    
+                    splash.style.left = `${posX}px`;
+                    splash.style.bottom = '0';
+                    splash.style.animationDelay = `${delay + duration * 0.9}s`;
+                    splash.style.width = `${10 + Math.random() * 10}px`;
+                    splash.style.height = `${5 + Math.random() * 5}px`;
+                    
+                    rainContainer.appendChild(splash);
+                }
+            }
+        }
+        
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-theme');
+            const isDarkTheme = body.classList.contains('dark-theme');
+            localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+            if (window.innerWidth <= 768) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        }
+        
+        function applySavedTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+            } else {
+                document.body.classList.remove('dark-theme');
+            }
+        }
+
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const themeToggle = document.querySelector('.theme-toggle');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        function handleThemeToggleVisibility() {
+            if (window.innerWidth <= 768) {
+                themeToggle.style.display = 'none';
+            } else {
+                themeToggle.style.display = 'block';
+            }
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    if (window.innerWidth <= 768) {
+                        hamburger.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                    }
+                    
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            applySavedTheme();
+            applySavedLanguage();
+            createRain();
+            
+            window.addEventListener('resize', createRain);
+        });
     </script>
-  </body>
+</body>
 </html>
