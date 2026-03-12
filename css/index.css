@@ -1303,3 +1303,14 @@ body {
         font-size: 0.9rem;
     }
 }
+
+.subtle-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
+}
+
+.subtle-link:hover {
+  opacity: 0.8;
+}
