@@ -7,7 +7,7 @@
   <meta name="title" content="Bereznyak72 | Fullstack Developer Portfolio">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Личный сайт Fullstack-разработчика: проекты, прогресс обучения и ресурсы для начинающих. Исследуйте мои работы и вдохновляйтесь программированием!">
-  <meta name="keywords" content="fullstack developer, веб-разработчик, портфолио, BlockChat, ByteMe, Telegram бот, веб-приложения, Python, JavaScript">
+  <meta name="keywords" content="fullstack developer, веб-разработчик, портфолио, BlockChat, ByteMe, Telegram бот, веб-приложения, Python, JavaScript, Rust, Todo API">
   <meta name="author" content="Bereznyak72">
   <meta name="robots" content="index, follow">
   <meta name="language" content="ru, en">
@@ -24,7 +24,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bereznyak72.github.io/">
   <meta property="og:title" content="Bereznyak72 | Fullstack Developer Portfolio">
-  <meta property="og:description" content="Fullstack-разработчик. Создаю веб-приложения, ботов и интерактивные проекты. BlockChat, ByteMe и другие работы.">
+  <meta property="og:description" content="Fullstack-разработчик. Создаю веб-приложения, ботов и интерактивные проекты. BlockChat, ByteMe, Todo API на Rust и другие работы.">
   <meta property="og:image" content="https://bereznyak72.github.io/img/logo.png">
   <meta property="og:image:width" content="512">
   <meta property="og:image:height" content="512">
@@ -36,7 +36,7 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://bereznyak72.github.io/">
   <meta property="twitter:title" content="Bereznyak72 | Fullstack Developer Portfolio">
-  <meta property="twitter:description" content="Fullstack developer. I create web applications, bots, and interactive projects. BlockChat, ByteMe, and other projects.">
+  <meta property="twitter:description" content="Fullstack developer. I create web applications, bots, and interactive projects. BlockChat, ByteMe, Todo API in Rust, and other projects.">
   <meta property="twitter:image" content="https://bereznyak72.github.io/img/logo.png">
   
   <!-- hreflang для многоязычности -->
@@ -62,7 +62,7 @@
       "@type": "Organization",
       "name": "Freelance"
     },
-    "knowsAbout": ["Web Development", "JavaScript", "Python", "Node.js", "Fullstack Development"],
+    "knowsAbout": ["Web Development", "JavaScript", "Python", "Node.js", "Rust", "Fullstack Development"],
     "description": "Fullstack-разработчик, создающий веб-приложения, Telegram-ботов и интерактивные проекты",
     "knowsLanguage": ["Russian", "English"]
   }
@@ -73,7 +73,7 @@
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Bereznyak72 Portfolio",
-    "description": "Портфолио Fullstack-разработчика с проектами BlockChat, ByteMe, Вечный Возврат и другие",
+    "description": "Портфолио Fullstack-разработчика с проектами BlockChat, ByteMe, Todo API на Rust, Вечный Возврат и другие",
     "url": "https://bereznyak72.github.io/",
     "inLanguage": ["ru", "en"],
     "mainEntity": {
@@ -110,6 +110,19 @@
           "position": 3,
           "item": {
             "@type": "SoftwareApplication",
+            "name": "Todo API на Rust",
+            "description": "REST API для управления списком задач, написанный на Rust с использованием фреймворка axum. Поддерживает все CRUD операции.",
+            "url": "https://github.com/bereznyak72/todo-api",
+            "image": "https://bereznyak72.github.io/img/rust-todo.png",
+            "applicationCategory": "Developer Tools",
+            "operatingSystem": "Linux, macOS, Windows"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "SoftwareApplication",
             "name": "Вечный Возврат",
             "description": "Архив литературных переживаний и сердечных ран. Исследуйте хроники разбитых сердец в зеркале мировой литературы.",
             "url": "https://bereznyak72.github.io/eternal_return/",
@@ -120,7 +133,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 4,
+          "position": 5,
           "item": {
             "@type": "SoftwareApplication",
             "name": "Расследование Персиммоны",
@@ -133,7 +146,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 5,
+          "position": 6,
           "item": {
             "@type": "SoftwareApplication",
             "name": "Бот Гуффи",
@@ -146,7 +159,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 6,
+          "position": 7,
           "item": {
             "@type": "SoftwareApplication",
             "name": "Мой веб-сайт",
@@ -278,6 +291,9 @@
               <span data-i18n="nodejs">Node.js</span>
             </li>
             <li>
+              <span data-i18n="rust">Rust</span>
+            </li>
+            <li>
               <span data-i18n="restApi">RESTful APIs</span>
             </li>
             <li>
@@ -340,6 +356,19 @@
               <span data-i18n="eternalReturnDescPart2"> в зеркале мировой литературы.</span>
             </p>
             <a href="https://bereznyak72.github.io/eternal_return/" target="_blank" class="project-link" data-i18n="learnMore">Подробнее →</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <svg xmlns="http://www.w3.org/2000/svg" width="125" height="125" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
+              <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+              <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"/>
+            </svg>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Todo API на Rust</h3>
+            <p class="project-description" data-i18n="todoApiDesc">REST API для управления списком задач, написанный на Rust. Поддерживает все CRUD операции: создание, чтение, обновление и удаление задач.</p>
+            <a href="https://github.com/bereznyak72/todo-api-rust" target="_blank" class="project-link" data-i18n="viewGitHub">GitHub →</a>
           </div>
         </div>
         <div class="project-card">
@@ -461,6 +490,7 @@
         'backendTitle': 'Backend',
         'python': 'Python',
         'nodejs': 'Node.js',
+        'rust': 'Rust',
         'restApi': 'RESTful APIs',
         'postgresql': 'PostgreSQL',
         'toolsTitle': 'Инструменты',
@@ -471,6 +501,8 @@
         'projectsTitle': 'Мои проекты',
         'projectsSubtitle': 'Исследуйте мои работы в веб-разработке и программировании',
         'blockchatDesc': 'Мессенджер с прямой peer-to-peer связью между пользователями. Ваши сообщения передаются напрямую, без хранения на серверах.',
+        'todoApiDesc': 'REST API для управления списком задач, написанный на Rust. Поддерживает все CRUD операции: создание, чтение, обновление и удаление задач.',
+        'viewGitHub': 'GitHub →',
         'eternalReturnTitle': 'Вечный Возврат',
         'eternalReturnDescPart1': 'Архив литературных переживаний и сердечных ран. Исследуйте хроники ',
         'brokenHeartsLink': 'разбитых сердец',
@@ -512,6 +544,7 @@
         'backendTitle': 'Backend',
         'python': 'Python',
         'nodejs': 'Node.js',
+        'rust': 'Rust',
         'restApi': 'RESTful APIs',
         'postgresql': 'PostgreSQL',
         'toolsTitle': 'Tools',
@@ -522,6 +555,8 @@
         'projectsTitle': 'My Projects',
         'projectsSubtitle': 'Explore my work in web development and programming',
         'blockchatDesc': 'Messenger with direct peer-to-peer connection between users. Your messages are transmitted directly, without being stored on servers.',
+        'todoApiDesc': 'REST API for task management written in Rust. Supports all CRUD operations: create, read, update, and delete tasks.',
+        'viewGitHub': 'GitHub →',
         'eternalReturnTitle': 'Eternal Return',
         'eternalReturnDescPart1': 'Archive of literary experiences and heart wounds. Explore the chronicles of ',
         'brokenHeartsLink': 'broken hearts',
