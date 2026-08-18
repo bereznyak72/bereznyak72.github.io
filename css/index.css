@@ -337,7 +337,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 60px 0;
+    padding: 60px 20px;
     position: relative;
 }
 
@@ -351,20 +351,55 @@ body {
 .hero-title {
     font-size: 4.5rem;
     font-weight: 800;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: -1px;
+    margin-bottom: 1.2rem;
+    letter-spacing: -2px;
     line-height: 1.1;
+    color: var(--text-color);
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-family: 'Roboto Mono', monospace;
     margin-bottom: 2.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
     color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.hero-subtitle__divider {
+    color: var(--accent-color);
+    opacity: 0.3;
+}
+
+.hero-subtitle__status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--secondary-color);
+}
+
+.hero-subtitle__dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #28c840;
+    animation: pulse-dot 2s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
 }
 
 .hero-buttons {
@@ -372,7 +407,53 @@ body {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
+}
+
+.hero-buttons .btn {
+    padding: 16px 40px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-buttons .btn-primary {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: 2px solid var(--text-color);
+}
+
+.hero-buttons .btn-primary:hover {
+    background-color: transparent;
+    color: var(--text-color);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(var(--accent-color-rgb), 0.15);
+}
+
+.hero-buttons .btn-secondary {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.hero-buttons .btn-secondary:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(var(--accent-color-rgb), 0.15);
+}
+
+.dark-theme .hero-buttons .btn-primary:hover {
+    box-shadow: 0 12px 40px rgba(129, 140, 248, 0.15);
+}
+
+.dark-theme .hero-buttons .btn-secondary:hover {
+    box-shadow: 0 12px 40px rgba(129, 140, 248, 0.15);
 }
 
 .scroll-indicator {
@@ -385,8 +466,20 @@ body {
     align-items: center;
     gap: 10px;
     color: var(--secondary-color);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-family: 'Roboto Mono', monospace;
+    opacity: 0.5;
     animation: bounce 2s infinite;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+}
+
+.scroll-indicator svg {
+    width: 20px;
+    height: 20px;
 }
 
 @keyframes bounce {
@@ -1118,10 +1211,31 @@ body:not(.dark-theme) .contact-btn:hover {
 @media (max-width: 768px) {
     .hero-title {
         font-size: 3rem;
+        letter-spacing: -1px;
     }
     
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 0.95rem;
+        gap: 6px;
+    }
+    
+    .hero-subtitle__dot {
+        width: 7px;
+        height: 7px;
+    }
+    
+    .hero-buttons .btn {
+        padding: 14px 30px;
+        font-size: 0.8rem;
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
     
     .section-title {
@@ -1131,27 +1245,6 @@ body:not(.dark-theme) .contact-btn:hover {
     .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
-    }
-
-    .about-card {
-        padding: 35px 25px;
-    }
-
-    .about-card h3 {
-        font-size: 1.8rem;
-    }
-
-    .about-icon {
-        padding: 15px;
-    }
-
-    .about-icon svg {
-        width: 32px;
-        height: 32px;
-    }
-
-    .about-content {
-        font-size: 1rem;
     }
 
     .project-card {
@@ -1221,22 +1314,30 @@ body:not(.dark-theme) .contact-btn:hover {
         justify-content: center;
     }
 
-    .about-card {
-        padding: 25px 20px;
-    }
-
-    .about-card h3 {
-        font-size: 1.5rem;
-        margin-bottom: 25px;
-    }
-
-    .about-card h3::after {
-        bottom: -8px;
-        height: 3px;
-    }
-
     .project-title {
         font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.8rem;
+        gap: 4px;
+    }
+    
+    .hero-subtitle__dot {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .hero-buttons .btn {
+        padding: 12px 24px;
+        font-size: 0.75rem;
+        max-width: 100%;
     }
 }
 
