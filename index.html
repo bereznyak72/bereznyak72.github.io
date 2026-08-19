@@ -185,26 +185,26 @@
   <!-- <div class="snow-container" id="snowContainer"></div> -->
 
   <!-- Навигация -->
-  <button class="hamburger">
+  <button class="hamburger" aria-label="Toggle navigation menu">
     <span></span>
     <span></span>
     <span></span>
   </button>
   
-  <div class="mobile-menu">
+  <nav class="mobile-menu" role="navigation" aria-label="Mobile navigation">
     <a href="#projects" data-i18n="projects">Мои проекты</a>
     <a href="#contact" data-i18n="contactButton">Связаться</a>
     <div class="mobile-menu-buttons">
-      <button class="mobile-theme-toggle" onclick="toggleTheme()">
+      <button class="mobile-theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-brilliance" viewBox="0 0 16 16">
           <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
         </svg>
       </button>
-      <button class="mobile-lang-toggle" onclick="toggleLanguage()">
+      <button class="mobile-lang-toggle" onclick="toggleLanguage()" aria-label="Toggle language">
         <span id="mobile-lang-text">EN</span>
       </button>
     </div>
-  </div>
+  </nav>
   
   <div class="container">
     <!-- Герой-секция -->
@@ -302,7 +302,14 @@
       <div class="projects-grid">
         <div class="project-card">
           <div class="project-image">
-            <img src="img/blockchat-black.png" alt="BlockChat" style="width: 150px;">
+            <img 
+              src="img/blockchat-black.png" 
+              alt="BlockChat" 
+              class="project-img" 
+              data-light="img/blockchat-black.png" 
+              data-dark="img/blockchat-white.png"
+              style="width: 150px;"
+            >
           </div>
           <div class="project-content">
             <h3 class="project-title">BlockChat</h3>
@@ -312,7 +319,13 @@
         </div>
         <div class="project-card">
           <div class="project-image">
-            <img src="img/vechno-black.png" alt="Вечный Возврат">
+            <img 
+              src="img/vechno-black.png" 
+              alt="Вечный Возврат" 
+              class="project-img" 
+              data-light="img/vechno-black.png" 
+              data-dark="img/vechno.png"
+            >
           </div>
           <div class="project-content">
             <h3 class="project-title" data-i18n="eternalReturnTitle">Вечный Возврат</h3>
@@ -349,7 +362,7 @@
         </div> -->
         <div class="project-card">
           <div class="project-image">
-            <img src="img/guffi.png" alt="Бот Гуффи">
+            <img src="img/guffi.png" alt="Бот Гуффи" class="project-img">
           </div>
           <div class="project-content">
             <h3 class="project-title" data-i18n="guffiTitle">Бот Гуффи</h3>
@@ -359,7 +372,7 @@
         </div>
         <div class="project-card">
           <div class="project-image">
-            <img src="img/persimmona.png" alt="Расследование Персиммоны">
+            <img src="img/persimmona.png" alt="Расследование Персиммоны" class="project-img">
           </div>
           <div class="project-content">
             <h3 class="project-title" data-i18n="persimmonaTitle">Расследование Персиммоны</h3>
@@ -369,7 +382,7 @@
         </div>
         <div class="project-card">
           <div class="project-image">
-            <img src="img/website.jpg" alt="Мой веб-сайт">
+            <img src="img/website.jpg" alt="Мой веб-сайт" class="project-img">
           </div>
           <div class="project-content">
             <h3 class="project-title" data-i18n="websiteTitle">Мой веб-сайт</h3>
@@ -411,318 +424,358 @@
   </div>
   
   <!-- Кнопки переключения темы и языка -->
-  <button class="theme-toggle" onclick="toggleTheme()">
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-brilliance" viewBox="0 0 16 16">
       <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
     </svg>
   </button>
-  <button class="lang-toggle" onclick="toggleLanguage()">
+  <button class="lang-toggle" onclick="toggleLanguage()" aria-label="Toggle language">
     <span id="lang-text">EN</span>
   </button>
   
   <script>
-    let currentLanguage = 'ru';
-    
-    const translations = {
-      'ru': {
-        'pageTitle': 'Портфолио bereznyak72',
-        'home': 'Главная',
-        'projects': 'Мои проекты',
-        'portfolioTitle': 'ПОРТФОЛИО',
-        'statusText': 'открыт к сотрудничеству',
-        'projectsButton': 'Мои проекты',
-        'contactButton': 'Связаться',
-        'scrollDown': 'Прокрутите вниз',
-        'aboutTitle': 'Обо мне',
-        'aboutText': 'Я увлекаюсь созданием веб-приложений и изучением технологий. Моя цель — стать backend-разработчиком. Стремлюсь стать частью сильной команды, чтобы применить и усовершенствовать свои навыки. Я готов приложить максимум усилий для обучения и решения сложных задач.',
-        'statMinimal1': '2 года',
-        'statMinimal2': '5 проектов',
-        'stackTitle': 'Навыки и технологии',
-        'frontendTitle': 'Frontend',
-        'backendTitle': 'Backend',
-        'toolsTitle': 'Инструменты',
-        'projectsTitle': 'Мои проекты',
-        'blockchatDesc': 'Мессенджер с прямой peer-to-peer связью между пользователями. Ваши сообщения передаются напрямую, без хранения на серверах.',
-        'todoApiDesc': 'REST API для управления списком задач, написанный на Rust. Поддерживает все CRUD операции: создание, чтение, обновление и удаление задач.',
-        'viewGitHub': 'GitHub →',
-        'eternalReturnTitle': 'Вечный Возврат',
-        'eternalReturnDescPart1': 'Архив литературных переживаний и сердечных ран. Исследуйте хроники ',
-        'brokenHeartsLink': 'разбитых сердец',
-        'eternalReturnDescPart2': ' в зеркале мировой литературы.',
-        'bytemeDesc': 'Умный бот-ментор, который помогает разработчикам прокачивать навыки через персонализированные задания, автоматическую проверку кода и адаптивный roadmap.',
-        'persimmonaTitle': 'Расследование Персиммоны',
-        'persimmonaDesc': 'Детективная приключенческая игра с элементами головоломок и исследования. Вы возьмете на себя роль Персиммоны — талантливой сыщицы.',
-        'guffiTitle': 'Бот Гуффи',
-        'guffiDesc': 'Этот универсальный помощник был разработан для того, чтобы сделать общение в чате более продуктивным и интересным.',
-        'websiteTitle': 'Мой веб-сайт',
-        'websiteDesc': 'Цель данного сайта — продемонстрировать мои проекты и ресурсы, которые я использовал и использую в процессе своего обучения.',
-        'learnMore': 'Подробнее →',
-        'contactTitle': 'Связаться со мной',
-        'copyright': '© 2026 Все права защищены',
-      },
-      'en': {
-        'pageTitle': 'Portfolio bereznyak72',
-        'home': 'Home',
-        'projects': 'My Projects',
-        'portfolioTitle': 'PORTFOLIO',
-        'statusText': 'open to collaborate',
-        'projectsButton': 'My Projects',
-        'contactButton': 'Contact',
-        'scrollDown': 'Scroll down',
-        'aboutTitle': 'About Me',
-        'aboutText': 'I am passionate about creating web applications and learning about technologies. My goal is to become a backend developer. I strive to become part of a strong team so that I can apply and improve my skills. I am ready to put in maximum effort to learn and solve complex problems',
-        'statMinimal1': '2 years',
-        'statMinimal2': '5 projects',
-        'stackTitle': 'Skills and Technologies',
-        'frontendTitle': 'Frontend',
-        'backendTitle': 'Backend',
-        'toolsTitle': 'Tools',
-        'projectsTitle': 'My Projects',
-        'blockchatDesc': 'Messenger with direct peer-to-peer connection between users. Your messages are transmitted directly, without being stored on servers.',
-        'todoApiDesc': 'REST API for task management written in Rust. Supports all CRUD operations: create, read, update, and delete tasks.',
-        'viewGitHub': 'GitHub →',
-        'eternalReturnTitle': 'Eternal Return',
-        'eternalReturnDescPart1': 'Archive of literary experiences and heart wounds. Explore the chronicles of ',
-        'brokenHeartsLink': 'broken hearts',
-        'eternalReturnDescPart2': ' in the mirror of world literature.',
-        'bytemeDesc': 'Smart mentor bot that helps developers improve their skills through personalized tasks, automatic code review and adaptive roadmap.',
-        'persimmonaTitle': 'Persimmona\'s Investigation',
-        'persimmonaDesc': 'Detective adventure game with puzzle and exploration elements. You will take on the role of Persimmona - a talented detective.',
-        'guffiTitle': 'Guffi Bot',
-        'guffiDesc': 'This universal assistant was developed to make chat communication more productive and interesting.',
-        'websiteTitle': 'My Website',
-        'websiteDesc': 'The purpose of this site is to demonstrate my projects and resources that I have used and use in my learning process.',
-        'learnMore': 'Learn More →',
-        'contactTitle': 'Contact Me',
-        'copyright': '© 2026 All rights reserved',
-      }
-    };
+    (function() {
+      'use strict';
 
-    function toggleLanguage() {
-      currentLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
-      applyLanguage();
-      localStorage.setItem('language', currentLanguage);
-      updateLanguageButton();
-      
-      if (window.innerWidth <= 768) {
-        hamburger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-      }
-    }
+      const STORAGE_KEYS = {
+        THEME: 'theme',
+        LANGUAGE: 'language'
+      };
 
-    function applyLanguage() {
-      document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[currentLanguage][key]) {
-          element.textContent = translations[currentLanguage][key];
+      const translations = {
+        'ru': {
+          'pageTitle': 'Портфолио bereznyak72',
+          'home': 'Главная',
+          'projects': 'Мои проекты',
+          'portfolioTitle': 'ПОРТФОЛИО',
+          'statusText': 'открыт к сотрудничеству',
+          'projectsButton': 'Мои проекты',
+          'contactButton': 'Связаться',
+          'scrollDown': 'Прокрутите вниз',
+          'aboutTitle': 'Обо мне',
+          'aboutText': 'Я увлекаюсь созданием веб-приложений и изучением технологий. Моя цель — стать backend-разработчиком. Стремлюсь стать частью сильной команды, чтобы применить и усовершенствовать свои навыки. Я готов приложить максимум усилий для обучения и решения сложных задач.',
+          'statMinimal1': '2 года',
+          'statMinimal2': '5 проектов',
+          'stackTitle': 'Навыки и технологии',
+          'frontendTitle': 'Frontend',
+          'backendTitle': 'Backend',
+          'toolsTitle': 'Инструменты',
+          'projectsTitle': 'Мои проекты',
+          'blockchatDesc': 'Мессенджер с прямой peer-to-peer связью между пользователями. Ваши сообщения передаются напрямую, без хранения на серверах.',
+          'todoApiDesc': 'REST API для управления списком задач, написанный на Rust. Поддерживает все CRUD операции: создание, чтение, обновление и удаление задач.',
+          'viewGitHub': 'GitHub →',
+          'eternalReturnTitle': 'Вечный Возврат',
+          'eternalReturnDescPart1': 'Архив литературных переживаний и сердечных ран. Исследуйте хроники ',
+          'brokenHeartsLink': 'разбитых сердец',
+          'eternalReturnDescPart2': ' в зеркале мировой литературы.',
+          'bytemeDesc': 'Умный бот-ментор, который помогает разработчикам прокачивать навыки через персонализированные задания, автоматическую проверку кода и адаптивный roadmap.',
+          'persimmonaTitle': 'Расследование Персиммоны',
+          'persimmonaDesc': 'Детективная приключенческая игра с элементами головоломок и исследования. Вы возьмете на себя роль Персиммоны — талантливой сыщицы.',
+          'guffiTitle': 'Бот Гуффи',
+          'guffiDesc': 'Этот универсальный помощник был разработан для того, чтобы сделать общение в чате более продуктивным и интересным.',
+          'websiteTitle': 'Мой веб-сайт',
+          'websiteDesc': 'Цель данного сайта — продемонстрировать мои проекты и ресурсы, которые я использовал и использую в процессе своего обучения.',
+          'learnMore': 'Подробнее →',
+          'contactTitle': 'Связаться со мной',
+          'copyright': '© 2026 Все права защищены',
+        },
+        'en': {
+          'pageTitle': 'Portfolio bereznyak72',
+          'home': 'Home',
+          'projects': 'My Projects',
+          'portfolioTitle': 'PORTFOLIO',
+          'statusText': 'open to collaborate',
+          'projectsButton': 'My Projects',
+          'contactButton': 'Contact',
+          'scrollDown': 'Scroll down',
+          'aboutTitle': 'About Me',
+          'aboutText': 'I am passionate about creating web applications and learning about technologies. My goal is to become a backend developer. I strive to become part of a strong team so that I can apply and improve my skills. I am ready to put in maximum effort to learn and solve complex problems',
+          'statMinimal1': '2 years',
+          'statMinimal2': '5 projects',
+          'stackTitle': 'Skills and Technologies',
+          'frontendTitle': 'Frontend',
+          'backendTitle': 'Backend',
+          'toolsTitle': 'Tools',
+          'projectsTitle': 'My Projects',
+          'blockchatDesc': 'Messenger with direct peer-to-peer connection between users. Your messages are transmitted directly, without being stored on servers.',
+          'todoApiDesc': 'REST API for task management written in Rust. Supports all CRUD operations: create, read, update, and delete tasks.',
+          'viewGitHub': 'GitHub →',
+          'eternalReturnTitle': 'Eternal Return',
+          'eternalReturnDescPart1': 'Archive of literary experiences and heart wounds. Explore the chronicles of ',
+          'brokenHeartsLink': 'broken hearts',
+          'eternalReturnDescPart2': ' in the mirror of world literature.',
+          'bytemeDesc': 'Smart mentor bot that helps developers improve their skills through personalized tasks, automatic code review and adaptive roadmap.',
+          'persimmonaTitle': 'Persimmona\'s Investigation',
+          'persimmonaDesc': 'Detective adventure game with puzzle and exploration elements. You will take on the role of Persimmona - a talented detective.',
+          'guffiTitle': 'Guffi Bot',
+          'guffiDesc': 'This universal assistant was developed to make chat communication more productive and interesting.',
+          'websiteTitle': 'My Website',
+          'websiteDesc': 'The purpose of this site is to demonstrate my projects and resources that I have used and use in my learning process.',
+          'learnMore': 'Learn More →',
+          'contactTitle': 'Contact Me',
+          'copyright': '© 2026 All rights reserved',
         }
-      });
-    }
+      };
 
-    function updateLanguageButton() {
+      let currentLanguage = 'ru';
+
+      const hamburger = document.querySelector('.hamburger');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const themeToggle = document.querySelector('.theme-toggle');
       const langText = document.getElementById('lang-text');
       const mobileLangText = document.getElementById('mobile-lang-text');
-      const text = currentLanguage === 'ru' ? 'EN' : 'RU';
-      
-      if (langText) langText.textContent = text;
-      if (mobileLangText) mobileLangText.textContent = text;
-    }
 
-    function applySavedLanguage() {
-      const savedLanguage = localStorage.getItem('language');
-      if (savedLanguage) {
-        currentLanguage = savedLanguage;
+      function toggleLanguage() {
+        currentLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
+        applyLanguage();
+        localStorage.setItem(STORAGE_KEYS.LANGUAGE, currentLanguage);
+        updateLanguageButton();
+
+        closeMobileMenu();
       }
-      applyLanguage();
-      updateLanguageButton();
-    }
 
-    // ДОЖДЬ
-    function createRain() {
-      const rainContainer = document.getElementById('rainContainer');
-      const containerWidth = window.innerWidth;
-      const dropsCount = Math.floor(containerWidth / 15);
-      
-      rainContainer.innerHTML = '';
-      
-      for (let i = 0; i < dropsCount; i++) {
-        const drop = document.createElement('div');
-        drop.classList.add('drop');
-        
-        const posX = Math.random() * containerWidth;
-        const delay = Math.random() * 2;
-        const duration = 0.3 + Math.random() * 0.4;
-        const length = 15 + Math.random() * 20;
-        
-        drop.style.left = `${posX}px`;
-        drop.style.animationDelay = `${delay}s`;
-        drop.style.animationDuration = `${duration}s`;
-        drop.style.height = `${length}px`;
-        drop.style.opacity = 0.3 + Math.random() * 0.4;
-        
-        rainContainer.appendChild(drop);
-        
-        if (i % 2 === 0) {
-          const splash = document.createElement('div');
-          splash.classList.add('splash');
-          
-          splash.style.left = `${posX}px`;
-          splash.style.bottom = '0';
-          splash.style.animationDelay = `${delay + duration * 0.9}s`;
-          splash.style.width = `${10 + Math.random() * 10}px`;
-          splash.style.height = `${5 + Math.random() * 5}px`;
-          
-          rainContainer.appendChild(splash);
-        }
-      }
-    }
-
-    /* СНЕГ
-    function createSnowfall() {
-      const snowContainer = document.getElementById('snowContainer');
-      const containerWidth = window.innerWidth;
-      const snowflakesCount = Math.floor(containerWidth / 20);
-      
-      snowContainer.innerHTML = '';
-      
-      for (let i = 0; i < snowflakesCount; i++) {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        
-        const size = 2 + Math.random() * 8;
-        const posX = Math.random() * containerWidth;
-        const delay = Math.random() * 5;
-        const duration = 5 + Math.random() * 15;
-        
-        snowflake.style.width = `${size}px`;
-        snowflake.style.height = `${size}px`;
-        snowflake.style.left = `${posX}px`;
-        
-        const swayAmount = Math.random() * 30 - 15;
-        
-        const style = document.createElement('style');
-        const animationName = `snow-fall-${i}`;
-        
-        style.textContent = `
-          @keyframes ${animationName} {
-            0% {
-              transform: translateY(-100px) translateX(0px) rotate(0deg);
-              opacity: 0;
-            }
-            10% {
-              opacity: 0.8;
-            }
-            90% {
-              opacity: 0.8;
-            }
-            100% {
-              transform: translateY(100vh) translateX(${swayAmount}px) rotate(360deg);
-              opacity: 0;
-            }
+      function applyLanguage() {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          if (translations[currentLanguage] && translations[currentLanguage][key]) {
+            element.textContent = translations[currentLanguage][key];
           }
-        `;
-        
-        document.head.appendChild(style);
+        });
+      }
 
-        snowflake.style.animation = `${animationName} ${duration}s linear ${delay}s infinite`;
-        
-        snowflake.style.opacity = 0.5 + Math.random() * 0.5;
-        
-        if (Math.random() > 0.7) {
-          snowflake.style.borderRadius = '30% 70% 70% 30% / 30% 30% 70% 70%';
+      function updateLanguageButton() {
+        const text = currentLanguage === 'ru' ? 'EN' : 'RU';
+        if (langText) langText.textContent = text;
+        if (mobileLangText) mobileLangText.textContent = text;
+      }
+
+      function applySavedLanguage() {
+        const savedLanguage = localStorage.getItem(STORAGE_KEYS.LANGUAGE);
+        if (savedLanguage && translations[savedLanguage]) {
+          currentLanguage = savedLanguage;
         }
+        applyLanguage();
+        updateLanguageButton();
+      }
+
+      function toggleTheme() {
+        const body = document.body;
+        body.classList.toggle('dark-theme');
+        const isDarkTheme = body.classList.contains('dark-theme');
+        localStorage.setItem(STORAGE_KEYS.THEME, isDarkTheme ? 'dark' : 'light');
         
-        snowContainer.appendChild(snowflake);
+        updateProjectImages();
+        closeMobileMenu();
       }
-    }
-    */
 
-    function updateProjectImages() {
-      const isDark = document.body.classList.contains('dark-theme');
-      
-      const projectImages = document.querySelectorAll('.project-image img');
-      projectImages.forEach(img => {
-        const src = img.getAttribute('src');
-        if (src.includes('blockchat')) {
-          img.src = isDark ?  'img/blockchat-white.png' : 'img/blockchat-black.png';
-        } else if (src.includes('vechno')) {
-          img.src = isDark ? 'img/vechno.png' : 'img/vechno-black.png';
+      function applySavedTheme() {
+        const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
+        if (savedTheme === 'dark') {
+          document.body.classList.add('dark-theme');
+        } else {
+          document.body.classList.remove('dark-theme');
         }
-      });
-    }
-
-    function toggleTheme() {
-      const body = document.body;
-      body.classList.toggle('dark-theme');
-      const isDarkTheme = body.classList.contains('dark-theme');
-      localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
-      
-      updateProjectImages();
-      
-      if (window.innerWidth <= 768) {
-        hamburger.classList.remove('active');
-        mobileMenu.classList.remove('active');
+        updateProjectImages();
       }
-    }
 
-    function applySavedTheme() {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
-        document.body.classList.add('dark-theme');
-      } else {
-        document.body.classList.remove('dark-theme');
+      function updateProjectImages() {
+        const isDark = document.body.classList.contains('dark-theme');
+        const images = document.querySelectorAll('.project-img[data-light][data-dark]');
+        
+        images.forEach(img => {
+          const srcKey = isDark ? 'dark' : 'light';
+          const newSrc = img.getAttribute(`data-${srcKey}`);
+          if (newSrc && img.src !== newSrc) {
+            img.src = newSrc;
+          }
+        });
       }
-      updateProjectImages();
-    }
 
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const themeToggle = document.querySelector('.theme-toggle');
-    
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
-    });
-    
-    function handleThemeToggleVisibility() {
-      if (window.innerWidth <= 768) {
-        themeToggle.style.display = 'none';
-      } else {
-        themeToggle.style.display = 'block';
+      function closeMobileMenu() {
+        if (window.innerWidth <= 768) {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+        }
       }
-    }
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+      function toggleMobileMenu() {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+      }
+
+      // Дождь
+      let rainTimeout = null;
+      let resizeTimeout = null;
+
+      function createRain() {
+        const rainContainer = document.getElementById('rainContainer');
+        if (!rainContainer) return;
+        
+        const containerWidth = window.innerWidth;
+        const dropsCount = Math.max(20, Math.floor(containerWidth / 15));
+        
+        rainContainer.innerHTML = '';
+        
+        for (let i = 0; i < dropsCount; i++) {
+          const drop = document.createElement('div');
+          drop.classList.add('drop');
+          
+          const posX = Math.random() * containerWidth;
+          const delay = Math.random() * 2;
+          const duration = 0.3 + Math.random() * 0.4;
+          const length = 15 + Math.random() * 20;
+          
+          drop.style.left = `${posX}px`;
+          drop.style.animationDelay = `${delay}s`;
+          drop.style.animationDuration = `${duration}s`;
+          drop.style.height = `${length}px`;
+          drop.style.opacity = 0.3 + Math.random() * 0.4;
+          
+          rainContainer.appendChild(drop);
+          
+          if (i % 2 === 0) {
+            const splash = document.createElement('div');
+            splash.classList.add('splash');
+            
+            splash.style.left = `${posX}px`;
+            splash.style.bottom = '0';
+            splash.style.animationDelay = `${delay + duration * 0.9}s`;
+            splash.style.width = `${10 + Math.random() * 10}px`;
+            splash.style.height = `${5 + Math.random() * 5}px`;
+            
+            rainContainer.appendChild(splash);
+          }
+        }
+      }
+
+      function handleResize() {
+        if (resizeTimeout) {
+          clearTimeout(resizeTimeout);
+        }
+        resizeTimeout = setTimeout(() => {
+          createRain();
+          resizeTimeout = null;
+        }, 250);
+      }
+
+      // Снег
+      // function createSnowfall() {
+      //   const snowContainer = document.getElementById('snowContainer');
+      //   const containerWidth = window.innerWidth;
+      //   const snowflakesCount = Math.floor(containerWidth / 20);
+        
+      //   snowContainer.innerHTML = '';
+        
+      //   for (let i = 0; i < snowflakesCount; i++) {
+      //     const snowflake = document.createElement('div');
+      //     snowflake.classList.add('snowflake');
+          
+      //     const size = 2 + Math.random() * 8;
+      //     const posX = Math.random() * containerWidth;
+      //     const delay = Math.random() * 5;
+      //     const duration = 5 + Math.random() * 15;
+          
+      //     snowflake.style.width = `${size}px`;
+      //     snowflake.style.height = `${size}px`;
+      //     snowflake.style.left = `${posX}px`;
+          
+      //     const swayAmount = Math.random() * 30 - 15;
+          
+      //     const style = document.createElement('style');
+      //     const animationName = `snow-fall-${i}`;
+          
+      //     style.textContent = `
+      //       @keyframes ${animationName} {
+      //         0% {
+      //           transform: translateY(-100px) translateX(0px) rotate(0deg);
+      //           opacity: 0;
+      //         }
+      //         10% {
+      //           opacity: 0.8;
+      //         }
+      //         90% {
+      //           opacity: 0.8;
+      //         }
+      //         100% {
+      //           transform: translateY(100vh) translateX(${swayAmount}px) rotate(360deg);
+      //           opacity: 0;
+      //         }
+      //       }
+      //     `;
+          
+      //     document.head.appendChild(style);
+
+      //     snowflake.style.animation = `${animationName} ${duration}s linear ${delay}s infinite`;
+          
+      //     snowflake.style.opacity = 0.5 + Math.random() * 0.5;
+          
+      //     if (Math.random() > 0.7) {
+      //       snowflake.style.borderRadius = '30% 70% 70% 30% / 30% 30% 70% 70%';
+      //     }
+          
+      //     snowContainer.appendChild(snowflake);
+      //   }
+      // }
+
+      function handleAnchorClick(e) {
         const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
+        if (targetId === '#' || !targetId.startsWith('#')) return;
         
+        e.preventDefault();
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
-          if (window.innerWidth <= 768) {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-          }
-          
+          closeMobileMenu();
           targetElement.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
           });
         }
-      });
-    });
-    
-    document.addEventListener('DOMContentLoaded', function() {
-      applySavedTheme();
-      applySavedLanguage();
-      createRain()
-      // createSnowfall();
+      }
 
-      
-      window.addEventListener('resize', createRain);
-      // window.addEventListener('resize', createSnowfall);
-    });
+      function init() {
+        applySavedTheme();
+        applySavedLanguage();
+
+        createRain();
+        // createSnowfall();
+
+        if (hamburger) {
+          hamburger.addEventListener('click', toggleMobileMenu);
+        }
+
+        if (window.innerWidth <= 768) {
+          if (themeToggle) themeToggle.style.display = 'none';
+        }
+
+        document.addEventListener('click', function(e) {
+          if (window.innerWidth <= 768) {
+            const isMenuOpen = mobileMenu && mobileMenu.classList.contains('active');
+            const isHamburger = hamburger && hamburger.contains(e.target);
+            const isMenu = mobileMenu && mobileMenu.contains(e.target);
+            
+            if (isMenuOpen && !isHamburger && !isMenu) {
+              closeMobileMenu();
+            }
+          }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', handleAnchorClick);
+        });
+
+        window.addEventListener('resize', handleResize);
+
+        window.toggleTheme = toggleTheme;
+        window.toggleLanguage = toggleLanguage;
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+
+    })();
   </script>
 </body>
 </html>
